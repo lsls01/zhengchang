@@ -22,7 +22,7 @@ final class PreferenceGeneralViewController: NSViewController, PreferencePane {
     @IBOutlet weak var autoLaunch: NSButtonCell!
     @IBOutlet weak var autoCheckVersion: NSButtonCell!
     @IBOutlet weak var autoUpdateServers: NSButtonCell!
-    @IBOutlet weak var autoSelectFastestServer: NSButtonCell!
+//    @IBOutlet weak var autoSelectFastestServer: NSButtonCell!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +38,9 @@ final class PreferenceGeneralViewController: NSViewController, PreferencePane {
         if UserDefaults.getBool(forKey: .autoUpdateServers) {
             autoUpdateServers.state = .on
         }
-        if UserDefaults.getBool(forKey: .autoSelectFastestServer) {
-            autoSelectFastestServer.state = .on
-        }
+//        if UserDefaults.getBool(forKey: .autoSelectFastestServer) {
+//            autoSelectFastestServer.state = .on
+//        }
     }
 
     @IBAction func SetAutoLogin(_ sender: NSButtonCell) {
@@ -56,9 +56,9 @@ final class PreferenceGeneralViewController: NSViewController, PreferencePane {
         UserDefaults.setBool(forKey: .autoUpdateServers, value: sender.state == .on)
     }
 
-    @IBAction func SetAutoSelectFastestServer(_ sender: NSButton) {
-        UserDefaults.setBool(forKey: .autoSelectFastestServer, value: sender.state == .on)
-    }
+//    @IBAction func SetAutoSelectFastestServer(_ sender: NSButton) {
+//        UserDefaults.setBool(forKey: .autoSelectFastestServer, value: sender.state == .on)
+//    }
 
     @IBAction func goFeedback(_ sender: NSButton) {
         guard let url = URL(string: "https://github.com/yanue/v2rayu/issues") else {
