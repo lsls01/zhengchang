@@ -271,7 +271,7 @@ class V2rayConfig: NSObject {
         var outbounds: [V2rayOutbound] = [outbound]
 
         if (self.v2ray.outbounds != nil && self.v2ray.outbounds!.count > 0) {
-            for var (i, item) in self.v2ray.outbounds!.enumerated() {
+            for (i, item) in self.v2ray.outbounds!.enumerated() {
                 // the first one is just from manual settings
                 if i == 0 {
                     continue
@@ -1358,7 +1358,7 @@ class V2rayConfig: NSObject {
 
             // request
             if steamJson["tcpSettings"]["header"]["request"].dictionaryValue.count > 0 {
-                var requestJson = steamJson["tcpSettings"]["header"]["request"]
+                let requestJson = steamJson["tcpSettings"]["header"]["request"]
                 var tcpRequest = TcpSettingHeaderRequest()
                 tcpRequest.version = requestJson["version"].stringValue
                 tcpRequest.method = requestJson["method"].stringValue
@@ -1388,7 +1388,7 @@ class V2rayConfig: NSObject {
 
             // response
             if steamJson["tcpSettings"]["header"]["response"].dictionaryValue.count > 0 {
-                var responseJson = steamJson["tcpSettings"]["header"]["response"]
+                let responseJson = steamJson["tcpSettings"]["header"]["response"]
                 var tcpResponse = TcpSettingHeaderResponse()
 
                 tcpResponse.version = responseJson["version"].stringValue
@@ -1488,7 +1488,7 @@ class V2rayConfig: NSObject {
 
         // combine new default config
         jsonText = vCfg.combineManual()
-        _ = V2rayServer.save(v2ray: item, jsonData: jsonText)
+        V2rayServer.save(v2ray: item, jsonData: jsonText)
 
         // path: /Application/V2rayU.app/Contents/Resources/config.json
         guard let jsonFile = V2rayServer.getJsonFile() else {

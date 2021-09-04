@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04CE3DAE2695EACF002923FD /* V2rayUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE3DAD2695EACF002923FD /* V2rayUTests.swift */; };
 		6604E43C21798F2A00E54AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6604E43B21798F2A00E54AE1 /* AppDelegate.swift */; };
 		6604E447217990CD00E54AE1 /* V2rayULauncher.app in Copy Files */ = {isa = PBXBuildFile; fileRef = 6604E43921798F2900E54AE1 /* V2rayULauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6608D9DA2182C69D00A0E0DD /* v2rayStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608D9D92182C69D00A0E0DD /* v2rayStruct.swift */; };
 		6608D9DC2182C6D200A0E0DD /* v2rayInbound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608D9DB2182C6D200A0E0DD /* v2rayInbound.swift */; };
 		6608D9DE2182C92D00A0E0DD /* v2rayOutbound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608D9DD2182C92D00A0E0DD /* v2rayOutbound.swift */; };
 		6608D9E22182C9C100A0E0DD /* v2rayStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608D9E12182C9C100A0E0DD /* v2rayStream.swift */; };
-		660C8CA22181CBAA00896361 /* V2rayUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660C8CA12181CBAA00896361 /* V2rayUTests.swift */; };
 		660D0E5A216E0158000C2922 /* V2rayServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D0E59216E0158000C2922 /* V2rayServer.swift */; };
 		66107B8622DEDBE4002FFB60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66107B8822DEDBE4002FFB60 /* Localizable.strings */; };
 		6610ECB721742AFD008FC401 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 664EB378216C9A5F00B6AE0D /* MainMenu.xib */; };
@@ -22,7 +22,6 @@
 		66193A8623EE45B200289B6A /* PreferenceRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66193A8523EE45B200289B6A /* PreferenceRouting.swift */; };
 		66193A8923EE46BC00289B6A /* PreferenceRouting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66193A8723EE46BC00289B6A /* PreferenceRouting.xib */; };
 		663F040625ED4B2C00687600 /* V2rayLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F040525ED4B2C00687600 /* V2rayLaunch.swift */; };
-		66406AF42183320000B56041 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66406AF32183320000B56041 /* Sample.swift */; };
 		664EB375216C9A5E00B6AE0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664EB374216C9A5E00B6AE0D /* AppDelegate.swift */; };
 		664EB377216C9A5F00B6AE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664EB376216C9A5F00B6AE0D /* Assets.xcassets */; };
 		664EB392216CA9E800B6AE0D /* ConfigWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664EB390216CA9E800B6AE0D /* ConfigWindow.swift */; };
@@ -120,6 +119,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04CE3DAC2695EACF002923FD /* V2rayUTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "V2rayUTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		04CE3DAD2695EACF002923FD /* V2rayUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2rayUTests.swift; sourceTree = "<group>"; };
 		230294B5D1C5B1E0D311F3E2 /* libPods-V2rayUTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-V2rayUTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B27CD97A6B24986CAF0BFD /* Pods-V2rayU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2rayU.release.xcconfig"; path = "Pods/Target Support Files/Pods-V2rayU/Pods-V2rayU.release.xcconfig"; sourceTree = "<group>"; };
 		6604E43921798F2900E54AE1 /* V2rayULauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2rayULauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +132,6 @@
 		6608D9DD2182C92D00A0E0DD /* v2rayOutbound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v2rayOutbound.swift; sourceTree = "<group>"; };
 		6608D9E12182C9C100A0E0DD /* v2rayStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = v2rayStream.swift; sourceTree = "<group>"; };
 		660C8C9F2181CBAA00896361 /* V2rayUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2rayUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		660C8CA12181CBAA00896361 /* V2rayUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2rayUTests.swift; sourceTree = "<group>"; };
 		660C8CA32181CBAA00896361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		660D0E59216E0158000C2922 /* V2rayServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = V2rayServer.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 0; };
 		66107B8722DEDBE4002FFB60 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -143,7 +143,6 @@
 		66193A9323EF1EF600289B6A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../zh-Hans.lproj/PreferenceRouting.strings"; sourceTree = "<group>"; };
 		66193A9523EF1EFA00289B6A /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "../zh-HK.lproj/PreferenceRouting.strings"; sourceTree = "<group>"; };
 		663F040525ED4B2C00687600 /* V2rayLaunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2rayLaunch.swift; sourceTree = "<group>"; };
-		66406AF32183320000B56041 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		6646669221CBC0860094F0B7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		664666A021CBD6C60094F0B7 /* libPods-V2rayUTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-V2rayUTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		664B95DD217062A500DBC941 /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Alamofire; path = Pods/Alamofire; sourceTree = "<group>"; };
@@ -287,9 +286,9 @@
 		660C8CA02181CBAA00896361 /* V2rayUTests */ = {
 			isa = PBXGroup;
 			children = (
-				66406AF32183320000B56041 /* Sample.swift */,
-				660C8CA12181CBAA00896361 /* V2rayUTests.swift */,
 				660C8CA32181CBAA00896361 /* Info.plist */,
+				04CE3DAD2695EACF002923FD /* V2rayUTests.swift */,
+				04CE3DAC2695EACF002923FD /* V2rayUTests-Bridging-Header.h */,
 			);
 			path = V2rayUTests;
 			sourceTree = "<group>";
@@ -529,18 +528,21 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = yanue;
 				TargetAttributes = {
 					6604E43821798F2900E54AE1 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1250;
 					};
 					660C8C9E2181CBAA00896361 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1250;
 						TestTargetID = 664EB370216C9A5E00B6AE0D;
 					};
 					664EB370216C9A5E00B6AE0D = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1250;
 						SystemCapabilities = {
 							com.apple.HardenedRuntime = {
 								enabled = 0;
@@ -674,8 +676,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				660C8CA22181CBAA00896361 /* V2rayUTests.swift in Sources */,
-				66406AF42183320000B56041 /* Sample.swift in Sources */,
+				04CE3DAE2695EACF002923FD /* V2rayUTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,7 +863,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = RJYEH6TCJD;
+				DEVELOPMENT_TEAM = 37MSAELA6E;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = V2rayULauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -872,7 +874,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.yanue.v2rayu.V2rayULauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -884,7 +886,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = RJYEH6TCJD;
+				DEVELOPMENT_TEAM = 37MSAELA6E;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = V2rayULauncher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -894,7 +897,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.yanue.v2rayu.V2rayULauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -902,10 +905,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BLHQ787DMR;
+				DEVELOPMENT_TEAM = 37MSAELA6E;
 				INFOPLIST_FILE = V2rayUTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -915,7 +919,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = net.yanue.v2rayu.V2rayUTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "V2rayUTests/V2rayUTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2rayU.app/Contents/MacOS/V2rayU";
 			};
 			name = Debug;
@@ -924,10 +930,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BLHQ787DMR;
+				DEVELOPMENT_TEAM = 37MSAELA6E;
 				INFOPLIST_FILE = V2rayUTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -937,7 +944,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = net.yanue.v2rayu.V2rayUTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "V2rayUTests/V2rayUTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2rayU.app/Contents/MacOS/V2rayU";
 			};
 			name = Release;
@@ -970,6 +978,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1035,6 +1044,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1076,7 +1086,8 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 3.2.0;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RJYEH6TCJD;
+				DEVELOPMENT_TEAM = 37MSAELA6E;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				INFOPLIST_FILE = V2rayU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1092,7 +1103,7 @@
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Common/V2rayU-Bridging-header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1107,7 +1118,8 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 3.2.0;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RJYEH6TCJD;
+				DEVELOPMENT_TEAM = 37MSAELA6E;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				INFOPLIST_FILE = V2rayU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1123,7 +1135,7 @@
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Common/V2rayU-Bridging-header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1132,7 +1144,8 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RJYEH6TCJD;
+				DEVELOPMENT_TEAM = 37MSAELA6E;
+				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1144,7 +1157,8 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RJYEH6TCJD;
+				DEVELOPMENT_TEAM = 37MSAELA6E;
+				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

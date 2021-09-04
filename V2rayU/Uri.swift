@@ -93,7 +93,7 @@ class VmessUri {
         // params
         let params = paramsStr.components(separatedBy: "&")
         for item in params {
-            var param = item.components(separatedBy: "=")
+            let param = item.components(separatedBy: "=")
             if param.count < 2 {
                 continue
             }

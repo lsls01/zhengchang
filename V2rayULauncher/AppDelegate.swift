@@ -38,7 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         if !alreadyRunning {
-            DistributedNotificationCenter.default().addObserver(NSApp, selector: #selector(NSApplication.terminate(_:)), name: Notification.Name("terminateV2rayU"), object: mainAppIdentifier)
+            DistributedNotificationCenter.default().addObserver(NSApp as Any, selector: #selector(NSApplication.terminate(_:)), name: Notification.Name("terminateV2rayU"), object: mainAppIdentifier)
             
             let path = Bundle.main.bundlePath as NSString
             var components = path.pathComponents

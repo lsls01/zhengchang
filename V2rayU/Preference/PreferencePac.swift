@@ -83,23 +83,20 @@ final class PreferencePacViewController: NSViewController, PreferencePane {
         self.tips.stringValue = "Updating Pac Rules ..."
 
         if let str = userRulesView?.string {
-            do {
-                // save user rules into UserDefaults
-                UserDefaults.set(forKey: .userRules, value: str)
-                UpdatePACFromGFWList(gfwPacListUrl: self.gfwPacListUrl.stringValue)
+            // save user rules into UserDefaults
+            UserDefaults.set(forKey: .userRules, value: str)
+            UpdatePACFromGFWList(gfwPacListUrl: self.gfwPacListUrl.stringValue)
 
-                if GeneratePACFile(rewrite: true) {
-                    // Popup a user notification
-                    self.tips.stringValue = "PAC has been updated by User Rules."
-                } else {
-                    self.tips.stringValue = "It's failed to update PAC by User Rules."
-                }
+            if GeneratePACFile(rewrite: true) {
+                // Popup a user notification
+                self.tips.stringValue = "PAC has been updated by User Rules."
+            } else {
+                self.tips.stringValue = "It's failed to update PAC by User Rules."
+            }
 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    // your code here
-                    self.tips.stringValue = ""
-                }
-            } catch {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                // your code here
+                self.tips.stringValue = ""
             }
         }
     }
@@ -157,63 +154,54 @@ func GeneratePACFile(rewrite: Bool) -> Bool {
 
     print("GeneratePACFile rewrite", sockPort)
 
-    do {
-        let gfwlist = UserDefaults.get(forKey: .gfwPacFileContent) ?? ""
-        if let data = Data(base64Encoded: gfwlist, options: .ignoreUnknownCharacters) {
-            let str = String(data: data, encoding: String.Encoding.utf8)
-            var lines = str!.components(separatedBy: CharacterSet.newlines)
-            do {
-                // read userRules from UserDefaults
-                let userRules = UserDefaults.get(forKey: .userRules) ?? ""
-                let userRuleLines = userRules.components(separatedBy: CharacterSet.newlines)
-                lines = userRuleLines + lines
-            } catch {
-                NSLog("Not found user-rule.txt")
+    let gfwlist = UserDefaults.get(forKey: .gfwPacFileContent) ?? ""
+    if let data = Data(base64Encoded: gfwlist, options: .ignoreUnknownCharacters) {
+        let str = String(data: data, encoding: String.Encoding.utf8)
+        var lines = str!.components(separatedBy: CharacterSet.newlines)
+        // read userRules from UserDefaults
+        let userRules = UserDefaults.get(forKey: .userRules) ?? ""
+        let userRuleLines = userRules.components(separatedBy: CharacterSet.newlines)
+        lines = userRuleLines + lines
+        // Filter empty and comment lines
+        lines = lines.filter({ (s: String) -> Bool in
+            if s.isEmpty {
+                return false
             }
-            // Filter empty and comment lines
-            lines = lines.filter({ (s: String) -> Bool in
-                if s.isEmpty {
-                    return false
-                }
-                let c = s[s.startIndex]
-                if c == "!" || c == "[" {
-                    return false
-                }
-                return true
-            })
-
-            do {
-                // rule lines to json array
-                let rulesJsonData: Data = try JSONSerialization.data(withJSONObject: lines, options: .prettyPrinted)
-                let rulesJsonStr = String(data: rulesJsonData, encoding: String.Encoding.utf8)
-
-                // Get raw pac js
-                let jsData = try? Data(contentsOf: URL.init(fileURLWithPath: PACAbpFile))
-                var jsStr = String(data: jsData!, encoding: String.Encoding.utf8)
-
-                // Replace rules placeholder in pac js
-                jsStr = jsStr!.replacingOccurrences(of: "__RULES__", with: rulesJsonStr!)
-                // Replace __SOCKS5PORT__ palcholder in pac js
-                jsStr = jsStr!.replacingOccurrences(of: "__SOCKS5PORT__", with: "\(sockPort)")
-                // Replace __SOCKS5ADDR__ palcholder in pac js
-                var sin6 = sockaddr_in6()
-                if socks5Address.withCString({ cstring in inet_pton(AF_INET6, cstring, &sin6.sin6_addr) }) == 1 {
-                    jsStr = jsStr!.replacingOccurrences(of: "__SOCKS5ADDR__", with: "[\(socks5Address)]")
-                } else {
-                    jsStr = jsStr!.replacingOccurrences(of: "__SOCKS5ADDR__", with: socks5Address)
-                }
-                print("PACFilePath", PACFilePath)
-
-                // Write the pac js to file.
-                try jsStr!.data(using: String.Encoding.utf8)?.write(to: URL(fileURLWithPath: PACFilePath), options: .atomic)
-                return true
-            } catch {
-
+            let c = s[s.startIndex]
+            if c == "!" || c == "[" {
+                return false
             }
+            return true
+        })
+
+        do {
+            // rule lines to json array
+            let rulesJsonData: Data = try JSONSerialization.data(withJSONObject: lines, options: .prettyPrinted)
+            let rulesJsonStr = String(data: rulesJsonData, encoding: String.Encoding.utf8)
+
+            // Get raw pac js
+            let jsData = try? Data(contentsOf: URL.init(fileURLWithPath: PACAbpFile))
+            var jsStr = String(data: jsData!, encoding: String.Encoding.utf8)
+
+            // Replace rules placeholder in pac js
+            jsStr = jsStr!.replacingOccurrences(of: "__RULES__", with: rulesJsonStr!)
+            // Replace __SOCKS5PORT__ palcholder in pac js
+            jsStr = jsStr!.replacingOccurrences(of: "__SOCKS5PORT__", with: "\(sockPort)")
+            // Replace __SOCKS5ADDR__ palcholder in pac js
+            var sin6 = sockaddr_in6()
+            if socks5Address.withCString({ cstring in inet_pton(AF_INET6, cstring, &sin6.sin6_addr) }) == 1 {
+                jsStr = jsStr!.replacingOccurrences(of: "__SOCKS5ADDR__", with: "[\(socks5Address)]")
+            } else {
+                jsStr = jsStr!.replacingOccurrences(of: "__SOCKS5ADDR__", with: socks5Address)
+            }
+            print("PACFilePath", PACFilePath)
+
+            // Write the pac js to file.
+            try jsStr!.data(using: String.Encoding.utf8)?.write(to: URL(fileURLWithPath: PACFilePath), options: .atomic)
+            return true
+        } catch {
+
         }
-
-    } catch {
-        NSLog("Not found gfwlist.txt")
     }
     return false
 }

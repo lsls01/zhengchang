@@ -167,29 +167,23 @@ class PingSpeed: NSObject {
         cfg.parseJson(jsonText: item.json)
 
         var host: String = ""
-        var port: Int
         if cfg.serverProtocol == V2rayProtocolOutbound.vmess.rawValue {
             host = cfg.serverVmess.address
-            port = cfg.serverVmess.port
         }
         if cfg.serverProtocol == V2rayProtocolOutbound.vless.rawValue {
             host = cfg.serverVless.address
-            port = cfg.serverVless.port
         }
         if cfg.serverProtocol == V2rayProtocolOutbound.shadowsocks.rawValue {
             host = cfg.serverShadowsocks.address
-            port = cfg.serverShadowsocks.port
         }
         if cfg.serverProtocol == V2rayProtocolOutbound.trojan.rawValue {
             host = cfg.serverTrojan.address
-            port = cfg.serverTrojan.port
         }
         if cfg.serverProtocol == V2rayProtocolOutbound.socks.rawValue {
             if cfg.serverSocks5.servers.count == 0 {
                 return ""
             }
             host = cfg.serverSocks5.servers[0].address
-            port = Int(cfg.serverSocks5.servers[0].port)
         }
 
         return host

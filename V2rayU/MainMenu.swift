@@ -261,10 +261,6 @@ class MenuController: NSObject, NSMenuDelegate {
     // start v2ray core
     func startV2rayCore() {
         NSLog("start v2ray-core begin")
-        if !V2rayLaunch.checkPorts() {
-            setStatusOff()
-            return
-        }
 
         guard let v2ray = V2rayServer.loadSelectedItem() else {
             noticeTip(title: "start v2ray fail", subtitle: "", informativeText: "v2ray config not found")
@@ -371,7 +367,7 @@ class MenuController: NSObject, NSMenuDelegate {
         }
     }
 
-    func showDock(state: Bool) -> Bool {
+    @discardableResult func showDock(state: Bool) -> Bool {
         // Get transform state.
         var transformState: ProcessApplicationTransformState
         if state {
