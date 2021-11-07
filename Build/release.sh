@@ -3,7 +3,7 @@
 
 APP_NAME="V2rayU"
 INFOPLIST_FILE="Info.plist"
-BASE_DIR=$HOME/swift/V2rayU
+BASE_DIR=$HOME/projects/zhengchang
 BUILD_DIR=${BASE_DIR}/Build
 V2rayU_ARCHIVE=${BUILD_DIR}/V2rayU.xcarchive
 V2rayU_RELEASE=${BUILD_DIR}/release
@@ -168,9 +168,9 @@ function commit() {
 function downloadV2ray() {
     echo "正在查询最新版v2ray ..."
     rm -fr v2ray-core
-    tag='v1.4.2'
+    tag='v1.5.0'
     echo "v2ray-core version: ${tag}"
-    url="https://github.com/XTLS/Xray-core/releases/download/v1.4.2/Xray-macos-64.zip"
+    url="https://github.com/XTLS/Xray-core/releases/download/${tag}/Xray-macos-64.zip"
     echo "正在下载最新版v2ray: ${tag}"
     curl -Lo Xray-macos-64.zip ${url}
 
