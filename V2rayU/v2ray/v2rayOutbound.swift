@@ -1,4 +1,4 @@
- //
+//
 //  V2rayOutbound.swift
 //  V2rayU
 //
@@ -54,7 +54,7 @@ extension V2rayOutbound {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        `protocol` = try container.decode(V2rayProtocolOutbound.self, forKey: CodingKeys.`protocol`)
+        `protocol` = try container.decode(V2rayProtocolOutbound.self, forKey: CodingKeys.protocol)
         tag = try container.decode(String.self, forKey: CodingKeys.tag)
 
         // ignore nil
@@ -81,37 +81,28 @@ extension V2rayOutbound {
         switch `protocol` {
         case .blackhole:
             settingBlackhole = try container.decode(V2rayOutboundBlackhole.self, forKey: CodingKeys.settings)
-            break
         case .freedom:
             settingFreedom = try container.decode(V2rayOutboundFreedom.self, forKey: CodingKeys.settings)
-            break
         case .shadowsocks:
             settingShadowsocks = try container.decode(V2rayOutboundShadowsocks.self, forKey: CodingKeys.settings)
-            break
         case .socks:
             settingSocks = try container.decode(V2rayOutboundSocks.self, forKey: CodingKeys.settings)
-            break
         case .vmess:
             settingVMess = try container.decode(V2rayOutboundVMess.self, forKey: CodingKeys.settings)
-            break
         case .dns:
             settingDns = try container.decode(V2rayOutboundDns.self, forKey: CodingKeys.settings)
-            break
         case .http:
             settingHttp = try container.decode(V2rayOutboundHttp.self, forKey: CodingKeys.settings)
-            break
         case .vless:
             settingVLess = try container.decode(V2rayOutboundVLess.self, forKey: CodingKeys.settings)
-            break
         case .trojan:
             settingTrojan = try container.decode(V2rayOutboundTrojan.self, forKey: CodingKeys.settings)
-            break
         }
     }
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(`protocol`, forKey: .`protocol`)
+        try container.encode(`protocol`, forKey: .protocol)
         try container.encode(tag, forKey: .tag)
 
         // ignore nil
@@ -120,7 +111,7 @@ extension V2rayOutbound {
         }
 
         // ignore nil
-        if sendThrough != nil && sendThrough!.count > 0 {
+        if sendThrough != nil, sendThrough!.count > 0 {
             try container.encode(sendThrough, forKey: .sendThrough)
         }
 
@@ -137,45 +128,36 @@ extension V2rayOutbound {
         // encode settings depends on `protocol`
         switch `protocol` {
         case .shadowsocks:
-            try container.encode(self.settingShadowsocks, forKey: .settings)
-            break
+            try container.encode(settingShadowsocks, forKey: .settings)
         case .socks:
-            try container.encode(self.settingSocks, forKey: .settings)
-            break
+            try container.encode(settingSocks, forKey: .settings)
         case .vmess:
-            try container.encode(self.settingVMess, forKey: .settings)
-            break
+            try container.encode(settingVMess, forKey: .settings)
         case .blackhole:
-            try container.encode(self.settingBlackhole, forKey: .settings)
-            break
+            try container.encode(settingBlackhole, forKey: .settings)
         case .freedom:
-            try container.encode(self.settingFreedom, forKey: .settings)
-            break
+            try container.encode(settingFreedom, forKey: .settings)
         case .dns:
-            try container.encode(self.settingDns, forKey: .settings)
-            break
+            try container.encode(settingDns, forKey: .settings)
         case .http:
-            try container.encode(self.settingHttp, forKey: .settings)
-            break
+            try container.encode(settingHttp, forKey: .settings)
         case .vless:
-            try container.encode(self.settingVLess, forKey: .settings)
-            break
+            try container.encode(settingVLess, forKey: .settings)
         case .trojan:
-            try container.encode(self.settingTrojan, forKey: .settings)
-            break
+            try container.encode(settingTrojan, forKey: .settings)
         }
     }
 }
 
 struct V2rayOutboundMux: Codable {
-    var enabled: Bool = false
-    var concurrency: Int = 8
+    var enabled = false
+    var concurrency = 8
 }
 
 // protocol
 // Blackhole
 struct V2rayOutboundBlackhole: Codable {
-    var response: V2rayOutboundBlackholeResponse = V2rayOutboundBlackholeResponse()
+    var response = V2rayOutboundBlackholeResponse()
 }
 
 struct V2rayOutboundBlackholeResponse: Codable {
@@ -184,9 +166,9 @@ struct V2rayOutboundBlackholeResponse: Codable {
 
 struct V2rayOutboundFreedom: Codable {
     // Freedom
-    var domainStrategy: String = "UseIP"// UseIP | AsIs
+    var domainStrategy = "UseIP" // UseIP | AsIs
     var redirect: String?
-    var userLevel: Int = 0
+    var userLevel = 0
 }
 
 struct V2rayOutboundShadowsocks: Codable {
@@ -196,14 +178,14 @@ struct V2rayOutboundShadowsocks: Codable {
 let V2rayOutboundShadowsockMethod = ["rc4-md5", "aes-128-cfb", "aes-192-cfb", "aes-256-cfb", "aes-128-ctr", "aes-192-ctr", "aes-256-ctr", "aes-128-gcm", "aes-192-gcm", "aes-256-gcm", "camellia-128-cfb", "camellia-192-cfb", "camellia-256-cfb", "bf-cfb", "salsa20", "chacha20", "chacha20-ietf", "chacha20-ietf-poly1305"]
 
 struct V2rayOutboundShadowsockServer: Codable {
-    var email: String = ""
-    var address: String = ""
-    var port: Int = 0
+    var email = ""
+    var address = ""
+    var port = 0
     // V2rayOutboundShadowsockMethod
-    var method: String = "aes-256-cfb"
-    var password: String = ""
-    var ota: Bool = false
-    var level: Int = 0
+    var method = "aes-256-cfb"
+    var password = ""
+    var ota = false
+    var level = 0
 }
 
 struct V2rayOutboundSocks: Codable {
@@ -211,15 +193,15 @@ struct V2rayOutboundSocks: Codable {
 }
 
 struct V2rayOutboundSockServer: Codable {
-    var address: String = ""
-    var port: Int = 0
+    var address = ""
+    var port = 0
     var users: [V2rayOutboundSockUser]?
 }
 
 struct V2rayOutboundSockUser: Codable {
-    var user: String = ""
-    var pass: String = ""
-    var level: Int = 0
+    var user = ""
+    var pass = ""
+    var level = 0
 }
 
 struct V2rayOutboundVMess: Codable {
@@ -227,24 +209,24 @@ struct V2rayOutboundVMess: Codable {
 }
 
 struct V2rayOutboundVMessItem: Codable {
-    var address: String = ""
-    var port: Int = 443
+    var address = ""
+    var port = 443
     var users: [V2rayOutboundVMessUser] = [V2rayOutboundVMessUser()]
 }
 
 let V2rayOutboundVMessSecurity = ["aes-128-gcm", "chacha20-poly1305", "auto", "none"]
 
 struct V2rayOutboundVMessUser: Codable {
-    var id: String = ""
-    var alterId: Int = 64// 0-65535
-    var level: Int = 0
+    var id = ""
+    var alterId = 64 // 0-65535
+    var level = 0
     // V2rayOutboundVMessSecurity
-    var security: String = "auto" // aes-128-gcm/chacha20-poly1305/auto/none
+    var security = "auto" // aes-128-gcm/chacha20-poly1305/auto/none
 }
 
 struct V2rayOutboundDns: Codable {
-    var network: String = "" // "tcp" | "udp" | ""
-    var address: String = ""
+    var network = "" // "tcp" | "udp" | ""
+    var address = ""
     var port: Int?
 }
 
@@ -253,14 +235,14 @@ struct V2rayOutboundHttp: Codable {
 }
 
 struct V2rayOutboundHttpServer: Codable {
-    var address: String = ""
-    var port: Int = 0
+    var address = ""
+    var port = 0
     var users: [V2rayOutboundHttpUser] = [V2rayOutboundHttpUser()]
 }
 
 struct V2rayOutboundHttpUser: Codable {
-    var user: String = ""
-    var pass: String = ""
+    var user = ""
+    var pass = ""
 }
 
 struct V2rayOutboundVLess: Codable {
@@ -268,16 +250,16 @@ struct V2rayOutboundVLess: Codable {
 }
 
 struct V2rayOutboundVLessItem: Codable {
-    var address: String = ""
-    var port: Int = 443
+    var address = ""
+    var port = 443
     var users: [V2rayOutboundVLessUser] = [V2rayOutboundVLessUser()]
 }
 
 struct V2rayOutboundVLessUser: Codable {
-    var id: String = ""
-    var flow: String = ""
-    var encryption: String = "none"
-    var level: Int = 0
+    var id = ""
+    var flow = ""
+    var encryption = "none"
+    var level = 0
 }
 
 struct V2rayOutboundTrojan: Codable {
@@ -285,9 +267,9 @@ struct V2rayOutboundTrojan: Codable {
 }
 
 struct V2rayOutboundTrojanServer: Codable {
-    var address: String = ""
-    var port: Int = 0
-    var password: String = ""
-    var level: Int = 0
-    var email: String = ""
+    var address = ""
+    var port = 0
+    var password = ""
+    var level = 0
+    var email = ""
 }

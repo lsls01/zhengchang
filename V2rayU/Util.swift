@@ -9,7 +9,6 @@
 import Cocoa
 
 extension UserDefaults {
-
     enum KEY: String {
         // v2ray-core version
         case xRayCoreVersion
@@ -115,15 +114,15 @@ extension UserDefaults {
 extension String {
     // version compare
     func versionToInt() -> [Int] {
-        return self.components(separatedBy: ".")
-                .map {
-                    Int.init($0) ?? 0
-                }
+        return components(separatedBy: ".")
+            .map {
+                Int($0) ?? 0
+            }
     }
 
     //: ### Base64 encoding a string
     func base64Encoded() -> String? {
-        if let data = self.data(using: .utf8) {
+        if let data = data(using: .utf8) {
             return data.base64EncodedString()
         }
         return nil
@@ -131,10 +130,10 @@ extension String {
 
     //: ### Base64 decoding a string
     func base64Decoded() -> String? {
-        if let _ = self.range(of: ":")?.lowerBound {
+        if let _ = range(of: ":")?.lowerBound {
             return self
         }
-        let base64String = self.replacingOccurrences(of: "-", with: "+").replacingOccurrences(of: "_", with: "/")
+        let base64String = replacingOccurrences(of: "-", with: "+").replacingOccurrences(of: "_", with: "/")
         let padding = base64String.count + (base64String.count % 4 != 0 ? (4 - base64String.count % 4) : 0)
         if let decodedData = Data(base64Encoded: base64String.padding(toLength: padding, withPad: "=", startingAt: 0), options: NSData.Base64DecodingOptions(rawValue: 0)), let decodedString = NSString(data: decodedData, encoding: String.Encoding.utf8.rawValue) {
             return decodedString as String
@@ -150,15 +149,15 @@ extension String {
         return result
     }
 
-    //将原始的url编码为合法的url
+    // 将原始的url编码为合法的url
     func urlEncoded() -> String {
-        let encodeUrlString = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let encodeUrlString = addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         return encodeUrlString ?? self
     }
 
-    //将编码后的url转换回原始的url
+    // 将编码后的url转换回原始的url
     func urlDecoded() -> String {
-        return self.removingPercentEncoding ?? self
+        return removingPercentEncoding ?? self
     }
 }
 
@@ -179,9 +178,9 @@ func shell(launchPath: String, arguments: [String]) -> String? {
     let output = String(data: data, encoding: String.Encoding.utf8)!
 
     if output.count > 0 {
-        //remove newline character.
+        // remove newline character.
         let lastIndex = output.index(before: output.endIndex)
-        return String(output[output.startIndex..<lastIndex])
+        return String(output[output.startIndex ..< lastIndex])
     }
 
     return output
@@ -207,9 +206,9 @@ struct TemporaryFile {
     /// - 注意: 这里不会创建文件！
     init(creatingTempDirectoryForFilename filename: String) throws {
         let (directory, deleteDirectory) = try FileManager.default
-                .urlForUniqueTemporaryDirectory()
-        self.directoryURL = directory
-        self.fileURL = directory.appendingPathComponent(filename)
+            .urlForUniqueTemporaryDirectory()
+        directoryURL = directory
+        fileURL = directory.appendingPathComponent(filename)
         self.deleteDirectory = deleteDirectory
     }
 }
@@ -222,16 +221,17 @@ extension FileManager {
     ///
     /// - 注意: 在应用退出后，不应该存在依赖的临时目录。
     func urlForUniqueTemporaryDirectory(preferredName: String? = nil) throws
-                    -> (url: URL, deleteDirectory: () throws -> Void) {
+        -> (url: URL, deleteDirectory: () throws -> Void)
+    {
         let basename = preferredName ?? UUID().uuidString
 
         var counter = 0
-        var createdSubdirectory: URL? = nil
+        var createdSubdirectory: URL?
         repeat {
             do {
                 let subdirName = counter == 0 ? basename : "\(basename)-\(counter)"
                 let subdirectory = temporaryDirectory
-                        .appendingPathComponent(subdirName, isDirectory: true)
+                    .appendingPathComponent(subdirName, isDirectory: true)
                 try createDirectory(at: subdirectory, withIntermediateDirectories: false)
                 createdSubdirectory = subdirectory
             } catch CocoaError.fileWriteFileExists {

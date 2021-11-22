@@ -10,16 +10,16 @@ import Cocoa
 
 // Inbound
 struct V2rayInbound: Codable {
-    var port: String = "1080"
-    var listen: String = "127.0.0.1"
+    var port = "1080"
+    var listen = "127.0.0.1"
     var `protocol`: V2rayProtocolInbound = .socks
     var tag: String?
     var streamSettings: V2rayStreamSettings?
     var sniffing: V2rayInboundSniffing?
     var allocate: V2rayInboundAllocate?
 
-    var settingHttp: V2rayInboundHttp = V2rayInboundHttp()
-    var settingSocks: V2rayInboundSocks = V2rayInboundSocks()
+    var settingHttp = V2rayInboundHttp()
+    var settingSocks = V2rayInboundSocks()
     var settingShadowsocks: V2rayInboundShadowsocks?
     var settingVMess: V2rayInboundVMess?
     var settingVLess: V2rayInboundVLess?
@@ -42,7 +42,7 @@ extension V2rayInbound {
 
         port = try container.decode(String.self, forKey: CodingKeys.port)
         listen = try container.decode(String.self, forKey: CodingKeys.listen)
-        `protocol` = try container.decode(V2rayProtocolInbound.self, forKey: CodingKeys.`protocol`)
+        `protocol` = try container.decode(V2rayProtocolInbound.self, forKey: CodingKeys.protocol)
         tag = try container.decode(String.self, forKey: CodingKeys.tag)
 
         // ignore nil
@@ -59,22 +59,16 @@ extension V2rayInbound {
         switch `protocol` {
         case .http:
             settingHttp = try container.decode(V2rayInboundHttp.self, forKey: CodingKeys.settings)
-            break
         case .shadowsocks:
             settingShadowsocks = try container.decode(V2rayInboundShadowsocks.self, forKey: CodingKeys.settings)
-            break
         case .socks:
             settingSocks = try container.decode(V2rayInboundSocks.self, forKey: CodingKeys.settings)
-            break
         case .vmess:
             settingVMess = try container.decode(V2rayInboundVMess.self, forKey: CodingKeys.settings)
-            break
         case .vless:
             settingVLess = try container.decode(V2rayInboundVLess.self, forKey: CodingKeys.settings)
-            break
         case .trojan:
             settingTrojan = try container.decode(V2rayInboundTrojan.self, forKey: CodingKeys.settings)
-            break
         }
     }
 
@@ -82,7 +76,7 @@ extension V2rayInbound {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(port, forKey: .port)
         try container.encode(listen, forKey: .listen)
-        try container.encode(`protocol`, forKey: .`protocol`)
+        try container.encode(`protocol`, forKey: .protocol)
 
         // ignore nil
         if tag != nil {
@@ -102,23 +96,17 @@ extension V2rayInbound {
         // encode settings depends on `protocol`
         switch `protocol` {
         case .http:
-            try container.encode(self.settingHttp, forKey: .settings)
-            break
+            try container.encode(settingHttp, forKey: .settings)
         case .shadowsocks:
-            try container.encode(self.settingShadowsocks, forKey: .settings)
-            break
+            try container.encode(settingShadowsocks, forKey: .settings)
         case .socks:
-            try container.encode(self.settingSocks, forKey: .settings)
-            break
+            try container.encode(settingSocks, forKey: .settings)
         case .vmess:
-            try container.encode(self.settingVMess, forKey: .settings)
-            break
+            try container.encode(settingVMess, forKey: .settings)
         case .vless:
-            try container.encode(self.settingVLess, forKey: .settings)
-            break
+            try container.encode(settingVLess, forKey: .settings)
         case .trojan:
-            try container.encode(self.settingTrojan, forKey: .settings)
-            break
+            try container.encode(settingTrojan, forKey: .settings)
         }
     }
 }
@@ -162,16 +150,16 @@ struct V2rayInboundHttpAccount: Codable {
 
 struct V2rayInboundShadowsocks: Codable {
     var email, method, password: String?
-    var udp: Bool = false
-    var level: Int = 0
-    var ota: Bool = true
-    var network: String = "tcp" // "tcp" | "udp" | "tcp,udp"
+    var udp = false
+    var level = 0
+    var ota = true
+    var network = "tcp" // "tcp" | "udp" | "tcp,udp"
 }
 
 struct V2rayInboundSocks: Codable {
-    var auth: String = "noauth" // noauth | password
+    var auth = "noauth" // noauth | password
     var accounts: [V2rayInboundSockAccount]?
-    var udp: Bool = true
+    var udp = true
     var ip: String?
     var userLevel: Int?
 }
@@ -190,8 +178,8 @@ struct V2rayInboundVMess: Codable {
 
 struct V2RayInboundVMessClient: Codable {
     var id: String?
-    var level: Int = 0
-    var alterId: Int = 64
+    var level = 0
+    var alterId = 64
     var email: String?
 }
 
@@ -200,45 +188,45 @@ struct V2RayInboundVMessDetour: Codable {
 }
 
 struct V2RayInboundVMessDefault: Codable {
-    var level: Int = 0
-    var alterId: Int = 64
+    var level = 0
+    var alterId = 64
 }
 
 struct V2rayInboundVLess: Codable {
     var clients: [V2rayInboundVLessClient]?
-    var decryption: String = "none"
+    var decryption = "none"
     var fallbacks: [V2rayInboundVLessFallback]? = [V2rayInboundVLessFallback()]
 }
 
 struct V2rayInboundVLessClient: Codable {
     var id: String?
-    var flow: String = ""
-    var level: Int = 0
+    var flow = ""
+    var level = 0
     var email: String?
 }
 
 struct V2rayInboundVLessFallback: Codable {
     var alpn: String? = ""
     var path: String? = ""
-    var dest: Int = 80
-    var xver: Int = 0
+    var dest = 80
+    var xver = 0
 }
 
 struct V2rayInboundTrojan: Codable {
     var clients: [V2rayInboundTrojanClient]?
-    var decryption: String = "none"
+    var decryption = "none"
     var fallbacks: [V2rayInboundTrojanFallback]? = [V2rayInboundTrojanFallback()]
 }
 
 struct V2rayInboundTrojanClient: Codable {
-    var password: String = ""
-    var level: Int = 0
+    var password = ""
+    var level = 0
     var email: String?
 }
 
 struct V2rayInboundTrojanFallback: Codable {
     var alpn: String? = ""
     var path: String? = ""
-    var dest: Int = 80
-    var xver: Int = 0
+    var dest = 80
+    var xver = 0
 }

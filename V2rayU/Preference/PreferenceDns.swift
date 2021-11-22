@@ -7,17 +7,16 @@
 //
 
 import Cocoa
-import Preferences
 import JavaScriptCore
-
+import Preferences
 
 final class PreferenceDnsViewController: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = PreferencePane.Identifier.dnsTab
+    let preferencePaneIdentifier = Preferences.PaneIdentifier.dnsTab
     let preferencePaneTitle = "Dns"
     let toolbarItemIcon = NSImage(named: NSImage.multipleDocumentsName)!
 
-    @IBOutlet weak var tips: NSTextField!
-    @IBOutlet weak var saveBtn: NSButtonCell!
+    @IBOutlet var tips: NSTextField!
+    @IBOutlet var saveBtn: NSButtonCell!
 
     override var nibName: NSNib.Name? {
         return "PreferenceDns"
@@ -28,15 +27,15 @@ final class PreferenceDnsViewController: NSViewController, PreferencePane {
     override func viewDidLoad() {
         super.viewDidLoad()
         // fix: https://github.com/sindresorhus/Preferences/issues/31
-        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
-        self.tips.stringValue = ""
-        self.dnsJson.string = UserDefaults.get(forKey: .v2rayDnsJson) ?? "{}"
-        self.saveBtn.state = .on
+        preferredContentSize = NSMakeSize(view.frame.size.width, view.frame.size.height)
+        tips.stringValue = ""
+        dnsJson.string = UserDefaults.get(forKey: .v2rayDnsJson) ?? "{}"
+        saveBtn.state = .on
     }
 
-    @IBAction func save(_ sender: Any) {
-        self.tips.stringValue = "save success"
-        self.saveBtn.state = .on
+    @IBAction func save(_: Any) {
+        tips.stringValue = "save success"
+        saveBtn.state = .on
 
         if var str = dnsJson?.string {
             if let context = JSContext() {
@@ -58,9 +57,9 @@ final class PreferenceDnsViewController: NSViewController, PreferencePane {
                                 // set current server item and reload v2ray-core
                                 regenerateAllConfig()
 
-                                self.dnsJson.string = reStr
+                                dnsJson.string = reStr
                             } else {
-                                self.tips.stringValue = reStr
+                                tips.stringValue = reStr
                             }
                         }
                     }
@@ -74,14 +73,14 @@ final class PreferenceDnsViewController: NSViewController, PreferencePane {
         }
     }
 
-    @IBAction func goHelp(_ sender: Any) {
+    @IBAction func goHelp(_: Any) {
         guard let url = URL(string: "https://guide.v2fly.org/basics/dns.html") else {
             return
         }
         NSWorkspace.shared.open(url)
     }
 
-    @IBAction func goViewConfig(_ sender: Any) {
+    @IBAction func goViewConfig(_: Any) {
         let confUrl = PACUrl.replacingOccurrences(of: "pac/proxy.js", with: "config.json")
         guard let url = URL(string: confUrl) else {
             return

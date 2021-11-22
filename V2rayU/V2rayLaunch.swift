@@ -6,10 +6,10 @@
 //  Copyright © 2018 yanue. All rights reserved.
 //
 
-import Cocoa
-import SystemConfiguration
 import Alamofire
+import Cocoa
 import Swifter
+import SystemConfiguration
 
 let LAUNCH_AGENT_NAME = "yanue.v2rayu.v2ray-core"
 let AppResourcesPath = Bundle.main.bundlePath + "/Contents/Resources"
@@ -69,7 +69,7 @@ class V2rayLaunch: NSObject {
         if let scriptObject = NSAppleScript(source: "do shell script \"" + doSh + "\" with administrator privileges") {
             let output: NSAppleEventDescriptor = scriptObject.executeAndReturnError(&error)
             print(output.stringValue ?? "")
-            if (error != nil) {
+            if error != nil {
                 print("error: \(String(describing: error))")
             }
         }
@@ -132,7 +132,7 @@ class V2rayLaunch: NSObject {
     static func OpenLogs() {
         if !FileManager.default.fileExists(atPath: logFilePath) {
             let txt = ""
-            try! txt.write(to: URL.init(fileURLWithPath: logFilePath), atomically: true, encoding: String.Encoding.utf8)
+            try! txt.write(to: URL(fileURLWithPath: logFilePath), atomically: true, encoding: String.Encoding.utf8)
         }
 
         let task = Process.launchedProcess(launchPath: "/usr/bin/open", arguments: [logFilePath])
@@ -146,14 +146,14 @@ class V2rayLaunch: NSObject {
 
     static func ClearLogs() {
         let txt = ""
-        try! txt.write(to: URL.init(fileURLWithPath: logFilePath), atomically: true, encoding: String.Encoding.utf8)
+        try! txt.write(to: URL(fileURLWithPath: logFilePath), atomically: true, encoding: String.Encoding.utf8)
     }
 
     static func setSystemProxy(mode: RunMode, httpPort: String = "", sockPort: String = "") {
         // Ensure launch agent directory is existed.
         let fileMgr = FileManager.default
         if !fileMgr.isExecutableFile(atPath: AppHomePath + "/V2rayUTool") {
-            self.install()
+            install()
         }
 
         let task = Process.launchedProcess(launchPath: AppHomePath + "/V2rayUTool", arguments: ["-mode", mode.rawValue, "-pac-url", PACUrl, "-http-port", httpPort, "-sock-port", sockPort])
@@ -179,7 +179,7 @@ class V2rayLaunch: NSObject {
             let pacPort = UInt16(UserDefaults.get(forKey: .localPacPort) ?? "11085") ?? 11085
             try webServer.start(pacPort)
             print("webServer.start at:\(pacPort)")
-        } catch let error {
+        } catch {
             print("webServer.start error:\(error)")
         }
     }

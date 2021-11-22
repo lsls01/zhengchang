@@ -6,9 +6,9 @@
 //  Copyright © 2018 yanue. All rights reserved.
 //
 
+import Alamofire
 import Cocoa
 import Preferences
-import Alamofire
 
 let PACRulesDirPath = AppHomePath + "/pac/"
 let PACUserRuleFilePath = PACRulesDirPath + "user-rule.txt"
@@ -19,40 +19,40 @@ let GFWListFilePath = PACRulesDirPath + "gfwlist.txt"
 let GFWListURL = "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
 
 final class PreferencePacViewController: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = PreferencePane.Identifier.pacTab
+    let preferencePaneIdentifier = Preferences.PaneIdentifier.pacTab
     let preferencePaneTitle = "Pac"
     let toolbarItemIcon = NSImage(named: NSImage.bookmarksTemplateName)!
 
-    @IBOutlet weak var tips: NSTextField!
+    @IBOutlet var tips: NSTextField!
 
     override var nibName: NSNib.Name? {
         return "PreferencePac"
     }
 
-    @IBOutlet weak var gfwPacListUrl: NSTextField!
+    @IBOutlet var gfwPacListUrl: NSTextField!
     @IBOutlet var userRulesView: NSTextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // fix: https://github.com/sindresorhus/Preferences/issues/31
-        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
-        self.tips.stringValue = ""
+        preferredContentSize = NSMakeSize(view.frame.size.width, view.frame.size.height)
+        tips.stringValue = ""
 
         let gfwUrl = UserDefaults.get(forKey: .gfwPacListUrl)
         if gfwUrl != nil {
-            self.gfwPacListUrl.stringValue = gfwUrl!
+            gfwPacListUrl.stringValue = gfwUrl!
         } else {
-            self.gfwPacListUrl.stringValue = GFWListURL
+            gfwPacListUrl.stringValue = GFWListURL
         }
 
         // read userRules from UserDefaults
         let txt = UserDefaults.get(forKey: .userRules)
         var userRuleTxt = """
-                          ! Put user rules line by line in this file.
-                          ! See https://adblockplus.org/en/filter-cheatsheet
-                          ||api.github.com
-                          ||githubusercontent.com
-                          """
+        ! Put user rules line by line in this file.
+        ! See https://adblockplus.org/en/filter-cheatsheet
+        ||api.github.com
+        ||githubusercontent.com
+        """
         if txt != nil {
             if txt!.count > 0 {
                 userRuleTxt = txt!
@@ -71,7 +71,7 @@ final class PreferencePacViewController: NSViewController, PreferencePane {
         userRulesView.string = userRuleTxt
     }
 
-    @IBAction func viewPacFile(_ sender: Any) {
+    @IBAction func viewPacFile(_: Any) {
         print("viewPacFile PACUrl", PACUrl)
         guard let url = URL(string: PACUrl) else {
             return
@@ -79,19 +79,19 @@ final class PreferencePacViewController: NSViewController, PreferencePane {
         NSWorkspace.shared.open(url)
     }
 
-    @IBAction func updatePac(_ sender: Any) {
-        self.tips.stringValue = "Updating Pac Rules ..."
+    @IBAction func updatePac(_: Any) {
+        tips.stringValue = "Updating Pac Rules ..."
 
         if let str = userRulesView?.string {
             // save user rules into UserDefaults
             UserDefaults.set(forKey: .userRules, value: str)
-            UpdatePACFromGFWList(gfwPacListUrl: self.gfwPacListUrl.stringValue)
+            UpdatePACFromGFWList(gfwPacListUrl: gfwPacListUrl.stringValue)
 
             if GeneratePACFile(rewrite: true) {
                 // Popup a user notification
-                self.tips.stringValue = "PAC has been updated by User Rules."
+                tips.stringValue = "PAC has been updated by User Rules."
             } else {
-                self.tips.stringValue = "It's failed to update PAC by User Rules."
+                tips.stringValue = "It's failed to update PAC by User Rules."
             }
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
@@ -106,31 +106,29 @@ final class PreferencePacViewController: NSViewController, PreferencePane {
         if !FileManager.default.fileExists(atPath: PACRulesDirPath) {
             do {
                 try FileManager.default.createDirectory(atPath: PACRulesDirPath, withIntermediateDirectories: true, attributes: nil)
-            } catch {
-            }
+            } catch {}
         }
 
-        Alamofire.request(gfwPacListUrl).responseString {
+        AF.request(gfwPacListUrl).responseString {
             response in
-            if response.result.isSuccess {
-                if let v = response.result.value {
-                    do {
-                        try v.write(toFile: GFWListFilePath, atomically: true, encoding: String.Encoding.utf8)
+            switch response.result {
+            case let .success(v):
+                do {
+                    try v.write(toFile: GFWListFilePath, atomically: true, encoding: String.Encoding.utf8)
 
-                        // save to UserDefaults
-                        UserDefaults.set(forKey: .gfwPacListUrl, value: gfwPacListUrl)
-                        UserDefaults.set(forKey: .gfwPacFileContent, value: v)
+                    // save to UserDefaults
+                    UserDefaults.set(forKey: .gfwPacListUrl, value: gfwPacListUrl)
+                    UserDefaults.set(forKey: .gfwPacFileContent, value: v)
 
-                        if GeneratePACFile(rewrite: true) {
-                            // Popup a user notification
-                            self.tips.stringValue = "PAC has been updated by latest GFW List."
-                        }
-                    } catch {
+                    if GeneratePACFile(rewrite: true) {
                         // Popup a user notification
-                        self.tips.stringValue = "Failed to Write latest GFW List."
+                        self.tips.stringValue = "PAC has been updated by latest GFW List."
                     }
+                } catch {
+                    // Popup a user notification
+                    self.tips.stringValue = "Failed to Write latest GFW List."
                 }
-            } else {
+            case .failure:
                 // Popup a user notification
                 self.tips.stringValue = "Failed to download latest GFW List."
             }
@@ -148,7 +146,7 @@ func GeneratePACFile(rewrite: Bool) -> Bool {
     _ = shell(launchPath: "/bin/bash", arguments: ["-c", "cd " + AppHomePath + " && /bin/chmod -R 755 ./pac"])
 
     // if PACFilePath exist and not need rewrite
-    if (!(rewrite || !FileManager.default.fileExists(atPath: PACFilePath))) {
+    if !(rewrite || !FileManager.default.fileExists(atPath: PACFilePath)) {
         return true
     }
 
@@ -163,7 +161,7 @@ func GeneratePACFile(rewrite: Bool) -> Bool {
         let userRuleLines = userRules.components(separatedBy: CharacterSet.newlines)
         lines = userRuleLines + lines
         // Filter empty and comment lines
-        lines = lines.filter({ (s: String) -> Bool in
+        lines = lines.filter { (s: String) -> Bool in
             if s.isEmpty {
                 return false
             }
@@ -172,7 +170,7 @@ func GeneratePACFile(rewrite: Bool) -> Bool {
                 return false
             }
             return true
-        })
+        }
 
         do {
             // rule lines to json array
@@ -180,7 +178,7 @@ func GeneratePACFile(rewrite: Bool) -> Bool {
             let rulesJsonStr = String(data: rulesJsonData, encoding: String.Encoding.utf8)
 
             // Get raw pac js
-            let jsData = try? Data(contentsOf: URL.init(fileURLWithPath: PACAbpFile))
+            let jsData = try? Data(contentsOf: URL(fileURLWithPath: PACAbpFile))
             var jsStr = String(data: jsData!, encoding: String.Encoding.utf8)
 
             // Replace rules placeholder in pac js
@@ -199,9 +197,7 @@ func GeneratePACFile(rewrite: Bool) -> Bool {
             // Write the pac js to file.
             try jsStr!.data(using: String.Encoding.utf8)?.write(to: URL(fileURLWithPath: PACFilePath), options: .atomic)
             return true
-        } catch {
-
-        }
+        } catch {}
     }
     return false
 }

@@ -13,7 +13,7 @@ import SwiftyJSON
 class V2rayServer: NSObject {
     static var shared = V2rayServer()
 
-    static private let defaultV2rayName = "config.default"
+    private static let defaultV2rayName = "config.default"
 
     // Initialization
     override init() {
@@ -22,12 +22,12 @@ class V2rayServer: NSObject {
     }
 
     // v2ray server list
-    static private var v2rayItemList: [V2rayItem] = []
+    private static var v2rayItemList: [V2rayItem] = []
 
     // (init) load v2ray server list from UserDefaults
     static func loadConfig() {
         // static reset
-        self.v2rayItemList = []
+        v2rayItemList = []
 
         // load name list from UserDefaults
         var list = UserDefaults.getArray(forKey: .v2rayServerList)
@@ -35,7 +35,7 @@ class V2rayServer: NSObject {
         if list == nil {
             list = ["default"]
             // store default
-            let model = V2rayItem(name: self.defaultV2rayName, remark: "default", isValid: false)
+            let model = V2rayItem(name: defaultV2rayName, remark: "default", isValid: false)
             model.store()
         }
 
@@ -47,50 +47,49 @@ class V2rayServer: NSObject {
                 continue
             }
             // append
-            self.v2rayItemList.append(v2ray)
+            v2rayItemList.append(v2ray)
         }
     }
 
     // get list from v2ray server list
     static func list() -> [V2rayItem] {
-        return self.v2rayItemList
+        return v2rayItemList
     }
 
     // get count from v2ray server list
     static func count() -> Int {
-        return self.v2rayItemList.count
+        return v2rayItemList.count
     }
 
     static func edit(rowIndex: Int, remark: String) {
-        if !self.v2rayItemList.indices.contains(rowIndex) {
+        if !v2rayItemList.indices.contains(rowIndex) {
             NSLog("index out of range", rowIndex)
             return
         }
 
         // update list
-        self.v2rayItemList[rowIndex].remark = remark
+        v2rayItemList[rowIndex].remark = remark
 
         // save
-        let v2ray = self.v2rayItemList[rowIndex]
+        let v2ray = v2rayItemList[rowIndex]
         v2ray.remark = remark
         v2ray.store()
     }
 
     static func edit(rowIndex: Int, url: String) {
-        if !self.v2rayItemList.indices.contains(rowIndex) {
+        if !v2rayItemList.indices.contains(rowIndex) {
             NSLog("index out of range", rowIndex)
             return
         }
 
         // update list
-        self.v2rayItemList[rowIndex].url = url
+        v2rayItemList[rowIndex].url = url
 
         // save
-        let v2ray = self.v2rayItemList[rowIndex]
+        let v2ray = v2rayItemList[rowIndex]
         v2ray.url = url
         v2ray.store()
     }
-
 
     // move item to new index
     static func move(oldIndex: Int, newIndex: Int) {
@@ -103,12 +102,12 @@ class V2rayServer: NSObject {
             return
         }
 
-        let o = self.v2rayItemList[oldIndex]
-        self.v2rayItemList.remove(at: oldIndex)
-        self.v2rayItemList.insert(o, at: newIndex)
+        let o = v2rayItemList[oldIndex]
+        v2rayItemList.remove(at: oldIndex)
+        v2rayItemList.insert(o, at: newIndex)
 
         // update server list UserDefaults
-        self.saveItemList()
+        saveItemList()
     }
 
     // add v2ray server (tmp)
@@ -121,10 +120,10 @@ class V2rayServer: NSObject {
         v2ray.store()
 
         // just add to mem
-        self.v2rayItemList.append(v2ray)
+        v2rayItemList.append(v2ray)
 
         // update server list UserDefaults
-        self.saveItemList()
+        saveItemList()
     }
 
     // add v2ray server (by scan qrcode)
@@ -142,10 +141,10 @@ class V2rayServer: NSObject {
         v2ray.store()
 
         // just add to mem
-        self.v2rayItemList.append(v2ray)
+        v2rayItemList.append(v2ray)
 
         // update server list UserDefaults
-        self.saveItemList()
+        saveItemList()
     }
 
     // remove v2ray server (tmp and UserDefaults and config json file)
@@ -158,13 +157,13 @@ class V2rayServer: NSObject {
         let v2ray = V2rayServer.v2rayItemList[idx]
 
         // delete from tmp
-        self.v2rayItemList.remove(at: idx)
+        v2rayItemList.remove(at: idx)
 
         // delete from v2ray UserDefaults
         V2rayItem.remove(name: v2ray.name)
 
         // update server list UserDefaults
-        self.saveItemList()
+        saveItemList()
 
         // if cuerrent item is default
         let curName = UserDefaults.get(forKey: .v2rayCurrentServerName)
@@ -189,7 +188,7 @@ class V2rayServer: NSObject {
         }
 
         // update server list UserDefaults
-        self.saveItemList()
+        saveItemList()
 
         // reload
         V2rayServer.loadConfig()
@@ -205,7 +204,7 @@ class V2rayServer: NSObject {
 
     // update server list UserDefaults
     static func saveItemList() {
-        var v2rayServerList: Array<String> = []
+        var v2rayServerList: [String] = []
         for item in V2rayServer.list() {
             v2rayServerList.append(item.name)
         }
@@ -215,7 +214,7 @@ class V2rayServer: NSObject {
 
     // check url is exists
     static func exist(url: String) -> Bool {
-        for item in self.v2rayItemList {
+        for item in v2rayItemList {
             if item.url == url {
                 return true
             }
@@ -237,13 +236,12 @@ class V2rayServer: NSObject {
             return nil
         }
 
-        return self.v2rayItemList[idx]
+        return v2rayItemList[idx]
     }
 
     // load selected v2ray item
     static func loadSelectedItem() -> V2rayItem? {
-
-        var v2ray: V2rayItem? = nil
+        var v2ray: V2rayItem?
 
         if let curName = UserDefaults.get(forKey: .v2rayCurrentServerName) {
             v2ray = V2rayItem.load(name: curName)
@@ -251,7 +249,7 @@ class V2rayServer: NSObject {
 
         // if default server not found
         if v2ray == nil {
-            for item in self.v2rayItemList {
+            for item in v2rayItemList {
                 if item.isValid {
                     v2ray = V2rayItem.load(name: item.name)
                     break
@@ -264,11 +262,11 @@ class V2rayServer: NSObject {
 
     // save json data
     static func save(idx: Int, isValid: Bool, jsonData: String) -> String {
-        if !self.v2rayItemList.indices.contains(idx) {
+        if !v2rayItemList.indices.contains(idx) {
             return "index out of range"
         }
 
-        let v2ray = self.v2rayItemList[idx]
+        let v2ray = v2rayItemList[idx]
 
         // store
         v2ray.isValid = isValid
@@ -276,7 +274,7 @@ class V2rayServer: NSObject {
         v2ray.store()
 
         // update current
-        self.v2rayItemList[idx] = v2ray
+        v2rayItemList[idx] = v2ray
         var usableCount = 0
 
         if isValid {
@@ -303,9 +301,9 @@ class V2rayServer: NSObject {
         v2ray.store()
 
         // refresh data
-        for (idx, item) in self.v2rayItemList.enumerated() {
+        for (idx, item) in v2rayItemList.enumerated() {
             if item.name == v2ray.name {
-                self.v2rayItemList[idx].json = jsonData
+                v2rayItemList[idx].json = jsonData
                 break
             }
         }
@@ -313,7 +311,7 @@ class V2rayServer: NSObject {
 
     // get by name
     static func getIndex(name: String) -> Int {
-        for (idx, item) in self.v2rayItemList.enumerated() {
+        for (idx, item) in v2rayItemList.enumerated() {
             if item.name == name {
                 return idx
             }
@@ -345,13 +343,13 @@ class V2rayItem: NSObject, NSCoding {
 
     // decode
     required init(coder decoder: NSCoder) {
-        self.name = decoder.decodeObject(forKey: "Name") as? String ?? ""
-        self.remark = decoder.decodeObject(forKey: "Remark") as? String ?? ""
-        self.json = decoder.decodeObject(forKey: "Json") as? String ?? ""
-        self.isValid = decoder.decodeBool(forKey: "IsValid")
-        self.url = decoder.decodeObject(forKey: "Url") as? String ?? ""
-        self.subscribe = decoder.decodeObject(forKey: "Subscribe") as? String ?? ""
-        self.speed = decoder.decodeObject(forKey: "Speed") as? String ?? ""
+        name = decoder.decodeObject(forKey: "Name") as? String ?? ""
+        remark = decoder.decodeObject(forKey: "Remark") as? String ?? ""
+        json = decoder.decodeObject(forKey: "Json") as? String ?? ""
+        isValid = decoder.decodeBool(forKey: "IsValid")
+        url = decoder.decodeObject(forKey: "Url") as? String ?? ""
+        subscribe = decoder.decodeObject(forKey: "Subscribe") as? String ?? ""
+        speed = decoder.decodeObject(forKey: "Speed") as? String ?? ""
     }
 
     // object encode
@@ -367,8 +365,9 @@ class V2rayItem: NSObject, NSCoding {
 
     // store into UserDefaults
     func store() {
-        let modelData = NSKeyedArchiver.archivedData(withRootObject: self)
-        UserDefaults.standard.set(modelData, forKey: self.name)
+        if let modelData = try? NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: true) {
+            UserDefaults.standard.set(modelData, forKey: name)
+        }
     }
 
     // static load from UserDefaults

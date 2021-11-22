@@ -10,24 +10,24 @@ import Cocoa
 import Preferences
 
 final class PreferenceAdvanceViewController: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = PreferencePane.Identifier.advanceTab
+    let preferencePaneIdentifier = Preferences.PaneIdentifier.advanceTab
     let preferencePaneTitle = "Advance"
     let toolbarItemIcon = NSImage(named: NSImage.advancedName)!
 
-    @IBOutlet weak var saveBtn: NSButtonCell!
-    @IBOutlet weak var sockPort: NSTextField!
-    @IBOutlet weak var httpPort: NSTextField!
-    @IBOutlet weak var sockHost: NSTextField!
-    @IBOutlet weak var httpHost: NSTextField!
-    @IBOutlet weak var pacPort: NSTextField!
+    @IBOutlet var saveBtn: NSButtonCell!
+    @IBOutlet var sockPort: NSTextField!
+    @IBOutlet var httpPort: NSTextField!
+    @IBOutlet var sockHost: NSTextField!
+    @IBOutlet var httpHost: NSTextField!
+    @IBOutlet var pacPort: NSTextField!
 
-    @IBOutlet weak var enableUdp: NSButton!
-    @IBOutlet weak var enableMux: NSButton!
-    @IBOutlet weak var enableSniffing: NSButton!
+    @IBOutlet var enableUdp: NSButton!
+    @IBOutlet var enableMux: NSButton!
+    @IBOutlet var enableSniffing: NSButton!
 
-    @IBOutlet weak var muxConcurrent: NSTextField!
-    @IBOutlet weak var logLevel: NSPopUpButton!
-    @IBOutlet weak var tips: NSTextField!
+    @IBOutlet var muxConcurrent: NSTextField!
+    @IBOutlet var logLevel: NSPopUpButton!
+    @IBOutlet var tips: NSTextField!
 
     override var nibName: NSNib.Name? {
         return "PreferenceAdvance"
@@ -36,8 +36,8 @@ final class PreferenceAdvanceViewController: NSViewController, PreferencePane {
     override func viewDidLoad() {
         super.viewDidLoad()
         // fix: https://github.com/sindresorhus/Preferences/issues/31
-        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
-        self.tips.stringValue = ""
+        preferredContentSize = NSMakeSize(view.frame.size.width, view.frame.size.height)
+        tips.stringValue = ""
 
         let enableMuxState = UserDefaults.getBool(forKey: .enableMux)
         let enableUdpState = UserDefaults.getBool(forKey: .enableUdp)
@@ -52,37 +52,37 @@ final class PreferenceAdvanceViewController: NSViewController, PreferencePane {
 
         // select item
         print("host", localSockHost, localHttpHost)
-        self.logLevel.selectItem(withTitle: UserDefaults.get(forKey: .v2rayLogLevel) ?? "info")
+        logLevel.selectItem(withTitle: UserDefaults.get(forKey: .v2rayLogLevel) ?? "info")
 
-        self.enableUdp.state = enableUdpState ? .on : .off
-        self.enableMux.state = enableMuxState ? .on : .off
-        self.enableSniffing.state = enableSniffingState ? .on : .off
-        self.sockPort.stringValue = localSockPort
-        self.sockHost.stringValue = localSockHost
-        self.httpPort.stringValue = localHttpPort
-        self.httpHost.stringValue = localHttpHost
-        self.pacPort.stringValue = localPacPort
-        self.muxConcurrent.intValue = Int32(muxConcurrent) ?? 8;
+        enableUdp.state = enableUdpState ? .on : .off
+        enableMux.state = enableMuxState ? .on : .off
+        enableSniffing.state = enableSniffingState ? .on : .off
+        sockPort.stringValue = localSockPort
+        sockHost.stringValue = localSockHost
+        httpPort.stringValue = localHttpPort
+        httpHost.stringValue = localHttpHost
+        pacPort.stringValue = localPacPort
+        self.muxConcurrent.intValue = Int32(muxConcurrent) ?? 8
     }
 
-    @IBAction func saveSettings(_ sender: Any) {
-        self.saveBtn.state = .on
+    @IBAction func saveSettings(_: Any) {
+        saveBtn.state = .on
         saveSettingsAndReload()
     }
 
     func saveSettingsAndReload() {
-        let httpPortVal = String(self.httpPort.intValue)
-        let sockPortVal = String(self.sockPort.intValue)
-        let pacPortVal = String(self.pacPort.intValue)
+        let httpPortVal = String(httpPort.intValue)
+        let sockPortVal = String(sockPort.intValue)
+        let pacPortVal = String(pacPort.intValue)
 
-        let enableUdpVal = self.enableUdp.state.rawValue > 0
-        let enableMuxVal = self.enableMux.state.rawValue > 0
-        let enableSniffingVal = self.enableSniffing.state.rawValue > 0
+        let enableUdpVal = enableUdp.state.rawValue > 0
+        let enableMuxVal = enableMux.state.rawValue > 0
+        let enableSniffingVal = enableSniffing.state.rawValue > 0
 
-        let muxConcurrentVal = self.muxConcurrent.intValue
+        let muxConcurrentVal = muxConcurrent.intValue
 
         if httpPortVal == sockPortVal || httpPortVal == pacPortVal || sockPortVal == pacPortVal {
-            self.tips.stringValue = "the ports(http,sock,pac) cannot be the same"
+            tips.stringValue = "the ports(http,sock,pac) cannot be the same"
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 // your code here
@@ -97,16 +97,16 @@ final class PreferenceAdvanceViewController: NSViewController, PreferencePane {
         UserDefaults.setBool(forKey: .enableSniffing, value: enableSniffingVal)
 
         UserDefaults.set(forKey: .localHttpPort, value: httpPortVal)
-        UserDefaults.set(forKey: .localHttpHost, value: self.httpHost.stringValue)
+        UserDefaults.set(forKey: .localHttpHost, value: httpHost.stringValue)
         UserDefaults.set(forKey: .localSockPort, value: sockPortVal)
-        UserDefaults.set(forKey: .localSockHost, value: self.sockHost.stringValue)
+        UserDefaults.set(forKey: .localSockHost, value: sockHost.stringValue)
         UserDefaults.set(forKey: .localPacPort, value: pacPortVal)
         UserDefaults.set(forKey: .muxConcurrent, value: String(muxConcurrentVal))
-        print("self.sockHost.stringValue", self.sockHost.stringValue)
+        print("self.sockHost.stringValue", sockHost.stringValue)
 
         var logLevelName = "info"
 
-        if let logLevelVal = self.logLevel.selectedItem {
+        if let logLevelVal = logLevel.selectedItem {
             print("logLevelVal", logLevelVal)
             logLevelName = logLevelVal.title
             UserDefaults.set(forKey: .v2rayLogLevel, value: logLevelVal.title)
@@ -130,7 +130,7 @@ final class PreferenceAdvanceViewController: NSViewController, PreferencePane {
         // restart pac http server
         V2rayLaunch.startHttpServer()
 
-        self.tips.stringValue = "save success."
+        tips.stringValue = "save success."
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             // your code here

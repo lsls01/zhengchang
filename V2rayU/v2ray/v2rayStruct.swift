@@ -11,11 +11,11 @@ import Cocoa
 // doc: https://www.v2ray.com/chapter_02/01_overview.html
 
 struct V2rayStruct: Codable {
-    var log: V2rayLog = V2rayLog()
+    var log = V2rayLog()
     var api: V2rayApi?
-    var dns: V2rayDns = V2rayDns()
+    var dns = V2rayDns()
     var stats: V2rayStats?
-    var routing: V2rayRouting = V2rayRouting()
+    var routing = V2rayRouting()
     var policy: V2rayPolicy?
     var inbounds: [V2rayInbound]? // > 4.0
     var outbounds: [V2rayOutbound]? // > 4.0
@@ -43,25 +43,21 @@ struct V2rayLog: Codable {
     }
 
     var loglevel: logLevel = .info
-    var error: String = ""
-    var access: String = ""
+    var error = ""
+    var access = ""
 }
 
-struct V2rayApi: Codable {
-
-}
+struct V2rayApi: Codable {}
 
 struct V2rayDns: Codable {
     var servers: [String]?
 }
 
-struct V2rayStats: Codable {
-
-}
+struct V2rayStats: Codable {}
 
 struct V2rayRouting: Codable {
-//    var strategy: String = "rules"
-    var settings: V2rayRoutingSetting = V2rayRoutingSetting()
+//    var strategy = "rules"
+    var settings = V2rayRoutingSetting()
 }
 
 struct V2rayRoutingSetting: Codable {
@@ -76,7 +72,7 @@ struct V2rayRoutingSetting: Codable {
 }
 
 struct V2rayRoutingSettingRule: Codable {
-    var type: String = "field"
+    var type = "field"
     var domain: [String]? = []
     var ip: [String]? = []
     var port: String?
@@ -88,5 +84,4 @@ struct V2rayRoutingSettingRule: Codable {
     var outboundTag: String? = "direct"
 }
 
-struct V2rayPolicy: Codable {
-}
+struct V2rayPolicy: Codable {}

@@ -9,15 +9,14 @@
 import Cocoa
 
 class ToastWindowController: NSWindowController {
-
     override var windowNibName: String? {
         return "ToastWindow" // no extension .xib here
     }
 
-    var message: String = ""
+    var message = ""
 
-    @IBOutlet weak var titleTextField: NSTextField!
-    @IBOutlet weak var panelView: NSView!
+    @IBOutlet var titleTextField: NSTextField!
+    @IBOutlet var panelView: NSView!
 
     let kHudFadeInDuration: Double = 0.35
     let kHudFadeOutDuration: Double = 0.35
@@ -28,16 +27,16 @@ class ToastWindowController: NSWindowController {
     let kHudHorizontalMargin: CGFloat = 30
     let kHudHeight: CGFloat = 90.0
 
-    var timerToFadeOut: Timer? = nil
-    var fadingOut: Bool = false
+    var timerToFadeOut: Timer?
+    var fadingOut = false
 
     override func windowDidLoad() {
         super.windowDidLoad()
 
-        self.shouldCascadeWindows = false
+        shouldCascadeWindows = false
 
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-        if let win = self.window {
+        if let win = window {
             win.isOpaque = false
             win.backgroundColor = .clear
             win.styleMask = NSWindow.StyleMask.borderless
@@ -47,23 +46,23 @@ class ToastWindowController: NSWindowController {
             win.orderFrontRegardless()
         }
 
-        let viewLayer: CALayer = CALayer()
-        viewLayer.backgroundColor = CGColor.init(red: 0.05, green: 0.05, blue: 0.05, alpha: kHudAlphaValue)
+        let viewLayer = CALayer()
+        viewLayer.backgroundColor = CGColor(red: 0.05, green: 0.05, blue: 0.05, alpha: kHudAlphaValue)
         viewLayer.cornerRadius = kHudCornerRadius
         panelView.wantsLayer = true
         panelView.layer = viewLayer
         panelView.layer?.opacity = 0.0
 
-        self.titleTextField.stringValue = self.message
+        titleTextField.stringValue = message
 
         setupHud()
     }
 
-    func setupHud() -> Void {
+    func setupHud() {
         titleTextField.sizeToFit()
 
         var labelFrame: CGRect = titleTextField.frame
-        var hudWindowFrame: CGRect = self.window!.frame
+        var hudWindowFrame: CGRect = window!.frame
         hudWindowFrame.size.width = labelFrame.size.width + kHudHorizontalMargin * 2
         hudWindowFrame.size.height = kHudHeight
         if NSScreen.screens.count == 0 {
@@ -72,9 +71,9 @@ class ToastWindowController: NSWindowController {
         let screenRect: NSRect = NSScreen.screens[0].visibleFrame
         hudWindowFrame.origin.x = (screenRect.size.width - hudWindowFrame.size.width) / 2
         hudWindowFrame.origin.y = (screenRect.size.height - hudWindowFrame.size.height) / 2
-        self.window!.setFrame(hudWindowFrame, display: true)
+        window!.setFrame(hudWindowFrame, display: true)
 
-        var viewFrame: NSRect = hudWindowFrame;
+        var viewFrame: NSRect = hudWindowFrame
         viewFrame.origin.x = 0
         viewFrame.origin.y = 0
         panelView.frame = viewFrame
@@ -84,7 +83,7 @@ class ToastWindowController: NSWindowController {
         titleTextField.frame = labelFrame
     }
 
-    func fadeInHud(_ displayDuration: Double?) -> Void {
+    func fadeInHud(_ displayDuration: Double?) {
         if timerToFadeOut != nil {
             timerToFadeOut?.invalidate()
             timerToFadeOut = nil
@@ -106,16 +105,17 @@ class ToastWindowController: NSWindowController {
         CATransaction.commit()
     }
 
-    func didFadeIn() -> Void {
+    func didFadeIn() {
         timerToFadeOut = Timer.scheduledTimer(
-                timeInterval: kHudDisplayDuration,
-                target: self,
-                selector: #selector(fadeOutHud),
-                userInfo: nil,
-                repeats: false)
+            timeInterval: kHudDisplayDuration,
+            target: self,
+            selector: #selector(fadeOutHud),
+            userInfo: nil,
+            repeats: false
+        )
     }
 
-    @objc func fadeOutHud() -> Void {
+    @objc func fadeOutHud() {
         fadingOut = true
 
         CATransaction.begin()
@@ -127,9 +127,9 @@ class ToastWindowController: NSWindowController {
         CATransaction.commit()
     }
 
-    func didFadeOut() -> Void {
+    func didFadeOut() {
         if fadingOut {
-            self.window?.orderOut(self)
+            window?.orderOut(self)
         }
         fadingOut = false
     }

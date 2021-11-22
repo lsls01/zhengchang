@@ -1,0 +1,1123 @@
+2021-11-22 07:06:42 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fb6f6189b10; archive(resolved)="<IDEArchive: 0x6000018ba580>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team(resolved)="<IDEProvisioningBasicTeam: 0x600003d3abc0; teamID='GYFQAWD6QY', teamName='Li Johnson'>">
+	Chain (10, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fb6f6189b10; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team="<IDEProvisioningBasicTeam: 0x600003d3abc0; teamID='GYFQAWD6QY', teamName='Li Johnson'>">
+	<IDEDistributionProcessingPipelineContext: 0x7fb6f618f4a0; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team="<IDEProvisioningBasicTeam: 0x600003d3abc0; teamID='GYFQAWD6QY', teamName='Li Johnson'>">
+	<IDEDistributionContext: 0x7fb6f6183090; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team="<IDEProvisioningBasicTeam: 0x600003d3abc0; teamID='GYFQAWD6QY', teamName='Li Johnson'>">
+	<IDEDistributionContext: 0x7fb6f6180840; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team="<IDEProvisioningBasicTeam: 0x600003d3abc0; teamID='GYFQAWD6QY', teamName='Li Johnson'>">
+	<IDEDistributionContext: 0x7fb6f6180310; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team="<IDEProvisioningBasicTeam: 0x600003d3abc0; teamID='GYFQAWD6QY', teamName='Li Johnson'>">
+	<IDEDistributionContext: 0x7fb6e22df180; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team="<IDEProvisioningBasicTeam: 0x600003d3abc0; teamID='GYFQAWD6QY', teamName='Li Johnson'>">
+	<IDEDistributionContext: 0x7fb6f617fb90; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team="<IDEProvisioningBasicTeam: 0x600003d3abc0; teamID='GYFQAWD6QY', teamName='Li Johnson'>">
+	<IDEDistributionContext: 0x7fb6f61663f0; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team="<IDEProvisioningBasicTeam: 0x600003d3abc0; teamID='GYFQAWD6QY', teamName='Li Johnson'>">
+	<IDEDistributionContext: 0x7fb6f4f25fc0; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="<IDEDistributionMethodDevelopmentSignedMac: 0x600003e1cad0>", team="(null)">
+	<IDEDistributionContext: 0x7fb6f6244f90; archive = "<IDEArchive: 0x6000018ba580>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x7fb6f6189b10>
+2021-11-22 07:06:42 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2021-11-22 07:06:42 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2021-11-22 07:06:42 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app'
+2021-11-22 07:06:42 +0000  >>> Copying /Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app 
+2021-11-22 07:06:42 +0000  copying file ./Contents/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:42 +0000  21279 bytes for ./Contents/_CodeSignature/CodeResources
+2021-11-22 07:06:42 +0000  copying file ./Contents/MacOS/V2rayU ... 
+2021-11-22 07:06:42 +0000  2278112 bytes for ./Contents/MacOS/V2rayU
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/MainMenu.strings ... 
+2021-11-22 07:06:42 +0000  7714 bytes for ./Contents/Resources/zh-Hans.lproj/MainMenu.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/PreferenceSubscribe.strings ... 
+2021-11-22 07:06:42 +0000  1526 bytes for ./Contents/Resources/zh-Hans.lproj/PreferenceSubscribe.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/PreferenceAbout.strings ... 
+2021-11-22 07:06:42 +0000  1238 bytes for ./Contents/Resources/zh-Hans.lproj/PreferenceAbout.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/PreferenceAdvance.strings ... 
+2021-11-22 07:06:42 +0000  2815 bytes for ./Contents/Resources/zh-Hans.lproj/PreferenceAdvance.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/PreferenceRouting.strings ... 
+2021-11-22 07:06:42 +0000  1833 bytes for ./Contents/Resources/zh-Hans.lproj/PreferenceRouting.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/Localizable.strings ... 
+2021-11-22 07:06:42 +0000  240 bytes for ./Contents/Resources/zh-Hans.lproj/Localizable.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/QrcodeWindow.strings ... 
+2021-11-22 07:06:42 +0000  267 bytes for ./Contents/Resources/zh-Hans.lproj/QrcodeWindow.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/PreferencePac.strings ... 
+2021-11-22 07:06:42 +0000  687 bytes for ./Contents/Resources/zh-Hans.lproj/PreferencePac.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/PreferenceGeneral.strings ... 
+2021-11-22 07:06:42 +0000  1671 bytes for ./Contents/Resources/zh-Hans.lproj/PreferenceGeneral.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/ConfigWindow.strings ... 
+2021-11-22 07:06:42 +0000  14457 bytes for ./Contents/Resources/zh-Hans.lproj/ConfigWindow.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-Hans.lproj/PreferenceDns.strings ... 
+2021-11-22 07:06:42 +0000  552 bytes for ./Contents/Resources/zh-Hans.lproj/PreferenceDns.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/en.lproj/PreferenceAdvance.strings ... 
+2021-11-22 07:06:42 +0000  3157 bytes for ./Contents/Resources/en.lproj/PreferenceAdvance.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/en.lproj/Localizable.strings ... 
+2021-11-22 07:06:42 +0000  322 bytes for ./Contents/Resources/en.lproj/Localizable.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/MainMenu.strings ... 
+2021-11-22 07:06:42 +0000  7717 bytes for ./Contents/Resources/zh-HK.lproj/MainMenu.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/PreferenceSubscribe.strings ... 
+2021-11-22 07:06:42 +0000  1526 bytes for ./Contents/Resources/zh-HK.lproj/PreferenceSubscribe.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/PreferenceAbout.strings ... 
+2021-11-22 07:06:42 +0000  1238 bytes for ./Contents/Resources/zh-HK.lproj/PreferenceAbout.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/PreferenceAdvance.strings ... 
+2021-11-22 07:06:42 +0000  2815 bytes for ./Contents/Resources/zh-HK.lproj/PreferenceAdvance.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/PreferenceRouting.strings ... 
+2021-11-22 07:06:42 +0000  1833 bytes for ./Contents/Resources/zh-HK.lproj/PreferenceRouting.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/Localizable.strings ... 
+2021-11-22 07:06:42 +0000  322 bytes for ./Contents/Resources/zh-HK.lproj/Localizable.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/QrcodeWindow.strings ... 
+2021-11-22 07:06:42 +0000  267 bytes for ./Contents/Resources/zh-HK.lproj/QrcodeWindow.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/PreferencePac.strings ... 
+2021-11-22 07:06:42 +0000  687 bytes for ./Contents/Resources/zh-HK.lproj/PreferencePac.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/PreferenceGeneral.strings ... 
+2021-11-22 07:06:42 +0000  1671 bytes for ./Contents/Resources/zh-HK.lproj/PreferenceGeneral.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/ConfigWindow.strings ... 
+2021-11-22 07:06:42 +0000  14457 bytes for ./Contents/Resources/zh-HK.lproj/ConfigWindow.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/zh-HK.lproj/PreferenceDns.strings ... 
+2021-11-22 07:06:42 +0000  546 bytes for ./Contents/Resources/zh-HK.lproj/PreferenceDns.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/install.sh ... 
+2021-11-22 07:06:42 +0000  785 bytes for ./Contents/Resources/install.sh
+copying file ./Contents/Resources/AppIcon.icns ... 
+2021-11-22 07:06:42 +0000  52952 bytes for ./Contents/Resources/AppIcon.icns
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/QrcodeWindow.nib ... 
+2021-11-22 07:06:42 +0000  8737 bytes for ./Contents/Resources/Base.lproj/QrcodeWindow.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/PreferenceRouting.nib ... 
+2021-11-22 07:06:42 +0000  21256 bytes for ./Contents/Resources/Base.lproj/PreferenceRouting.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/PreferencePac.nib ... 
+2021-11-22 07:06:42 +0000  15530 bytes for ./Contents/Resources/Base.lproj/PreferencePac.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/PreferenceAbout.nib ... 
+2021-11-22 07:06:42 +0000  13714 bytes for ./Contents/Resources/Base.lproj/PreferenceAbout.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/PreferenceGeneral.nib ... 
+2021-11-22 07:06:42 +0000  11796 bytes for ./Contents/Resources/Base.lproj/PreferenceGeneral.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/PreferenceDns.nib ... 
+2021-11-22 07:06:42 +0000  15647 bytes for ./Contents/Resources/Base.lproj/PreferenceDns.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/MainMenu.nib ... 
+2021-11-22 07:06:42 +0000  17399 bytes for ./Contents/Resources/Base.lproj/MainMenu.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/ToastWindow.nib ... 
+2021-11-22 07:06:42 +0000  6426 bytes for ./Contents/Resources/Base.lproj/ToastWindow.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/ConfigWindow.nib ... 
+2021-11-22 07:06:42 +0000  81698 bytes for ./Contents/Resources/Base.lproj/ConfigWindow.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/PreferenceAdvance.nib ... 
+2021-11-22 07:06:42 +0000  22351 bytes for ./Contents/Resources/Base.lproj/PreferenceAdvance.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Base.lproj/PreferenceSubscribe.nib ... 
+2021-11-22 07:06:42 +0000  35386 bytes for ./Contents/Resources/Base.lproj/PreferenceSubscribe.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/pac/user-rule.txt ... 
+2021-11-22 07:06:42 +0000  746 bytes for ./Contents/Resources/pac/user-rule.txt
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/pac/gfwlist.txt ... 
+2021-11-22 07:06:42 +0000  198027 bytes for ./Contents/Resources/pac/gfwlist.txt
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/pac/abp.js ... 
+2021-11-22 07:06:42 +0000  19179 bytes for ./Contents/Resources/pac/abp.js
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/V2rayUHelper ... 
+2021-11-22 07:06:42 +0000  3915952 bytes for ./Contents/Resources/V2rayUHelper
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/v2ray-core/geoip.dat ... 
+2021-11-22 07:06:42 +0000  12623173 bytes for ./Contents/Resources/v2ray-core/geoip.dat
+copying file ./Contents/Resources/v2ray-core/LICENSE ... 
+2021-11-22 07:06:42 +0000  16725 bytes for ./Contents/Resources/v2ray-core/LICENSE
+copying file ./Contents/Resources/v2ray-core/geosite.dat ... 
+2021-11-22 07:06:42 +0000  1058137 bytes for ./Contents/Resources/v2ray-core/geosite.dat
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/v2ray-core/v2ray ... 
+2021-11-22 07:06:42 +0000  20510480 bytes for ./Contents/Resources/v2ray-core/v2ray
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/v2ray-core/README.md ... 
+2021-11-22 07:06:42 +0000  3269 bytes for ./Contents/Resources/v2ray-core/README.md
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/v2ray-core/xray ... 
+2021-11-22 07:06:42 +0000  20510480 bytes for ./Contents/Resources/v2ray-core/xray
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/Assets.car ... 
+2021-11-22 07:06:42 +0000  614136 bytes for ./Contents/Resources/Assets.car
+copying file ./Contents/Resources/V2rayUTool ... 
+2021-11-22 07:06:42 +0000  6381392 bytes for ./Contents/Resources/V2rayUTool
+2021-11-22 07:06:42 +0000  copying file ./Contents/Resources/cmd.sh ... 
+335 bytes for ./Contents/Resources/cmd.sh
+copying file ./Contents/Resources/unzip.sh ... 
+2021-11-22 07:06:42 +0000  444 bytes for ./Contents/Resources/unzip.sh
+2021-11-22 07:06:42 +0000  copying file ./Contents/Library/LoginItems/V2rayULauncher.app/Contents/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:42 +0000  2200 bytes for ./Contents/Library/LoginItems/V2rayULauncher.app/Contents/_CodeSignature/CodeResources
+2021-11-22 07:06:42 +0000  copying file ./Contents/Library/LoginItems/V2rayULauncher.app/Contents/MacOS/V2rayULauncher ... 
+2021-11-22 07:06:42 +0000  173440 bytes for ./Contents/Library/LoginItems/V2rayULauncher.app/Contents/MacOS/V2rayULauncher
+2021-11-22 07:06:42 +0000  copying file ./Contents/Library/LoginItems/V2rayULauncher.app/Contents/Info.plist ... 
+2021-11-22 07:06:42 +0000  1460 bytes for ./Contents/Library/LoginItems/V2rayULauncher.app/Contents/Info.plist
+2021-11-22 07:06:42 +0000  copying file ./Contents/Library/LoginItems/V2rayULauncher.app/Contents/PkgInfo ... 
+2021-11-22 07:06:42 +0000  8 bytes for ./Contents/Library/LoginItems/V2rayULauncher.app/Contents/PkgInfo
+2021-11-22 07:06:42 +0000  copying symlink ./Contents/Frameworks/SwiftyJSON.framework/SwiftyJSON ... 
+2021-11-22 07:06:42 +0000  linked ./Contents/Frameworks/SwiftyJSON.framework/SwiftyJSON
+2021-11-22 07:06:42 +0000  copying symlink ./Contents/Frameworks/SwiftyJSON.framework/Resources ... 
+2021-11-22 07:06:42 +0000  linked ./Contents/Frameworks/SwiftyJSON.framework/Resources
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/SwiftyJSON.framework/Versions/A/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:42 +0000  2514 bytes for ./Contents/Frameworks/SwiftyJSON.framework/Versions/A/_CodeSignature/CodeResources
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/SwiftyJSON.framework/Versions/A/SwiftyJSON ... 
+2021-11-22 07:06:42 +0000  754336 bytes for ./Contents/Frameworks/SwiftyJSON.framework/Versions/A/SwiftyJSON
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/SwiftyJSON.framework/Versions/A/Resources/Info.plist ... 
+2021-11-22 07:06:42 +0000  1347 bytes for ./Contents/Frameworks/SwiftyJSON.framework/Versions/A/Resources/Info.plist
+2021-11-22 07:06:42 +0000  copying symlink ./Contents/Frameworks/SwiftyJSON.framework/Versions/Current ... 
+2021-11-22 07:06:42 +0000  linked ./Contents/Frameworks/SwiftyJSON.framework/Versions/Current
+2021-11-22 07:06:42 +0000  copying symlink ./Contents/Frameworks/Preferences.framework/Preferences ... 
+2021-11-22 07:06:42 +0000  linked ./Contents/Frameworks/Preferences.framework/Preferences
+copying symlink ./Contents/Frameworks/Preferences.framework/Resources ... 
+2021-11-22 07:06:42 +0000  linked ./Contents/Frameworks/Preferences.framework/Resources
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Preferences.framework/Versions/A/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:42 +0000  2514 bytes for ./Contents/Frameworks/Preferences.framework/Versions/A/_CodeSignature/CodeResources
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Preferences.framework/Versions/A/Preferences ... 
+2021-11-22 07:06:42 +0000  903408 bytes for ./Contents/Frameworks/Preferences.framework/Versions/A/Preferences
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Preferences.framework/Versions/A/Resources/Info.plist ... 
+2021-11-22 07:06:42 +0000  1351 bytes for ./Contents/Frameworks/Preferences.framework/Versions/A/Resources/Info.plist
+2021-11-22 07:06:42 +0000  copying symlink ./Contents/Frameworks/Preferences.framework/Versions/Current ... 
+2021-11-22 07:06:42 +0000  linked ./Contents/Frameworks/Preferences.framework/Versions/Current
+2021-11-22 07:06:42 +0000  copying symlink ./Contents/Frameworks/Sparkle.framework/Resources ... 
+2021-11-22 07:06:42 +0000  linked ./Contents/Frameworks/Sparkle.framework/Resources
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:42 +0000  81929 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/_CodeSignature/CodeResources
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/de.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  10148 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/de.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/de.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1114 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/de.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/de.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2556 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/de.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/de.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1488 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/de.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/he.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  5288 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/he.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/he.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  538 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/he.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/he.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  781 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/he.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ar.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  8468 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ar.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ar.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1038 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ar.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ar.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2656 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ar.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ar.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1416 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ar.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/el.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  7734 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/el.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/el.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1114 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/el.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/el.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2612 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/el.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/el.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1516 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/el.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ja.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  8552 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ja.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ja.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  854 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ja.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ja.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  1876 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ja.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ja.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1256 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ja.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/en.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  516 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/en.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/en.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  1277 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/en.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/en.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  731 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/en.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/SUModelTranslation.plist ... 
+2021-11-22 07:06:42 +0000  11859 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/SUModelTranslation.plist
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/uk.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  7860 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/uk.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/uk.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2600 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/uk.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/uk.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1664 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/uk.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_CN.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  6128 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_CN.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_CN.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  726 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_CN.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_CN.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  1736 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_CN.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_CN.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1080 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_CN.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nb.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  9352 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nb.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nb.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1026 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nb.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nb.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2452 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nb.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nb.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1352 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nb.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/es.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  10030 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/es.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/es.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1050 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/es.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/es.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2808 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/es.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/es.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1560 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/es.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/is.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  5868 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/is.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/is.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1034 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/is.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/is.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2628 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/is.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/is.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1452 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/is.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sl.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  7944 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sl.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sl.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1010 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sl.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sl.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2504 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sl.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sl.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1520 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sl.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_BR.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  9728 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_BR.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_BR.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1034 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_BR.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_BR.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2676 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_BR.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_BR.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1524 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_BR.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/da.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  8306 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/da.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/da.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1046 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/da.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/da.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2504 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/da.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/da.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1436 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/da.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/it.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  8340 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/it.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/it.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1058 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/it.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/it.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2716 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/it.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/it.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1540 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/it.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sk.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  7548 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sk.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sk.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1078 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sk.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sk.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2604 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sk.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sk.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1532 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sk.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_PT.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  7896 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_PT.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_PT.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1058 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_PT.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_PT.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2760 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pt_PT.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sv.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  7834 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sv.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sv.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1114 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sv.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sv.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  2640 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sv.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sv.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1596 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/sv.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ReleaseNotesColorStyle.css ... 
+2021-11-22 07:06:42 +0000  203 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ReleaseNotesColorStyle.css
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/cs.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  10570 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/cs.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/cs.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  526 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/cs.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/cs.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  1314 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/cs.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/cs.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  761 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/cs.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ko.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  6220 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ko.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ko.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  790 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ko.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ko.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:42 +0000  1892 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ko.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ko.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:42 +0000  1192 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ko.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/Sparkle.strings ... 
+2021-11-22 07:06:42 +0000  10196 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/Sparkle.strings
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUAutomaticUpdateAlert.nib/keyedobjects-101300.nib ... 
+2021-11-22 07:06:42 +0000  13694 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUAutomaticUpdateAlert.nib/keyedobjects-101300.nib
+2021-11-22 07:06:42 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUAutomaticUpdateAlert.nib/keyedobjects.nib ... 
+2021-11-22 07:06:42 +0000  16812 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUAutomaticUpdateAlert.nib/keyedobjects.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdatePermissionPrompt.nib/keyedobjects-110000.nib ... 
+2021-11-22 07:06:43 +0000  17052 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdatePermissionPrompt.nib/keyedobjects-110000.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdatePermissionPrompt.nib/keyedobjects-101300.nib ... 
+2021-11-22 07:06:43 +0000  17088 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdatePermissionPrompt.nib/keyedobjects-101300.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdatePermissionPrompt.nib/keyedobjects.nib ... 
+2021-11-22 07:06:43 +0000  21550 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdatePermissionPrompt.nib/keyedobjects.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdateAlert.nib/keyedobjects-101300.nib ... 
+2021-11-22 07:06:43 +0000  17534 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdateAlert.nib/keyedobjects-101300.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdateAlert.nib/keyedobjects.nib ... 
+2021-11-22 07:06:43 +0000  21983 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Base.lproj/SUUpdateAlert.nib/keyedobjects.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hu.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  10002 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hu.lproj/Sparkle.strings
+copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hu.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1118 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hu.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hu.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2596 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hu.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hu.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1584 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hu.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/tr.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  9716 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/tr.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/tr.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1046 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/tr.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/tr.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2612 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/tr.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/tr.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1428 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/tr.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pl.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7318 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pl.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pl.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1098 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pl.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pl.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2620 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pl.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pl.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1548 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/pl.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_TW.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  5748 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_TW.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_TW.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  738 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_TW.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_TW.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  1756 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_TW.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_TW.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1092 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/zh_TW.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:43 +0000  17421 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/_CodeSignature/CodeResources
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop ... 
+2021-11-22 07:06:43 +0000  286544 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate ... 
+2021-11-22 07:06:43 +0000  544640 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/de.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  10148 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/de.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/he.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  5288 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/he.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ar.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  8468 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ar.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/el.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7734 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/el.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ja.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  8552 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ja.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/uk.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7860 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/uk.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/zh_CN.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  6128 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/zh_CN.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/nb.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  9352 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/nb.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/es.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  10030 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/es.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/is.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  5868 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/is.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/sl.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7944 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/sl.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/pt_BR.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  9728 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/pt_BR.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/da.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  8306 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/da.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/it.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  8340 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/it.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/sk.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7548 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/sk.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/pt_PT.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7896 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/pt_PT.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/sv.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7834 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/sv.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/cs.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  10570 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/cs.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/AppIcon.icns ... 
+2021-11-22 07:06:43 +0000  37132 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/AppIcon.icns
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ko.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  6220 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ko.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/Base.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  10196 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/Base.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/hu.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  10002 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/hu.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/tr.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  9716 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/tr.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/pl.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7318 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/pl.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/zh_TW.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  5748 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/zh_TW.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ru.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7668 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ru.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/SUStatus.nib/keyedobjects-101300.nib ... 
+2021-11-22 07:06:43 +0000  10683 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/SUStatus.nib/keyedobjects-101300.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/SUStatus.nib/keyedobjects.nib ... 
+2021-11-22 07:06:43 +0000  12937 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/SUStatus.nib/keyedobjects.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/fr.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  10170 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/fr.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/fi.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  6184 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/fi.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/nl.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  8850 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/nl.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/th.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  8492 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/th.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ro.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  9806 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ro.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/hr.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  9778 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/hr.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ca.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  6792 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Resources/ca.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Info.plist ... 
+2021-11-22 07:06:43 +0000  1670 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/Info.plist
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/PkgInfo ... 
+2021-11-22 07:06:43 +0000  8 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/PkgInfo
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ru.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  7668 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ru.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ru.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1118 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ru.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ru.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2780 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ru.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ru.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1624 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ru.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/SUStatus.nib/keyedobjects-101300.nib ... 
+2021-11-22 07:06:43 +0000  10682 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/SUStatus.nib/keyedobjects-101300.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/SUStatus.nib/keyedobjects.nib ... 
+2021-11-22 07:06:43 +0000  12937 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/SUStatus.nib/keyedobjects.nib
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fr.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  10170 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fr.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fr.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1042 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fr.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fr.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2764 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fr.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fr.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1496 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fr.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fi.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  6184 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fi.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fi.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1118 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fi.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fi.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2648 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fi.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fi.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1500 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/fi.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nl.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  8850 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nl.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nl.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1098 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nl.lproj/SUAutomaticUpdateAlert.strings
+copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nl.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2660 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nl.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nl.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1508 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/nl.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/th.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  8492 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/th.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/th.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  970 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/th.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/th.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2272 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/th.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/th.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1404 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/th.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ro.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  9806 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ro.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ro.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1062 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ro.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ro.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2604 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ro.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ro.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1556 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ro.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Info.plist ... 
+2021-11-22 07:06:43 +0000  1349 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Info.plist
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hr.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  9778 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hr.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hr.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1078 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hr.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hr.lproj/SUUpdatePermissionPrompt.strings ... 
+2021-11-22 07:06:43 +0000  2468 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hr.lproj/SUUpdatePermissionPrompt.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hr.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  1560 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/hr.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ca.lproj/Sparkle.strings ... 
+2021-11-22 07:06:43 +0000  6792 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ca.lproj/Sparkle.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ca.lproj/SUAutomaticUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  544 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ca.lproj/SUAutomaticUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ca.lproj/SUUpdateAlert.strings ... 
+2021-11-22 07:06:43 +0000  792 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Resources/ca.lproj/SUUpdateAlert.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle ... 
+2021-11-22 07:06:43 +0000  1430144 bytes for ./Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/Sparkle.framework/Versions/Current ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/Sparkle.framework/Versions/Current
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/Sparkle.framework/Sparkle ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/Sparkle.framework/Sparkle
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/QRCoder.framework/QRCoder ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/QRCoder.framework/QRCoder
+copying symlink ./Contents/Frameworks/QRCoder.framework/Resources ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/QRCoder.framework/Resources
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/QRCoder.framework/Versions/A/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:43 +0000  2514 bytes for ./Contents/Frameworks/QRCoder.framework/Versions/A/_CodeSignature/CodeResources
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/QRCoder.framework/Versions/A/QRCoder ... 
+2021-11-22 07:06:43 +0000  249568 bytes for ./Contents/Frameworks/QRCoder.framework/Versions/A/QRCoder
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/QRCoder.framework/Versions/A/Resources/Info.plist ... 
+2021-11-22 07:06:43 +0000  1338 bytes for ./Contents/Frameworks/QRCoder.framework/Versions/A/Resources/Info.plist
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/QRCoder.framework/Versions/Current ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/QRCoder.framework/Versions/Current
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/Alamofire.framework/Alamofire ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/Alamofire.framework/Alamofire
+copying symlink ./Contents/Frameworks/Alamofire.framework/Resources ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/Alamofire.framework/Resources
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Alamofire.framework/Versions/A/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:43 +0000  2442 bytes for ./Contents/Frameworks/Alamofire.framework/Versions/A/_CodeSignature/CodeResources
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Alamofire.framework/Versions/A/Alamofire ... 
+2021-11-22 07:06:43 +0000  6019872 bytes for ./Contents/Frameworks/Alamofire.framework/Versions/A/Alamofire
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Alamofire.framework/Versions/A/Resources/Info.plist ... 
+2021-11-22 07:06:43 +0000  1345 bytes for ./Contents/Frameworks/Alamofire.framework/Versions/A/Resources/Info.plist
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/Alamofire.framework/Versions/Current ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/Alamofire.framework/Versions/Current
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/Swifter.framework/Swifter ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/Swifter.framework/Swifter
+copying symlink ./Contents/Frameworks/Swifter.framework/Resources ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/Swifter.framework/Resources
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Swifter.framework/Versions/A/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:43 +0000  2514 bytes for ./Contents/Frameworks/Swifter.framework/Versions/A/_CodeSignature/CodeResources
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Swifter.framework/Versions/A/Swifter ... 
+2021-11-22 07:06:43 +0000  2450176 bytes for ./Contents/Frameworks/Swifter.framework/Versions/A/Swifter
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/Swifter.framework/Versions/A/Resources/Info.plist ... 
+2021-11-22 07:06:43 +0000  1339 bytes for ./Contents/Frameworks/Swifter.framework/Versions/A/Resources/Info.plist
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/Swifter.framework/Versions/Current ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/Swifter.framework/Versions/Current
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/MASShortcut.framework/MASShortcut ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/MASShortcut.framework/MASShortcut
+copying symlink ./Contents/Frameworks/MASShortcut.framework/Resources ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/MASShortcut.framework/Resources
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/_CodeSignature/CodeResources ... 
+2021-11-22 07:06:43 +0000  10673 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/_CodeSignature/CodeResources
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/MASShortcut ... 
+2021-11-22 07:06:43 +0000  328624 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/MASShortcut
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/de.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2272 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/de.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/zh-Hans.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2193 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/zh-Hans.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/ja.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2652 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/ja.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/en.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2160 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/en.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/es.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2213 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/es.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/it.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2348 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/it.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/sv.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2318 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/sv.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/cs.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2133 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/cs.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/ko.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2300 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/ko.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/zh-Hant.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2193 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/zh-Hant.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/pl.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2124 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/pl.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/ru.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2833 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/ru.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/fr.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2304 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/fr.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/nl.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2236 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/nl.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/pt.lproj/Localizable.strings ... 
+2021-11-22 07:06:43 +0000  2179 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Resources/pt.lproj/Localizable.strings
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Info.plist ... 
+2021-11-22 07:06:43 +0000  1290 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/MASShortcut.bundle/Contents/Info.plist
+2021-11-22 07:06:43 +0000  copying file ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/Info.plist ... 
+2021-11-22 07:06:43 +0000  1351 bytes for ./Contents/Frameworks/MASShortcut.framework/Versions/A/Resources/Info.plist
+2021-11-22 07:06:43 +0000  copying symlink ./Contents/Frameworks/MASShortcut.framework/Versions/Current ... 
+2021-11-22 07:06:43 +0000  linked ./Contents/Frameworks/MASShortcut.framework/Versions/Current
+2021-11-22 07:06:43 +0000  copying file ./Contents/Info.plist ... 
+2021-11-22 07:06:43 +0000  2331 bytes for ./Contents/Info.plist
+2021-11-22 07:06:43 +0000  copying file ./Contents/PkgInfo ... 
+2021-11-22 07:06:43 +0000  8 bytes for ./Contents/PkgInfo
+2021-11-22 07:06:43 +0000 [MT] /usr/bin/ditto exited with 0
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600001888720; bundleID='(null)', path='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f159a0; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='fileop-555549443bdc6d7501e331e6ac09ade807ccd65d', executablePath='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600001887300; bundleID='org.sparkle-project.Sparkle.Autoupdate', path='<DVTFilePath:0x6000017bce00:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d630; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='org.sparkle-project.Sparkle.Autoupdate', executablePath='<DVTFilePath:0x6000017bd1f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600001888cc0; bundleID='org.cocoapods.Alamofire', path='<DVTFilePath:0x6000017b07e0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d310; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0a470; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Alamofire', executablePath='<DVTFilePath:0x6000017b0a10:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A/Alamofire'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x6000018f7060; bundleID='org.cocoapods.MASShortcut', path='<DVTFilePath:0x6000017b1730:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85900; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0a470; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.MASShortcut', executablePath='<DVTFilePath:0x6000017b1960:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A/MASShortcut'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x6000018f7120; bundleID='org.cocoapods.Preferences', path='<DVTFilePath:0x6000017a3c60:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f15720; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b39ce0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Preferences', executablePath='<DVTFilePath:0x6000017a3e90:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A/Preferences'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600001888a80; bundleID='org.cocoapods.QRCoder', path='<DVTFilePath:0x6000017b0000:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85d60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b39ce0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.QRCoder', executablePath='<DVTFilePath:0x6000017b0230:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A/QRCoder'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600001891140; bundleID='org.sparkle-project.Sparkle', path='<DVTFilePath:0x6000017d3640:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d400; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b39ce0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.sparkle-project.Sparkle', executablePath='<DVTFilePath:0x6000017b7b80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x6000018b5740; bundleID='org.cocoapods.Swifter', path='<DVTFilePath:0x6000017b0fc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001fdaa80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b39ce0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Swifter', executablePath='<DVTFilePath:0x6000017b11f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A/Swifter'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600001894300; bundleID='org.cocoapods.SwiftyJSON', path='<DVTFilePath:0x6000017d3250:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fed0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b39ce0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.SwiftyJSON', executablePath='<DVTFilePath:0x6000017d3480:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A/SwiftyJSON'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x6000018b5b60; bundleID='net.yanue.V2rayU.Launcher', path='<DVTFilePath:0x600001255a80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85950; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b39ce0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+}', teamID='GYFQAWD6QY', identifier='net.yanue.V2rayU.Launcher', executablePath='<DVTFilePath:0x6000017d2bc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app/Contents/MacOS/V2rayULauncher'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x6000018b5d40; bundleID='(null)', path='<DVTFilePath:0x6000017d2840:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fd90; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x6000018b5da0; bundleID='(null)', path='<DVTFilePath:0x6000017d2920:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f863a0; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600001894240; bundleID='(null)', path='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f859f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b39d90; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='V2rayUHelper', executablePath='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x6000018b5c80; bundleID='(null)', path='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f80280; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b08630; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+}', teamID='GYFQAWD6QY', identifier='V2rayUTool', executablePath='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x6000018890e0; bundleID='net.yanue.V2rayU', path='<DVTFilePath:0x6000017a24c0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7efd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0a470; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+}', teamID='GYFQAWD6QY', identifier='net.yanue.V2rayU', executablePath='<DVTFilePath:0x6000017ed260:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/MacOS/V2rayU'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionInfoPlistStep
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionCompileBitcodeStep
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionCodeSlimmingStep
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionCopyBCSymbolMapsStep
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2021-11-22 07:06:43 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionArchThinningStep
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "fileop" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "Autoupdate" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A/Alamofire' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "Alamofire" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A/MASShortcut' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "MASShortcut" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A/Preferences' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "Preferences" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A/QRCoder' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "QRCoder" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "Sparkle" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A/Swifter' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "Swifter" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A/SwiftyJSON' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "SwiftyJSON" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app/Contents/MacOS/V2rayULauncher' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "V2rayULauncher" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "v2ray" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "xray" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUHelper' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "V2rayUHelper" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUTool' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "V2rayUTool" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/MacOS/V2rayU' '-verify_arch' 'arm64e'
+2021-11-22 07:06:43 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-11-22 07:06:43 +0000 [MT] Skipping architecture thinning for item "V2rayU" because arch "arm64e" wasn't found
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionODRStep
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600001888720; bundleID='(null)', path='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f159a0; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='fileop-555549443bdc6d7501e331e6ac09ade807ccd65d', executablePath='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600001887300; bundleID='org.sparkle-project.Sparkle.Autoupdate', path='<DVTFilePath:0x6000017bce00:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d630; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='org.sparkle-project.Sparkle.Autoupdate', executablePath='<DVTFilePath:0x6000017bd1f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600001888cc0; bundleID='org.cocoapods.Alamofire', path='<DVTFilePath:0x6000017b07e0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d310; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b09130; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Alamofire', executablePath='<DVTFilePath:0x6000017b0a10:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A/Alamofire'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x6000018f7060; bundleID='org.cocoapods.MASShortcut', path='<DVTFilePath:0x6000017b1730:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85900; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b3a100; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.MASShortcut', executablePath='<DVTFilePath:0x6000017b1960:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A/MASShortcut'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x6000018f7120; bundleID='org.cocoapods.Preferences', path='<DVTFilePath:0x6000017a3c60:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f15720; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b3a100; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Preferences', executablePath='<DVTFilePath:0x6000017a3e90:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A/Preferences'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600001888a80; bundleID='org.cocoapods.QRCoder', path='<DVTFilePath:0x6000017b0000:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85d60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b3a100; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.QRCoder', executablePath='<DVTFilePath:0x6000017b0230:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A/QRCoder'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600001891140; bundleID='org.sparkle-project.Sparkle', path='<DVTFilePath:0x6000017d3640:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d400; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b3a100; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.sparkle-project.Sparkle', executablePath='<DVTFilePath:0x6000017b7b80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x6000018b5740; bundleID='org.cocoapods.Swifter', path='<DVTFilePath:0x6000017b0fc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001fdaa80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b3a100; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Swifter', executablePath='<DVTFilePath:0x6000017b11f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A/Swifter'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600001894300; bundleID='org.cocoapods.SwiftyJSON', path='<DVTFilePath:0x6000017d3250:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fed0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b3a100; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.SwiftyJSON', executablePath='<DVTFilePath:0x6000017d3480:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A/SwiftyJSON'>', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x6000018b5b60; bundleID='net.yanue.V2rayU.Launcher', path='<DVTFilePath:0x600001255a80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85950; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b3a100; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+}', teamID='GYFQAWD6QY', identifier='net.yanue.V2rayU.Launcher', executablePath='<DVTFilePath:0x6000017d2bc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app/Contents/MacOS/V2rayULauncher'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x6000018b5d40; bundleID='(null)', path='<DVTFilePath:0x6000017d2840:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fd90; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x6000018b5da0; bundleID='(null)', path='<DVTFilePath:0x6000017d2920:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f863a0; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600001894240; bundleID='(null)', path='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f859f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b39fa0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='V2rayUHelper', executablePath='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x6000018b5c80; bundleID='(null)', path='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f80280; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b3a050; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+}', teamID='GYFQAWD6QY', identifier='V2rayUTool', executablePath='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', hardenedRuntime='1'>'>
+2021-11-22 07:06:43 +0000 [MT] Running /usr/bin/xattr '-crs' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app'
+2021-11-22 07:06:43 +0000 [MT] /usr/bin/xattr exited with 0
+2021-11-22 07:06:43 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001888720; bundleID='(null)', path='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f159a0; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='fileop-555549443bdc6d7501e331e6ac09ade807ccd65d', executablePath='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', hardenedRuntime='1'>'>: {
+}
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001888720; bundleID='(null)', path='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f159a0; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='fileop-555549443bdc6d7501e331e6ac09ade807ccd65d', executablePath='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', hardenedRuntime='1'>'> are: {
+}
+2021-11-22 07:06:43 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600001888720; bundleID='(null)', path='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f159a0; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='fileop-555549443bdc6d7501e331e6ac09ade807ccd65d', executablePath='<DVTFilePath:0x6000017bd110:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>', hardenedRuntime='1'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~GT1XCS
+2021-11-22 07:06:43 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~GT1XCS' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop: replacing existing signature
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop: signed Mach-O universal (x86_64 arm64) [fileop-555549443bdc6d7501e331e6ac09ade807ccd65d]
+2021-11-22 07:06:43 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001887300; bundleID='org.sparkle-project.Sparkle.Autoupdate', path='<DVTFilePath:0x6000017bce00:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d630; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='org.sparkle-project.Sparkle.Autoupdate', executablePath='<DVTFilePath:0x6000017bd1f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate'>', hardenedRuntime='1'>'>: {
+}
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001887300; bundleID='org.sparkle-project.Sparkle.Autoupdate', path='<DVTFilePath:0x6000017bce00:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d630; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='org.sparkle-project.Sparkle.Autoupdate', executablePath='<DVTFilePath:0x6000017bd1f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate'>', hardenedRuntime='1'>'> are: {
+}
+2021-11-22 07:06:43 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600001887300; bundleID='org.sparkle-project.Sparkle.Autoupdate', path='<DVTFilePath:0x6000017bce00:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d630; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.get-task-allow" = 1;
+}', teamID='(null)', identifier='org.sparkle-project.Sparkle.Autoupdate', executablePath='<DVTFilePath:0x6000017bd1f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate'>', hardenedRuntime='1'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~LwRrZW
+2021-11-22 07:06:43 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~LwRrZW' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app'
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app: replacing existing signature
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app: signed app bundle with Mach-O universal (x86_64 arm64) [org.sparkle-project.Sparkle.Autoupdate]
+2021-11-22 07:06:43 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001888cc0; bundleID='org.cocoapods.Alamofire', path='<DVTFilePath:0x6000017b07e0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d310; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b09130; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Alamofire', executablePath='<DVTFilePath:0x6000017b0a10:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A/Alamofire'>', hardenedRuntime='0'>'>: {
+}
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001888cc0; bundleID='org.cocoapods.Alamofire', path='<DVTFilePath:0x6000017b07e0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d310; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e5d0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Alamofire', executablePath='<DVTFilePath:0x6000017b0a10:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A/Alamofire'>', hardenedRuntime='0'>'> are: {
+}
+2021-11-22 07:06:43 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600001888cc0; bundleID='org.cocoapods.Alamofire', path='<DVTFilePath:0x6000017b07e0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d310; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e730; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Alamofire', executablePath='<DVTFilePath:0x6000017b0a10:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A/Alamofire'>', hardenedRuntime='0'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~6J1hcM
+2021-11-22 07:06:43 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~6J1hcM' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A'
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A: replacing existing signature
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A: signed bundle with Mach-O universal (x86_64 arm64) [org.cocoapods.Alamofire]
+2021-11-22 07:06:43 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018f7060; bundleID='org.cocoapods.MASShortcut', path='<DVTFilePath:0x6000017b1730:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85900; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b09130; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.MASShortcut', executablePath='<DVTFilePath:0x6000017b1960:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A/MASShortcut'>', hardenedRuntime='0'>'>: {
+}
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018f7060; bundleID='org.cocoapods.MASShortcut', path='<DVTFilePath:0x6000017b1730:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85900; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e5d0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.MASShortcut', executablePath='<DVTFilePath:0x6000017b1960:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A/MASShortcut'>', hardenedRuntime='0'>'> are: {
+}
+2021-11-22 07:06:43 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x6000018f7060; bundleID='org.cocoapods.MASShortcut', path='<DVTFilePath:0x6000017b1730:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85900; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e730; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.MASShortcut', executablePath='<DVTFilePath:0x6000017b1960:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A/MASShortcut'>', hardenedRuntime='0'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~KZQKQg
+2021-11-22 07:06:43 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~KZQKQg' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A'
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A: replacing existing signature
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A: signed bundle with Mach-O universal (x86_64 arm64) [org.cocoapods.MASShortcut]
+2021-11-22 07:06:43 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018f7120; bundleID='org.cocoapods.Preferences', path='<DVTFilePath:0x6000017a3c60:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f15720; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b04a50; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Preferences', executablePath='<DVTFilePath:0x6000017a3e90:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A/Preferences'>', hardenedRuntime='0'>'>: {
+}
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018f7120; bundleID='org.cocoapods.Preferences', path='<DVTFilePath:0x6000017a3c60:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f15720; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e310; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Preferences', executablePath='<DVTFilePath:0x6000017a3e90:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A/Preferences'>', hardenedRuntime='0'>'> are: {
+}
+2021-11-22 07:06:43 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x6000018f7120; bundleID='org.cocoapods.Preferences', path='<DVTFilePath:0x6000017a3c60:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f15720; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e680; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Preferences', executablePath='<DVTFilePath:0x6000017a3e90:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A/Preferences'>', hardenedRuntime='0'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~rcxBjm
+2021-11-22 07:06:43 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~rcxBjm' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A'
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A: replacing existing signature
+2021-11-22 07:06:43 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A: signed bundle with Mach-O universal (x86_64 arm64) [org.cocoapods.Preferences]
+2021-11-22 07:06:43 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001888a80; bundleID='org.cocoapods.QRCoder', path='<DVTFilePath:0x6000017b0000:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85d60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b09130; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.QRCoder', executablePath='<DVTFilePath:0x6000017b0230:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A/QRCoder'>', hardenedRuntime='0'>'>: {
+}
+2021-11-22 07:06:43 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001888a80; bundleID='org.cocoapods.QRCoder', path='<DVTFilePath:0x6000017b0000:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85d60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b091e0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.QRCoder', executablePath='<DVTFilePath:0x6000017b0230:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A/QRCoder'>', hardenedRuntime='0'>'> are: {
+}
+2021-11-22 07:06:43 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600001888a80; bundleID='org.cocoapods.QRCoder', path='<DVTFilePath:0x6000017b0000:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85d60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e5d0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.QRCoder', executablePath='<DVTFilePath:0x6000017b0230:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A/QRCoder'>', hardenedRuntime='0'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~SbFF2r
+2021-11-22 07:06:43 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~SbFF2r' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A'
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A: replacing existing signature
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A: signed bundle with Mach-O universal (x86_64 arm64) [org.cocoapods.QRCoder]
+2021-11-22 07:06:44 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001891140; bundleID='org.sparkle-project.Sparkle', path='<DVTFilePath:0x6000017d3640:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d400; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b09130; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.sparkle-project.Sparkle', executablePath='<DVTFilePath:0x6000017b7b80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle'>', hardenedRuntime='0'>'>: {
+}
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001891140; bundleID='org.sparkle-project.Sparkle', path='<DVTFilePath:0x6000017d3640:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d400; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e5d0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.sparkle-project.Sparkle', executablePath='<DVTFilePath:0x6000017b7b80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle'>', hardenedRuntime='0'>'> are: {
+}
+2021-11-22 07:06:44 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600001891140; bundleID='org.sparkle-project.Sparkle', path='<DVTFilePath:0x6000017d3640:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7d400; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e730; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.sparkle-project.Sparkle', executablePath='<DVTFilePath:0x6000017b7b80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Sparkle'>', hardenedRuntime='0'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~ZC514e
+2021-11-22 07:06:44 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~ZC514e' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A'
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A: replacing existing signature
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A: signed bundle with Mach-O universal (x86_64 arm64) [org.sparkle-project.Sparkle]
+2021-11-22 07:06:44 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5740; bundleID='org.cocoapods.Swifter', path='<DVTFilePath:0x6000017b0fc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001fdaa80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b09130; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Swifter', executablePath='<DVTFilePath:0x6000017b11f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A/Swifter'>', hardenedRuntime='0'>'>: {
+}
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5740; bundleID='org.cocoapods.Swifter', path='<DVTFilePath:0x6000017b0fc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001fdaa80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e5d0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Swifter', executablePath='<DVTFilePath:0x6000017b11f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A/Swifter'>', hardenedRuntime='0'>'> are: {
+}
+2021-11-22 07:06:44 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x6000018b5740; bundleID='org.cocoapods.Swifter', path='<DVTFilePath:0x6000017b0fc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001fdaa80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e730; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.Swifter', executablePath='<DVTFilePath:0x6000017b11f0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A/Swifter'>', hardenedRuntime='0'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~GiMwYD
+2021-11-22 07:06:44 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~GiMwYD' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A'
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A: replacing existing signature
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A: signed bundle with Mach-O universal (x86_64 arm64) [org.cocoapods.Swifter]
+2021-11-22 07:06:44 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001894300; bundleID='org.cocoapods.SwiftyJSON', path='<DVTFilePath:0x6000017d3250:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fed0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b3a100; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.SwiftyJSON', executablePath='<DVTFilePath:0x6000017d3480:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A/SwiftyJSON'>', hardenedRuntime='0'>'>: {
+}
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001894300; bundleID='org.cocoapods.SwiftyJSON', path='<DVTFilePath:0x6000017d3250:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fed0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e5d0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.SwiftyJSON', executablePath='<DVTFilePath:0x6000017d3480:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A/SwiftyJSON'>', hardenedRuntime='0'>'> are: {
+}
+2021-11-22 07:06:44 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600001894300; bundleID='org.cocoapods.SwiftyJSON', path='<DVTFilePath:0x6000017d3250:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fed0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b09130; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='org.cocoapods.SwiftyJSON', executablePath='<DVTFilePath:0x6000017d3480:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A/SwiftyJSON'>', hardenedRuntime='0'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~NiLNGA
+2021-11-22 07:06:44 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~NiLNGA' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A'
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A: replacing existing signature
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A: signed bundle with Mach-O universal (x86_64 arm64) [org.cocoapods.SwiftyJSON]
+2021-11-22 07:06:44 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5b60; bundleID='net.yanue.V2rayU.Launcher', path='<DVTFilePath:0x600001255a80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85950; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b09130; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+}', teamID='GYFQAWD6QY', identifier='net.yanue.V2rayU.Launcher', executablePath='<DVTFilePath:0x6000017d2bc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app/Contents/MacOS/V2rayULauncher'>', hardenedRuntime='1'>'>: {
+    "com.apple.security.app-sandbox" = 1;
+}
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5b60; bundleID='net.yanue.V2rayU.Launcher', path='<DVTFilePath:0x600001255a80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85950; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e680; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+}', teamID='GYFQAWD6QY', identifier='net.yanue.V2rayU.Launcher', executablePath='<DVTFilePath:0x6000017d2bc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app/Contents/MacOS/V2rayULauncher'>', hardenedRuntime='1'>'> are: {
+    "com.apple.security.app-sandbox" = 1;
+}
+2021-11-22 07:06:44 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x6000018b5b60; bundleID='net.yanue.V2rayU.Launcher', path='<DVTFilePath:0x600001255a80:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f85950; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e7e0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+}', teamID='GYFQAWD6QY', identifier='net.yanue.V2rayU.Launcher', executablePath='<DVTFilePath:0x6000017d2bc0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app/Contents/MacOS/V2rayULauncher'>', hardenedRuntime='1'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~ruJj7K
+2021-11-22 07:06:44 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~ruJj7K' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app'
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app: replacing existing signature
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app: signed app bundle with Mach-O universal (x86_64 arm64) [net.yanue.V2rayU.Launcher]
+2021-11-22 07:06:44 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5d40; bundleID='(null)', path='<DVTFilePath:0x6000017d2840:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fd90; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'>: {
+}
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5d40; bundleID='(null)', path='<DVTFilePath:0x6000017d2840:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fd90; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'> are: {
+}
+2021-11-22 07:06:44 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x6000018b5d40; bundleID='(null)', path='<DVTFilePath:0x6000017d2840:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7fd90; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~xChHPz
+2021-11-22 07:06:44 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~xChHPz' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray: signed Mach-O thin (x86_64) [v2ray]
+2021-11-22 07:06:44 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5da0; bundleID='(null)', path='<DVTFilePath:0x6000017d2920:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f863a0; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'>: {
+}
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5da0; bundleID='(null)', path='<DVTFilePath:0x6000017d2920:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f863a0; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'> are: {
+}
+2021-11-22 07:06:44 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x6000018b5da0; bundleID='(null)', path='<DVTFilePath:0x6000017d2920:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f863a0; isSigned='0', isAdHocSigned='0', signingCertificate='(null)', entitlements='(null)', teamID='(null)', identifier='(null)', executablePath='(null)', hardenedRuntime='0'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~erIgVL
+2021-11-22 07:06:44 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~erIgVL' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray: signed Mach-O thin (x86_64) [xray]
+2021-11-22 07:06:44 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001894240; bundleID='(null)', path='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f859f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e5d0; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='V2rayUHelper', executablePath='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', hardenedRuntime='1'>'>: {
+}
+2021-11-22 07:06:44 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001894240; bundleID='(null)', path='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f859f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b52d60; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='V2rayUHelper', executablePath='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', hardenedRuntime='1'>'> are: {
+}
+2021-11-22 07:06:44 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600001894240; bundleID='(null)', path='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f859f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e890; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='(null)', teamID='GYFQAWD6QY', identifier='V2rayUHelper', executablePath='<DVTFilePath:0x6000017eeed0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>', hardenedRuntime='1'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~yMvJBc
+2021-11-22 07:06:44 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~yMvJBc' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'
+2021-11-22 07:06:44 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUHelper: replacing existing signature
+2021-11-22 07:06:45 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUHelper: signed Mach-O thin (x86_64) [V2rayUHelper]
+2021-11-22 07:06:45 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:45 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5c80; bundleID='(null)', path='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f80280; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e680; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+}', teamID='GYFQAWD6QY', identifier='V2rayUTool', executablePath='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', hardenedRuntime='1'>'>: {
+}
+2021-11-22 07:06:45 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018b5c80; bundleID='(null)', path='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f80280; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0e310; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+}', teamID='GYFQAWD6QY', identifier='V2rayUTool', executablePath='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', hardenedRuntime='1'>'> are: {
+}
+2021-11-22 07:06:45 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x6000018b5c80; bundleID='(null)', path='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f80280; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b0ed60; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+}', teamID='GYFQAWD6QY', identifier='V2rayUTool', executablePath='<DVTFilePath:0x6000017a36b0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>', hardenedRuntime='1'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~LUeJ8q
+2021-11-22 07:06:45 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~LUeJ8q' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUTool'
+2021-11-22 07:06:45 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUTool: replacing existing signature
+2021-11-22 07:06:45 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUTool: signed Mach-O thin (x86_64) [V2rayUTool]
+2021-11-22 07:06:45 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:45 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018890e0; bundleID='net.yanue.V2rayU', path='<DVTFilePath:0x6000017a24c0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7efd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b04a50; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+}', teamID='GYFQAWD6QY', identifier='net.yanue.V2rayU', executablePath='<DVTFilePath:0x6000017ed260:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/MacOS/V2rayU'>', hardenedRuntime='1'>'>: {
+}
+2021-11-22 07:06:45 +0000 [MT] Entitlements for <IDEDistributionItem: 0x6000018890e0; bundleID='net.yanue.V2rayU', path='<DVTFilePath:0x6000017a24c0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7efd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b05080; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+}', teamID='GYFQAWD6QY', identifier='net.yanue.V2rayU', executablePath='<DVTFilePath:0x6000017ed260:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/MacOS/V2rayU'>', hardenedRuntime='1'>'> are: {
+}
+2021-11-22 07:06:45 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x6000018890e0; bundleID='net.yanue.V2rayU', path='<DVTFilePath:0x6000017a24c0:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001f7efd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b05130; name='Apple Development: johnson.li01@sap.com (PF9A6Z5553)', hash='73C8333F7D05DA856176F88254E3C4C66F384631', serialNumber='2711A4836DBCC111', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-01-21 06:52:19 +0000''>', entitlements='{
+}', teamID='GYFQAWD6QY', identifier='net.yanue.V2rayU', executablePath='<DVTFilePath:0x6000017ed260:'/Users/i531320/projects/zhengchang/Build/V2rayU.xcarchive/Products/Applications/V2rayU.app/Contents/MacOS/V2rayU'>', hardenedRuntime='1'>'> to: /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~77JWOD
+2021-11-22 07:06:45 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '73C8333F7D05DA856176F88254E3C4C66F384631' '--entitlements' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/entitlements~~~77JWOD' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app'
+2021-11-22 07:06:45 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app: replacing existing signature
+2021-11-22 07:06:45 +0000  /var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app: signed app bundle with Mach-O universal (x86_64 arm64) [net.yanue.V2rayU]
+2021-11-22 07:06:45 +0000 [MT] /usr/bin/codesign exited with 0
+2021-11-22 07:06:45 +0000 [MT] Processing step: IDEDistributionZipODRItemStep
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Processing step: IDEDistributionSkipPackagingStep
+2021-11-22 07:06:45 +0000 [MT] Processing step: IDEDistributionAppStoreInformationStep
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2021-11-22 07:06:45 +0000 [MT] Processing step: IDEDistributionGenerateProcessedDistributionItems
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x60000179dab0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Preferences.framework/Versions/A'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000017817a0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/SwiftyJSON.framework/Versions/A'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000013e9d00:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app'>
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Didn't find embedded provisioning profile for <DVTFilePath:0x6000013e9d00:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app'>: Error Domain=NSCocoaErrorDomain Code=4 "No file at <DVTFilePath:0x600001369480:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app/Contents/embedded.provisionprofile'>" UserInfo={NSLocalizedDescription=No file at <DVTFilePath:0x600001369480:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Library/LoginItems/V2rayULauncher.app/Contents/embedded.provisionprofile'>}
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000017bdd50:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Didn't find info dictionary for <DVTFilePath:0x6000017bdd50:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>: Error Domain=DVTFoundationNSBundleAdditionsErrorDomain Code=1 "Couldn't load Info dictionary for <DVTFilePath:0x6000017bdd50:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>" UserInfo={NSLocalizedDescription=Couldn't load Info dictionary for <DVTFilePath:0x6000017bdd50:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>}
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x6000017bdd50:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x60000179d420:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app'>
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Didn't find embedded provisioning profile for <DVTFilePath:0x60000179d420:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app'>: Error Domain=NSCocoaErrorDomain Code=4 "No file at <DVTFilePath:0x600001368080:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/embedded.provisionprofile'>" UserInfo={NSLocalizedDescription=No file at <DVTFilePath:0x600001368080:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/embedded.provisionprofile'>}
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x60000179d340:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Sparkle.framework/Versions/A'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x600001781420:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Alamofire.framework/Versions/A'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x600001781500:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/MASShortcut.framework/Versions/A'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x600001782bc0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Didn't find info dictionary for <DVTFilePath:0x600001782bc0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>: Error Domain=DVTFoundationNSBundleAdditionsErrorDomain Code=1 "Couldn't load Info dictionary for <DVTFilePath:0x600001782bc0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>" UserInfo={NSLocalizedDescription=Couldn't load Info dictionary for <DVTFilePath:0x600001782bc0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>}
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x600001782bc0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/xray'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x600001799260:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Didn't find info dictionary for <DVTFilePath:0x600001799260:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>: Error Domain=DVTFoundationNSBundleAdditionsErrorDomain Code=1 "Couldn't load Info dictionary for <DVTFilePath:0x600001799260:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>" UserInfo={NSLocalizedDescription=Couldn't load Info dictionary for <DVTFilePath:0x600001799260:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>}
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x600001799260:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/v2ray-core/v2ray'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x600001798ee0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Didn't find info dictionary for <DVTFilePath:0x600001798ee0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>: Error Domain=DVTFoundationNSBundleAdditionsErrorDomain Code=1 "Couldn't load Info dictionary for <DVTFilePath:0x600001798ee0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>" UserInfo={NSLocalizedDescription=Couldn't load Info dictionary for <DVTFilePath:0x600001798ee0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>}
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x600001798ee0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUHelper'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x600001782ed0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Didn't find info dictionary for <DVTFilePath:0x600001782ed0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>: Error Domain=DVTFoundationNSBundleAdditionsErrorDomain Code=1 "Couldn't load Info dictionary for <DVTFilePath:0x600001782ed0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>" UserInfo={NSLocalizedDescription=Couldn't load Info dictionary for <DVTFilePath:0x600001782ed0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>}
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x600001782ed0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Resources/V2rayUTool'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x60000179dc00:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/QRCoder.framework/Versions/A'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x600001781650:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/Frameworks/Swifter.framework/Versions/A'>
+2021-11-22 07:06:45 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000017812d0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app'>
+2021-11-22 07:06:45 +0000 [MT] [OPTIONAL] Didn't find embedded provisioning profile for <DVTFilePath:0x6000017812d0:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app'>: Error Domain=NSCocoaErrorDomain Code=4 "No file at <DVTFilePath:0x600001322c80:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/embedded.provisionprofile'>" UserInfo={NSLocalizedDescription=No file at <DVTFilePath:0x600001322c80:'/var/folders/96/lcn_f7256nb04_8c1mvld4jh0000gn/T/XcodeDistPipeline.~~~fG9YtN/Root/Applications/V2rayU.app/Contents/embedded.provisionprofile'>}
+2021-11-22 07:06:45 +0000 [MT] Processing step: IDEDistributionCreateManifestStep
+2021-11-22 07:06:45 +0000 [MT] Skipping step: IDEDistributionCreateManifestStep because it said so

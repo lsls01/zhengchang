@@ -80,28 +80,28 @@ struct TlsCertificates: Codable {
 }
 
 struct TcpSettings: Codable {
-    var header: TcpSettingHeader = TcpSettingHeader()
+    var header = TcpSettingHeader()
 }
 
 struct TcpSettingHeader: Codable {
-    var type: String = "none" // http or none
+    var type = "none" // http or none
     var request: TcpSettingHeaderRequest?
     var response: TcpSettingHeaderResponse?
 }
 
 struct TcpSettingHeaderRequest: Codable {
-    var version: String = ""
-    var method: String = ""
-    var path: [String] = []
-    var headers: TcpSettingHeaderRequestHeaders = TcpSettingHeaderRequestHeaders()
+    var version = ""
+    var method = ""
+    var path = [String]()
+    var headers = TcpSettingHeaderRequestHeaders()
 }
 
 struct TcpSettingHeaderRequestHeaders: Codable {
-    var host: [String] = []
-    var userAgent: [String] = []
-    var acceptEncoding: [String] = []
-    var connection: [String] = []
-    var pragma: String = ""
+    var host = [String]()
+    var userAgent = [String]()
+    var acceptEncoding = [String]()
+    var connection = [String]()
+    var pragma = ""
 
     enum CodingKeys: String, CodingKey {
         case host = "Host"
@@ -130,30 +130,30 @@ struct TcpSettingHeaderResponseHeaders: Codable {
 }
 
 struct KcpSettings: Codable {
-    var mtu: Int = 1350
-    var tti: Int = 20
-    var uplinkCapacity: Int = 50
-    var downlinkCapacity: Int = 20
-    var congestion: Bool = false
-    var readBufferSize: Int = 1
-    var writeBufferSize: Int = 1
-    var header: KcpSettingsHeader = KcpSettingsHeader()
+    var mtu = 1350
+    var tti = 20
+    var uplinkCapacity = 50
+    var downlinkCapacity = 20
+    var congestion = false
+    var readBufferSize = 1
+    var writeBufferSize = 1
+    var header = KcpSettingsHeader()
 }
 
 var KcpSettingsHeaderType = ["none", "srtp", "utp", "wechat-video", "dtls", "wireguard"]
 
 struct KcpSettingsHeader: Codable {
     // KcpSettingsHeaderType
-    var type: String = "none"
+    var type = "none"
 }
 
 struct WsSettings: Codable {
-    var path: String = ""
-    var headers: WsSettingsHeader = WsSettingsHeader()
+    var path = ""
+    var headers = WsSettingsHeader()
 }
 
 struct WsSettingsHeader: Codable {
-    var host: String = ""
+    var host = ""
 }
 
 struct HttpSettings: Codable {
@@ -162,7 +162,7 @@ struct HttpSettings: Codable {
 }
 
 struct DsSettings: Codable {
-    var path: String = ""
+    var path = ""
 }
 
 struct V2rayStreamSettingSockopt: Codable {
@@ -172,24 +172,23 @@ struct V2rayStreamSettingSockopt: Codable {
         case off
     }
 
-    var mark: Int = 0
-    var tcpFastOpen: Bool = false // 是否启用 TCP Fast Open。
+    var mark = 0
+    var tcpFastOpen = false // 是否启用 TCP Fast Open。
     var tproxy: tproxy = .off // 是否开启透明代理 (仅适用于 Linux)。
 }
-
 
 var QuicSettingsSecurity = ["none", "aes-128-gcm", "chacha20-poly1305"]
 
 struct QuicSettings: Codable {
     //  QuicSettingsSecurity
-    var security: String = "none"
-    var key: String = ""
-    var header: QuicSettingHeader = QuicSettingHeader()
+    var security = "none"
+    var key = ""
+    var header = QuicSettingHeader()
 }
 
 var QuicSettingsHeaderType = ["none", "srtp", "utp", "wechat-video", "dtls", "wireguard"]
 
 struct QuicSettingHeader: Codable {
     // QuicSettingsHeaderType
-    var type: String = "none"
+    var type = "none"
 }

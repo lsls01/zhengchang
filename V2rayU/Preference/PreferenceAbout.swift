@@ -10,13 +10,13 @@ import Cocoa
 import Preferences
 
 final class PreferenceAboutViewController: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = PreferencePane.Identifier.aboutTab
+    let preferencePaneIdentifier = Preferences.PaneIdentifier.aboutTab
     let preferencePaneTitle = "About"
     let toolbarItemIcon = NSImage(named: NSImage.infoName)!
-    
-    @IBOutlet weak var VersionLabel: NSTextField!
-    @IBOutlet weak var V2rayCoreVersion: NSTextField!
-    
+
+    @IBOutlet var VersionLabel: NSTextField!
+    @IBOutlet var V2rayCoreVersion: NSTextField!
+
     override var nibName: NSNib.Name? {
         return "PreferenceAbout"
     }
@@ -24,12 +24,12 @@ final class PreferenceAboutViewController: NSViewController, PreferencePane {
     override func viewDidLoad() {
         super.viewDidLoad()
         // fix: https://github.com/sindresorhus/Preferences/issues/31
-        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
-        
-        self.VersionLabel.stringValue = "Version " + appVersion
+        preferredContentSize = NSMakeSize(view.frame.size.width, view.frame.size.height)
+
+        VersionLabel.stringValue = "Version " + appVersion
 
         if let v2rayCoreVersion = UserDefaults.get(forKey: .xRayCoreVersion) {
-            self.V2rayCoreVersion.stringValue = "based on v2ray-core " + v2rayCoreVersion
+            V2rayCoreVersion.stringValue = "based on v2ray-core " + v2rayCoreVersion
         }
     }
 }

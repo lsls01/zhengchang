@@ -27,7 +27,7 @@ class V2rayUTool: NSObject {
     static func run() {
         let arguments = CommandLine.arguments
         if arguments.count < 9 {
-            print(self.usage)
+            print(usage)
             return
         }
 
@@ -35,21 +35,21 @@ class V2rayUTool: NSObject {
         let pac = arguments[4]
         let httpPort = arguments[6]
         let sockPort = arguments[8]
-        let mode = self.RunMode(rawValue: modeArg) ?? .manual
+        let mode = RunMode(rawValue: modeArg) ?? .manual
 
-        self.setProxy(mode: mode, pacUrl: pac, httpPort: httpPort, sockPort: sockPort)
+        setProxy(mode: mode, pacUrl: pac, httpPort: httpPort, sockPort: sockPort)
     }
 
     static func setProxy(mode: RunMode, pacUrl: String, httpPort: String, sockPort: String) {
         let authErr = AuthorizationCreate(nil, nil, [.interactionAllowed, .extendRights, .preAuthorize], &authRef)
-        if (authErr != noErr) {
-            authRef = nil;
-            NSLog("Error when create authorization");
-            return;
+        if authErr != noErr {
+            authRef = nil
+            NSLog("Error when create authorization")
+            return
         } else {
-            if (authRef == nil) {
-                NSLog("No authorization has been granted to modify network configuration");
-                return;
+            if authRef == nil {
+                NSLog("No authorization has been granted to modify network configuration")
+                return
             }
 
             // set system proxy
@@ -67,7 +67,7 @@ class V2rayUTool: NSObject {
             // global proxy
             if mode == .global {
                 // socks
-                if sockPort != "" && Int(sockPort) ?? 0 > 1024 {
+                if sockPort != "", Int(sockPort) ?? 0 > 1024 {
                     proxies[kCFNetworkProxiesSOCKSEnable] = 1 as NSNumber
                     proxies[kCFNetworkProxiesSOCKSProxy] = "127.0.0.1" as AnyObject?
                     proxies[kCFNetworkProxiesSOCKSPort] = Int(sockPort)! as NSNumber
@@ -75,7 +75,7 @@ class V2rayUTool: NSObject {
                 }
 
                 // check http port
-                if httpPort != "" && Int(httpPort) ?? 0 > 1024 {
+                if httpPort != "", Int(httpPort) ?? 0 > 1024 {
                     // http
                     proxies[kCFNetworkProxiesHTTPEnable] = 1 as NSNumber
                     proxies[kCFNetworkProxiesHTTPProxy] = "127.0.0.1" as AnyObject?
@@ -97,20 +97,20 @@ class V2rayUTool: NSObject {
             }
 
             // restore system proxy setting in off or manual or restore
-            var originalSets: Dictionary<String, Dictionary<String, Any>>?
+            var originalSets: [String: [String: Any]]?
             if mode == .off || mode == .manual || mode == .restore {
-                originalSets = (NSDictionary(contentsOfFile: SysProxyBackupPlist) as? Dictionary<String, Dictionary<String, Any>>)
+                originalSets = (NSDictionary(contentsOfFile: SysProxyBackupPlist) as? [String: [String: Any]])
             }
 
-            sets.allKeys!.forEach { (key) in
+            sets.allKeys!.forEach { key in
                 let dict = sets.object(forKey: key)!
                 let hardware = (dict as AnyObject).value(forKeyPath: "Interface.Hardware")
 
-                if hardware != nil && ["AirPort", "Wi-Fi", "Ethernet"].contains(hardware as! String) {
+                if hardware != nil, ["AirPort", "Wi-Fi", "Ethernet"].contains(hardware as! String) {
                     // restore system proxy setting in off or manual or restore
-                    if (mode == .off || mode == .manual || mode == .restore) && originalSets != nil && originalSets!.keys.contains(key) {
+                    if mode == .off || mode == .manual || mode == .restore, originalSets != nil, originalSets!.keys.contains(key) {
                         if let nowSet = originalSets![key] {
-                            proxies = nowSet["Proxies"] as! [NSObject: AnyObject];
+                            proxies = nowSet["Proxies"] as! [NSObject: AnyObject]
                         }
                     }
 

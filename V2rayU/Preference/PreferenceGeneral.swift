@@ -11,7 +11,7 @@ import Preferences
 import ServiceManagement
 
 final class PreferenceGeneralViewController: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = PreferencePane.Identifier.generalTab
+    let preferencePaneIdentifier = Preferences.PaneIdentifier.generalTab
     let preferencePaneTitle = "General"
     let toolbarItemIcon = NSImage(named: NSImage.preferencesGeneralName)!
 
@@ -19,15 +19,15 @@ final class PreferenceGeneralViewController: NSViewController, PreferencePane {
         return "PreferenceGeneral"
     }
 
-    @IBOutlet weak var autoLaunch: NSButtonCell!
-    @IBOutlet weak var autoCheckVersion: NSButtonCell!
-    @IBOutlet weak var autoUpdateServers: NSButtonCell!
+    @IBOutlet var autoLaunch: NSButtonCell!
+    @IBOutlet var autoCheckVersion: NSButtonCell!
+    @IBOutlet var autoUpdateServers: NSButtonCell!
 //    @IBOutlet weak var autoSelectFastestServer: NSButtonCell!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // fix: https://github.com/sindresorhus/Preferences/issues/31
-        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        preferredContentSize = NSMakeSize(view.frame.size.width, view.frame.size.height)
 
         if UserDefaults.getBool(forKey: .autoLaunch) {
             autoLaunch.state = .on
@@ -60,7 +60,7 @@ final class PreferenceGeneralViewController: NSViewController, PreferencePane {
 //        UserDefaults.setBool(forKey: .autoSelectFastestServer, value: sender.state == .on)
 //    }
 
-    @IBAction func goFeedback(_ sender: NSButton) {
+    @IBAction func goFeedback(_: NSButton) {
         guard let url = URL(string: "https://github.com/yanue/v2rayu/issues") else {
             return
         }
@@ -71,5 +71,4 @@ final class PreferenceGeneralViewController: NSViewController, PreferencePane {
         // need set SUFeedURL into plist
         V2rayUpdater.checkForUpdates(sender)
     }
-
 }

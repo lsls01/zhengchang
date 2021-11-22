@@ -17,15 +17,14 @@ let pingJsonFilePath = AppHomePath + "/" + pingJsonFileName
 var task: Process?
 
 struct pingItem: Codable {
-    var name: String = ""
-    var host: String = ""
-    var ping: String = ""
+    var name = ""
+    var host = ""
+    var ping = ""
 }
 
 class PingSpeed: NSObject {
-
     var pingServers: [V2rayItem] = []
-    var serverLen : Int = 0
+    var serverLen = 0
 
     func pingAll() {
         print("ping start")
@@ -34,7 +33,7 @@ class PingSpeed: NSObject {
             return
         }
         fastV2rayName = ""
-        self.pingServers = []
+        pingServers = []
         let itemList = V2rayServer.list()
         if itemList.count == 0 {
             return
@@ -57,18 +56,18 @@ class PingSpeed: NSObject {
         menuController.statusMenu.item(withTag: 1)?.title = pingTip
         // in ping
         inPing = true
-        self.serverLen = itemList.count
+        serverLen = itemList.count
         for item in itemList {
-            self.pingEachServer(item: item)
+            pingEachServer(item: item)
         }
     }
 
     func pingEachServer(item: V2rayItem) {
         if !item.isValid {
-            self.pingServers.append(item)
+            pingServers.append(item)
             return
         }
-        let host = self.parseHost(item: item)
+        let host = parseHost(item: item)
         guard let _ = NSURL(string: host) else {
             print("not host", host)
             return
@@ -78,7 +77,7 @@ class PingSpeed: NSObject {
         var ping: SwiftyPing?
         do {
             ping = try SwiftyPing(host: host, configuration: PingConfiguration(interval: 1.0, with: 1), queue: DispatchQueue.global())
-            ping?.finished = { (result) in
+            ping?.finished = { result in
                 DispatchQueue.main.async {
                     var message = "\n--- \(host) ping statistics ---\n"
                     message += "\(result.packetsTransmitted) transmitted, \(result.packetsReceived) received"
@@ -92,7 +91,7 @@ class PingSpeed: NSObject {
                         item.store()
                         message += String(format: "round-trip min/avg/max/stddev = %.3f/%.3f/%.3f/%.3f ms", roundtrip.minimum * 1000, roundtrip.average * 1000, roundtrip.maximum * 1000, roundtrip.standardDeviation * 1000)
                     }
-                    //print("finished",message)
+                    // print("finished",message)
                     self.pingServers.append(item)
                     self.refreshStatusMenu()
                 }
@@ -100,12 +99,12 @@ class PingSpeed: NSObject {
             ping?.targetCount = 5
             try ping?.startPinging()
         } catch {
-            print("ping ",item.name,host,error.localizedDescription)
+            print("ping ", item.name, host, error.localizedDescription)
         }
     }
 
     func refreshStatusMenu() {
-        if self.pingServers.count == self.serverLen {
+        if pingServers.count == serverLen {
             inPing = false
             menuController.statusMenu.item(withTag: 1)?.title = "Ping Speed..."
             menuController.showServers()
@@ -136,7 +135,7 @@ class PingSpeed: NSObject {
             return
         }
 
-        var pingResHash: Dictionary<String, String> = [:]
+        var pingResHash: [String: String] = [:]
         if json.arrayValue.count > 0 {
             for val in json.arrayValue {
                 let name = val["name"].stringValue
@@ -155,7 +154,7 @@ class PingSpeed: NSObject {
                 continue
             }
             let x = pingResHash[item.name]
-            if x != nil && x!.count > 0 {
+            if x != nil, x!.count > 0 {
                 item.speed = x!
                 item.store()
             }
@@ -166,7 +165,7 @@ class PingSpeed: NSObject {
         let cfg = V2rayConfig()
         cfg.parseJson(jsonText: item.json)
 
-        var host: String = ""
+        var host = ""
         if cfg.serverProtocol == V2rayProtocolOutbound.vmess.rawValue {
             host = cfg.serverVmess.address
         }
@@ -202,9 +201,9 @@ class PingSpeed: NSObject {
         let output = String(data: data, encoding: String.Encoding.utf8)!
 
         if output.count > 0 {
-            //remove newline character.
+            // remove newline character.
             let lastIndex = output.index(before: output.endIndex)
-            return String(output[output.startIndex..<lastIndex])
+            return String(output[output.startIndex ..< lastIndex])
         }
 
         return output

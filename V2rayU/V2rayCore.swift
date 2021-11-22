@@ -11,7 +11,7 @@ import SwiftyJSON
 
 // v2ray-core version check, download, unzip
 class V2rayCore {
-    static let version = "v1.4.2"
+    static let version = "v1.4.5"
     // need replace ${version}
     //  "https://github.com/XTLS/Xray-core/releases/download/v1.4.2/Xray-macos-64.zip"
     var releaseUrl: String = "https://github.com/XTLS/Xray-core/releases/download/${version}/Xray-macos-64.zip"
@@ -22,13 +22,13 @@ class V2rayCore {
         // has new verion
         if hasNewVersion {
             // download new version
-            self.download()
+            download()
             return
         }
 
         let fileMgr = FileManager.default
         if !fileMgr.fileExists(atPath: v2rayCoreFile) {
-            self.download();
+            download()
         }
     }
 
@@ -37,7 +37,7 @@ class V2rayCore {
         let oldVersion = UserDefaults.get(forKey: .xRayCoreVersion) ?? V2rayCore.version
         NSLog("check version", oldVersion)
 
-        Alamofire.request(versionUrl).responseJSON { response in
+        AF.request(versionUrl).responseJSON { response in
             var hasNewVersion = false
 
             defer {
@@ -45,7 +45,7 @@ class V2rayCore {
                 self.checkLocal(hasNewVersion: hasNewVersion)
             }
 
-            //to get status code
+            // to get status code
             if let status = response.response?.statusCode {
                 if status != 200 {
                     NSLog("error with response status: ", status)
@@ -53,8 +53,9 @@ class V2rayCore {
                 }
             }
 
-            //to get JSON return value
-            if let result = response.result.value {
+            // to get JSON return value
+            switch response.result {
+            case let .success(result):
                 let JSON = result as! NSDictionary
 
                 // get tag_name (verion)
@@ -92,6 +93,8 @@ class V2rayCore {
                 }
 
                 return
+            case .failure:
+                break
             }
         }
     }
@@ -109,36 +112,34 @@ class V2rayCore {
         }
 
         // download file: /Application/V2rayU.app/Contents/Resources/v2ray-macos-64.zip
-        let fileUrl = URL.init(fileURLWithPath: shFile.path.replacingOccurrences(of: "/unzip.sh", with: "/v2ray-macos-64.zip"))
-        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
-            return (fileUrl, [.removePreviousFile, .createIntermediateDirectories])
+        let fileUrl = URL(fileURLWithPath: shFile.path.replacingOccurrences(of: "/unzip.sh", with: "/v2ray-macos-64.zip"))
+        let destination: DownloadRequest.Destination = { _, _ in
+            (fileUrl, [.removePreviousFile, .createIntermediateDirectories])
         }
 
         let utilityQueue = DispatchQueue.global(qos: .utility)
-        Alamofire.download(url, to: destination)
-                .downloadProgress(queue: utilityQueue) { progress in
-                    NSLog("已下载：\(progress.completedUnitCount / 1024)KB")
-                }
-                .responseData { response in
-                    switch response.result {
-                    case .success(_):
-                        if let _ = response.result.value {
-                            // make unzip.sh execable
-                            // chmod 777 unzip.sh
-                            let execable = "cd " + AppHomePath + " && /bin/chmod 777 ./unzip.sh"
-                            _ = shell(launchPath: "/bin/bash", arguments: ["-c", execable])
+        AF.download(url, to: destination)
+            .downloadProgress(queue: utilityQueue) { progress in
+                NSLog("已下载：\(progress.completedUnitCount / 1024)KB")
+            }
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    // make unzip.sh execable
+                    // chmod 777 unzip.sh
+                    let execable = "cd " + AppHomePath + " && /bin/chmod 777 ./unzip.sh"
+                    _ = shell(launchPath: "/bin/bash", arguments: ["-c", execable])
 
-                            // unzip v2ray-core
-                            // cmd: /bin/bash -c 'cd path && ./unzip.sh '
-                            let sh = "cd " + AppHomePath + " && ./unzip.sh && /bin/chmod -R 777 ./v2ray-core"
-                            // exec shell
-                            let res = shell(launchPath: "/bin/bash", arguments: ["-c", sh])
-                            NSLog("res:", sh, res!)
-                        }
-                    case .failure(_):
-                        NSLog("error with response status:")
-                        return
-                    }
+                    // unzip v2ray-core
+                    // cmd: /bin/bash -c 'cd path && ./unzip.sh '
+                    let sh = "cd " + AppHomePath + " && ./unzip.sh && /bin/chmod -R 777 ./v2ray-core"
+                    // exec shell
+                    let res = shell(launchPath: "/bin/bash", arguments: ["-c", sh])
+                    NSLog("res:", sh, res!)
+                case .failure:
+                    NSLog("error with response status:")
+                    return
                 }
+            }
     }
 }

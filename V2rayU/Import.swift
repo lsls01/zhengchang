@@ -10,13 +10,13 @@ import SwiftyJSON
 
 class ImportUri {
     var isValid: Bool = false
-    var json: String = ""
-    var remark: String = ""
-    var error: String = ""
-    var uri: String = ""
+    var json = ""
+    var remark = ""
+    var error = ""
+    var uri = ""
 
     static func importUri(uri: String, id: String = "", checkExist: Bool = true) -> ImportUri? {
-        if checkExist && V2rayServer.exist(url: uri) {
+        if checkExist, V2rayServer.exist(url: uri) {
             let importUri = ImportUri()
             importUri.isValid = false
             importUri.error = "Url already exists"
@@ -64,12 +64,12 @@ class ImportUri {
             let aUri = uri.split(separator: "#")
             url = URL(string: String(aUri[0]))
             if url == nil {
-                self.error = "invalid ss url"
+                error = "invalid ss url"
                 return
             }
             // 支持 ss://YWVzLTI1Ni1jZmI6ZjU1LmZ1bi0wNTM1NDAxNkA0NS43OS4xODAuMTExOjExMDc4#翻墙党300.16美国 格式
             if aUri.count > 1 {
-                self.remark = String(aUri[1])
+                remark = String(aUri[1])
             }
         }
 
@@ -78,12 +78,12 @@ class ImportUri {
         let ss = ShadowsockUri()
         ss.Init(url: url!)
         if ss.error.count > 0 {
-            self.error = ss.error
-            self.isValid = false
+            error = ss.error
+            isValid = false
             return
         }
         if ss.remark.count > 0 {
-            self.remark = ss.remark
+            remark = ss.remark
         }
 
         let v2ray = V2rayConfig()
@@ -98,17 +98,17 @@ class ImportUri {
         // check is valid
         v2ray.checkManualValid()
         if v2ray.isValid {
-            self.isValid = true
-            self.json = v2ray.combineManual()
+            isValid = true
+            json = v2ray.combineManual()
         } else {
-            self.error = v2ray.error
-            self.isValid = false
+            error = v2ray.error
+            isValid = false
         }
     }
 
     func importSSRUri(uri: String) {
         if URL(string: uri) == nil {
-            self.error = "invalid ssr url"
+            error = "invalid ssr url"
             return
         }
         self.uri = uri
@@ -116,11 +116,11 @@ class ImportUri {
         let ssr = ShadowsockRUri()
         ssr.Init(url: URL(string: uri)!)
         if ssr.error.count > 0 {
-            self.error = ssr.error
-            self.isValid = false
+            error = ssr.error
+            isValid = false
             return
         }
-        self.remark = ssr.remark
+        remark = ssr.remark
 
         let v2ray = V2rayConfig()
         var ssServer = V2rayOutboundShadowsockServer()
@@ -134,17 +134,17 @@ class ImportUri {
         // check is valid
         v2ray.checkManualValid()
         if v2ray.isValid {
-            self.isValid = true
-            self.json = v2ray.combineManual()
+            isValid = true
+            json = v2ray.combineManual()
         } else {
-            self.error = v2ray.error
-            self.isValid = false
+            error = v2ray.error
+            isValid = false
         }
     }
 
     func importVmessUri(uri: String, id: String = "") {
         if URL(string: uri) == nil {
-            self.error = "invalid vmess url"
+            error = "invalid vmess url"
             return
         }
 
@@ -157,12 +157,12 @@ class ImportUri {
             vmess.parseType1(url: URL(string: uri)!)
             if vmess.error.count > 0 {
                 print("error", vmess.error)
-                self.isValid = false;
-                self.error = vmess.error
+                isValid = false
+                error = vmess.error
                 return
             }
         }
-        self.remark = vmess.remark
+        remark = vmess.remark
 
         let v2ray = V2rayConfig()
 
@@ -187,7 +187,7 @@ class ImportUri {
         v2ray.streamTlsServerName = vmess.tlsServer
 
         // tls servername for h2 or ws
-        if vmess.tlsServer.count == 0 && (vmess.network == V2rayStreamSettings.network.h2.rawValue || vmess.network == V2rayStreamSettings.network.ws.rawValue) {
+        if vmess.tlsServer.count == 0, vmess.network == V2rayStreamSettings.network.h2.rawValue || vmess.network == V2rayStreamSettings.network.ws.rawValue {
             v2ray.streamTlsServerName = vmess.netHost
         }
 
@@ -216,17 +216,17 @@ class ImportUri {
         // check is valid
         v2ray.checkManualValid()
         if v2ray.isValid {
-            self.isValid = true
-            self.json = v2ray.combineManual()
+            isValid = true
+            json = v2ray.combineManual()
         } else {
-            self.error = v2ray.error
-            self.isValid = false
+            error = v2ray.error
+            isValid = false
         }
     }
 
-    func importVlessUri(uri: String, id: String = "") {
+    func importVlessUri(uri: String, id _: String = "") {
         if URL(string: uri) == nil {
-            self.error = "invalid vless url"
+            error = "invalid vless url"
             return
         }
 
@@ -235,10 +235,10 @@ class ImportUri {
         let vmess = VlessUri()
         vmess.Init(url: URL(string: uri)!)
         if vmess.error.count > 0 {
-            self.error = vmess.error
+            error = vmess.error
             return
         }
-        self.remark = vmess.remark
+        remark = vmess.remark
         let v2ray = V2rayConfig()
         v2ray.serverProtocol = V2rayProtocolOutbound.vless.rawValue
 
@@ -284,17 +284,17 @@ class ImportUri {
         // check is valid
         v2ray.checkManualValid()
         if v2ray.isValid {
-            self.isValid = true
-            self.json = v2ray.combineManual()
+            isValid = true
+            json = v2ray.combineManual()
         } else {
-            self.error = v2ray.error
-            self.isValid = false
+            error = v2ray.error
+            isValid = false
         }
     }
 
     func importTrojanUri(uri: String) {
         if URL(string: uri) == nil {
-            self.error = "invalid ssr url"
+            error = "invalid ssr url"
             return
         }
         self.uri = uri
@@ -302,11 +302,11 @@ class ImportUri {
         let trojan = TrojanUri()
         trojan.Init(url: URL(string: uri)!)
         if trojan.error.count > 0 {
-            self.error = trojan.error
-            self.isValid = false
+            error = trojan.error
+            isValid = false
             return
         }
-        self.remark = trojan.remark
+        remark = trojan.remark
 
         let v2ray = V2rayConfig()
         var svr = V2rayOutboundTrojanServer()
@@ -320,38 +320,36 @@ class ImportUri {
         // check is valid
         v2ray.checkManualValid()
         if v2ray.isValid {
-            self.isValid = true
-            self.json = v2ray.combineManual()
-            NSLog("\(self.json)")
+            isValid = true
+            json = v2ray.combineManual()
+            NSLog("\(json)")
         } else {
-            self.error = v2ray.error
-            self.isValid = false
+            error = v2ray.error
+            isValid = false
         }
     }
-
 }
 
-class Scanner {
-
+enum Scanner {
     // scan from screen
     static func scanQRCodeFromScreen() -> String {
-        var displayCount: UInt32 = 0;
+        var displayCount: UInt32 = 0
         var result = CGGetActiveDisplayList(0, nil, &displayCount)
-        if (Int(result.rawValue) != 0) {
+        if Int(result.rawValue) != 0 {
             return ""
         }
         let allocated = Int(displayCount)
         let activeDisplays: UnsafeMutablePointer<UInt32> = UnsafeMutablePointer<CGDirectDisplayID>.allocate(capacity: allocated)
 
         result = CGGetActiveDisplayList(displayCount, activeDisplays, &displayCount)
-        if (Int(result.rawValue) != 0) {
+        if Int(result.rawValue) != 0 {
             return ""
         }
 
         var qrStr = ""
 
-        for i in 0..<displayCount {
-            let str = self.getQrcodeStr(displayID: activeDisplays[Int(i)])
+        for i in 0 ..< displayCount {
+            let str = getQrcodeStr(displayID: activeDisplays[Int(i)])
             // support: ss:// | ssr:// | vmess://
             if ImportUri.supportProtocol(uri: str) {
                 qrStr = str
@@ -369,8 +367,8 @@ class Scanner {
             return ""
         }
 
-        let detector: CIDetector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])!
-        let ciImage: CIImage = CIImage(cgImage: qrcodeImg)
+        let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])!
+        let ciImage = CIImage(cgImage: qrcodeImg)
         let features = detector.features(in: ciImage)
 
         var qrCodeLink = ""

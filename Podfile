@@ -2,7 +2,7 @@
 # platform :ios, '9.0'
 inhibit_all_warnings!
 source 'https://github.com/CocoaPods/Specs.git'
-platform :osx, '10.12'
+platform :osx, '12.0'
 
 target 'V2rayU' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks

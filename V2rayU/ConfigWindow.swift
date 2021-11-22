@@ -6,117 +6,116 @@
 //  Copyright © 2018 yanue. All rights reserved.
 //
 
-import Cocoa
 import Alamofire
+import Cocoa
 
-var v2rayConfig: V2rayConfig = V2rayConfig()
+var v2rayConfig = V2rayConfig()
 
 class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDelegate {
-
     override var windowNibName: String? {
         return "ConfigWindow" // no extension .xib here
     }
 
-    let tableViewDragType: String = "v2ray.item"
+    let tableViewDragType = "v2ray.item"
 
-    @IBOutlet weak var tabView: NSTabView!
-    @IBOutlet weak var okBtn: NSButtonCell!
-    @IBOutlet weak var errTip: NSTextField!
-    @IBOutlet weak var configText: NSTextView!
-    @IBOutlet weak var serversTableView: NSTableView!
-    @IBOutlet weak var addRemoveButton: NSSegmentedControl!
-    @IBOutlet weak var jsonUrl: NSTextField!
-    @IBOutlet weak var selectFileBtn: NSButton!
-    @IBOutlet weak var importBtn: NSButton!
+    @IBOutlet var tabView: NSTabView!
+    @IBOutlet var okBtn: NSButtonCell!
+    @IBOutlet var errTip: NSTextField!
+    @IBOutlet var configText: NSTextView!
+    @IBOutlet var serversTableView: NSTableView!
+    @IBOutlet var addRemoveButton: NSSegmentedControl!
+    @IBOutlet var jsonUrl: NSTextField!
+    @IBOutlet var selectFileBtn: NSButton!
+    @IBOutlet var importBtn: NSButton!
 
-    @IBOutlet weak var sockPort: NSButton!
-    @IBOutlet weak var httpPort: NSButton!
-    @IBOutlet weak var dnsServers: NSButton!
-    @IBOutlet weak var enableUdp: NSButton!
-    @IBOutlet weak var enableMux: NSButton!
-    @IBOutlet weak var muxConcurrent: NSButton!
-    @IBOutlet weak var version4: NSButton!
+    @IBOutlet var sockPort: NSButton!
+    @IBOutlet var httpPort: NSButton!
+    @IBOutlet var dnsServers: NSButton!
+    @IBOutlet var enableUdp: NSButton!
+    @IBOutlet var enableMux: NSButton!
+    @IBOutlet var muxConcurrent: NSButton!
+    @IBOutlet var version4: NSButton!
 
-    @IBOutlet weak var switchProtocol: NSPopUpButton!
+    @IBOutlet var switchProtocol: NSPopUpButton!
 
-    @IBOutlet weak var serverView: NSView!
-    @IBOutlet weak var VmessView: NSView!
-    @IBOutlet weak var VlessView: NSView!
-    @IBOutlet weak var ShadowsocksView: NSView!
-    @IBOutlet weak var SocksView: NSView!
-    @IBOutlet weak var TrojanView: NSView!
+    @IBOutlet var serverView: NSView!
+    @IBOutlet var VmessView: NSView!
+    @IBOutlet var VlessView: NSView!
+    @IBOutlet var ShadowsocksView: NSView!
+    @IBOutlet var SocksView: NSView!
+    @IBOutlet var TrojanView: NSView!
 
     // vmess
-    @IBOutlet weak var vmessAddr: NSTextField!
-    @IBOutlet weak var vmessPort: NSTextField!
-    @IBOutlet weak var vmessAlterId: NSTextField!
-    @IBOutlet weak var vmessLevel: NSTextField!
-    @IBOutlet weak var vmessUserId: NSTextField!
-    @IBOutlet weak var vmessSecurity: NSPopUpButton!
+    @IBOutlet var vmessAddr: NSTextField!
+    @IBOutlet var vmessPort: NSTextField!
+    @IBOutlet var vmessAlterId: NSTextField!
+    @IBOutlet var vmessLevel: NSTextField!
+    @IBOutlet var vmessUserId: NSTextField!
+    @IBOutlet var vmessSecurity: NSPopUpButton!
 
     // vless
-    @IBOutlet weak var vlessAddr: NSTextField!
-    @IBOutlet weak var vlessPort: NSTextField!
-    @IBOutlet weak var vlessUserId: NSTextField!
-    @IBOutlet weak var vlessLevel: NSTextField!
-    @IBOutlet weak var vlessFlow: NSTextField!
+    @IBOutlet var vlessAddr: NSTextField!
+    @IBOutlet var vlessPort: NSTextField!
+    @IBOutlet var vlessUserId: NSTextField!
+    @IBOutlet var vlessLevel: NSTextField!
+    @IBOutlet var vlessFlow: NSTextField!
 
     // shadowsocks
-    @IBOutlet weak var shadowsockAddr: NSTextField!
-    @IBOutlet weak var shadowsockPort: NSTextField!
-    @IBOutlet weak var shadowsockPass: NSTextField!
-    @IBOutlet weak var shadowsockMethod: NSPopUpButton!
+    @IBOutlet var shadowsockAddr: NSTextField!
+    @IBOutlet var shadowsockPort: NSTextField!
+    @IBOutlet var shadowsockPass: NSTextField!
+    @IBOutlet var shadowsockMethod: NSPopUpButton!
 
     // socks5
-    @IBOutlet weak var socks5Addr: NSTextField!
-    @IBOutlet weak var socks5Port: NSTextField!
-    @IBOutlet weak var socks5User: NSTextField!
-    @IBOutlet weak var socks5Pass: NSTextField!
+    @IBOutlet var socks5Addr: NSTextField!
+    @IBOutlet var socks5Port: NSTextField!
+    @IBOutlet var socks5User: NSTextField!
+    @IBOutlet var socks5Pass: NSTextField!
 
     // for trojan
-    @IBOutlet weak var trojanAddr: NSTextField!
-    @IBOutlet weak var trojanPort: NSTextField!
-    @IBOutlet weak var trojanPass: NSTextField!
-    @IBOutlet weak var trojanAlpn: NSTextField!
+    @IBOutlet var trojanAddr: NSTextField!
+    @IBOutlet var trojanPort: NSTextField!
+    @IBOutlet var trojanPass: NSTextField!
+    @IBOutlet var trojanAlpn: NSTextField!
 
-    @IBOutlet weak var networkView: NSView!
+    @IBOutlet var networkView: NSView!
 
-    @IBOutlet weak var tcpView: NSView!
-    @IBOutlet weak var kcpView: NSView!
-    @IBOutlet weak var dsView: NSView!
-    @IBOutlet weak var wsView: NSView!
-    @IBOutlet weak var h2View: NSView!
-    @IBOutlet weak var quicView: NSView!
+    @IBOutlet var tcpView: NSView!
+    @IBOutlet var kcpView: NSView!
+    @IBOutlet var dsView: NSView!
+    @IBOutlet var wsView: NSView!
+    @IBOutlet var h2View: NSView!
+    @IBOutlet var quicView: NSView!
 
-    @IBOutlet weak var switchNetwork: NSPopUpButton!
+    @IBOutlet var switchNetwork: NSPopUpButton!
 
     // kcp setting
-    @IBOutlet weak var kcpMtu: NSTextField!
-    @IBOutlet weak var kcpTti: NSTextField!
-    @IBOutlet weak var kcpUplinkCapacity: NSTextField!
-    @IBOutlet weak var kcpDownlinkCapacity: NSTextField!
-    @IBOutlet weak var kcpReadBufferSize: NSTextField!
-    @IBOutlet weak var kcpWriteBufferSize: NSTextField!
-    @IBOutlet weak var kcpHeader: NSPopUpButton!
-    @IBOutlet weak var kcpCongestion: NSButton!
+    @IBOutlet var kcpMtu: NSTextField!
+    @IBOutlet var kcpTti: NSTextField!
+    @IBOutlet var kcpUplinkCapacity: NSTextField!
+    @IBOutlet var kcpDownlinkCapacity: NSTextField!
+    @IBOutlet var kcpReadBufferSize: NSTextField!
+    @IBOutlet var kcpWriteBufferSize: NSTextField!
+    @IBOutlet var kcpHeader: NSPopUpButton!
+    @IBOutlet var kcpCongestion: NSButton!
 
-    @IBOutlet weak var tcpHeaderType: NSPopUpButton!
+    @IBOutlet var tcpHeaderType: NSPopUpButton!
 
-    @IBOutlet weak var wsHost: NSTextField!
-    @IBOutlet weak var wsPath: NSTextField!
+    @IBOutlet var wsHost: NSTextField!
+    @IBOutlet var wsPath: NSTextField!
 
-    @IBOutlet weak var h2Host: NSTextField!
-    @IBOutlet weak var h2Path: NSTextField!
+    @IBOutlet var h2Host: NSTextField!
+    @IBOutlet var h2Path: NSTextField!
 
-    @IBOutlet weak var dsPath: NSTextField!
+    @IBOutlet var dsPath: NSTextField!
 
-    @IBOutlet weak var quicKey: NSTextField!
-    @IBOutlet weak var quicSecurity: NSPopUpButton!
-    @IBOutlet weak var quicHeaderType: NSPopUpButton!
+    @IBOutlet var quicKey: NSTextField!
+    @IBOutlet var quicSecurity: NSPopUpButton!
+    @IBOutlet var quicHeaderType: NSPopUpButton!
 
-    @IBOutlet weak var streamSecurity: NSPopUpButton!
-    @IBOutlet weak var streamAllowSecure: NSButton!
-    @IBOutlet weak var streamTlsServerName: NSTextField!
+    @IBOutlet var streamSecurity: NSPopUpButton!
+    @IBOutlet var streamAllowSecure: NSButton!
+    @IBOutlet var streamTlsServerName: NSTextField!
 
     override func awakeFromNib() {
         // set table drag style
@@ -127,81 +126,78 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
             // add default
             V2rayServer.add(remark: "default", json: "", isValid: false)
         }
-        self.shadowsockMethod.removeAllItems()
-        self.shadowsockMethod.addItems(withTitles: V2rayOutboundShadowsockMethod)
+        shadowsockMethod.removeAllItems()
+        shadowsockMethod.addItems(withTitles: V2rayOutboundShadowsockMethod)
 
-        self.configText.isAutomaticQuoteSubstitutionEnabled = false
+        configText.isAutomaticQuoteSubstitutionEnabled = false
     }
 
     override func windowDidLoad() {
         super.windowDidLoad()
 
         // table view
-        self.serversTableView.delegate = self
-        self.serversTableView.dataSource = self
-        self.serversTableView.reloadData()
+        serversTableView.delegate = self
+        serversTableView.dataSource = self
+        serversTableView.reloadData()
         // tab view
-        self.tabView.delegate = self
+        tabView.delegate = self
     }
 
-    @IBAction func addRemoveServer(_ sender: NSSegmentedCell) {
+    @IBAction func addRemoveServer(_: NSSegmentedCell) {
         // 0 add,1 remove
         let seg = addRemoveButton.indexOfSelectedItem
 
         switch seg {
-                // add server config
+        // add server config
         case 0:
             // add
             V2rayServer.add()
 
             // reload data
-            self.serversTableView.reloadData()
+            serversTableView.reloadData()
             // selected current row
-            self.serversTableView.selectRowIndexes(NSIndexSet(index: V2rayServer.count() - 1) as IndexSet, byExtendingSelection: false)
+            serversTableView.selectRowIndexes(NSIndexSet(index: V2rayServer.count() - 1) as IndexSet, byExtendingSelection: false)
 
-            break
-
-                // delete server config
+        // delete server config
         case 1:
             // get seleted index
-            let idx = self.serversTableView.selectedRow
+            let idx = serversTableView.selectedRow
             // remove
             V2rayServer.remove(idx: idx)
 
             // selected prev row
             let cnt: Int = V2rayServer.count()
             var rowIndex: Int = idx - 1
-            if idx > 0 && idx < cnt {
+            if idx > 0, idx < cnt {
                 rowIndex = idx
             }
 
             // reload
-            self.serversTableView.reloadData()
+            serversTableView.reloadData()
 
             // fix
             if cnt > 1 {
                 // selected row
-                self.serversTableView.selectRowIndexes(NSIndexSet(index: rowIndex) as IndexSet, byExtendingSelection: false)
+                serversTableView.selectRowIndexes(NSIndexSet(index: rowIndex) as IndexSet, byExtendingSelection: false)
             }
 
             if rowIndex >= 0 {
-                self.loadJsonData(rowIndex: rowIndex)
+                loadJsonData(rowIndex: rowIndex)
             } else {
-                self.serversTableView.becomeFirstResponder()
+                serversTableView.becomeFirstResponder()
             }
 
             // refresh menu
             menuController.showServers()
-            break
 
-                // unknown action
+        // unknown action
         default:
             return
         }
     }
 
     // switch tab view
-    func tabView(_ tabView: NSTabView, didSelect tabViewItem: NSTabViewItem?) {
+    func tabView(_: NSTabView, didSelect tabViewItem: NSTabViewItem?) {
         guard let item = tabViewItem else {
             print("not found tab view")
             return
@@ -209,9 +205,9 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
 
         let tab = item.identifier! as! String
         if tab == "Manual" {
-            self.switchToManualView()
+            switchToManualView()
         } else {
-            self.switchToImportView()
+            switchToImportView()
         }
     }
 
@@ -226,49 +222,49 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         }
 
         // re parse json
-        v2rayConfig.parseJson(jsonText: self.configText.string)
+        v2rayConfig.parseJson(jsonText: configText.string)
         if v2rayConfig.errors.count > 0 {
-            self.errTip.stringValue = v2rayConfig.errors[0]
+            errTip.stringValue = v2rayConfig.errors[0]
             return
         }
 
-        self.saveConfig()
+        saveConfig()
     }
 
     // switch to import
     func switchToImportView() {
         // reset error
-        self.errTip.stringValue = ""
+        errTip.stringValue = ""
 
-        self.exportData()
+        exportData()
 
         v2rayConfig.checkManualValid()
 
         if v2rayConfig.isValid {
             let jsonText = v2rayConfig.combineManual()
-            self.configText.string = jsonText
-            self.saveConfig()
+            configText.string = jsonText
+            saveConfig()
         } else {
-            self.errTip.stringValue = v2rayConfig.error
+            errTip.stringValue = v2rayConfig.error
         }
     }
 
     // export data to V2rayConfig
     func exportData() {
         // ========================== server start =======================
-        if self.switchProtocol.indexOfSelectedItem >= 0 {
-            v2rayConfig.serverProtocol = self.switchProtocol.titleOfSelectedItem!
+        if switchProtocol.indexOfSelectedItem >= 0 {
+            v2rayConfig.serverProtocol = switchProtocol.titleOfSelectedItem!
         }
 
         // vmess
-        v2rayConfig.serverVmess.address = self.vmessAddr.stringValue
-        v2rayConfig.serverVmess.port = Int(self.vmessPort.intValue)
+        v2rayConfig.serverVmess.address = vmessAddr.stringValue
+        v2rayConfig.serverVmess.port = Int(vmessPort.intValue)
         var user = V2rayOutboundVMessUser()
-        user.alterId = Int(self.vmessAlterId.intValue)
-        user.level = Int(self.vmessLevel.intValue)
-        user.id = self.vmessUserId.stringValue
-        if self.vmessSecurity.indexOfSelectedItem >= 0 {
-            user.security = self.vmessSecurity.titleOfSelectedItem!
+        user.alterId = Int(vmessAlterId.intValue)
+        user.level = Int(vmessLevel.intValue)
+        user.id = vmessUserId.stringValue
+        if vmessSecurity.indexOfSelectedItem >= 0 {
+            user.security = vmessSecurity.titleOfSelectedItem!
         }
         if v2rayConfig.serverVmess.users.count == 0 {
             v2rayConfig.serverVmess.users = [user]
@@ -277,12 +273,12 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         }
 
         // vless
-        v2rayConfig.serverVless.address = self.vlessAddr.stringValue
-        v2rayConfig.serverVless.port = Int(self.vlessPort.intValue)
+        v2rayConfig.serverVless.address = vlessAddr.stringValue
+        v2rayConfig.serverVless.port = Int(vlessPort.intValue)
         var vless_user = V2rayOutboundVLessUser()
-        vless_user.id = self.vlessUserId.stringValue
-        vless_user.level = Int(self.vlessLevel.intValue)
-        vless_user.flow = self.vlessFlow.stringValue
+        vless_user.id = vlessUserId.stringValue
+        vless_user.level = Int(vlessLevel.intValue)
+        vless_user.flow = vlessFlow.stringValue
         if v2rayConfig.serverVless.users.count == 0 {
             v2rayConfig.serverVless.users = [vless_user]
         } else {
@@ -290,29 +286,29 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         }
 
         // shadowsocks
-        v2rayConfig.serverShadowsocks.address = self.shadowsockAddr.stringValue
-        v2rayConfig.serverShadowsocks.port = Int(self.shadowsockPort.intValue)
-        v2rayConfig.serverShadowsocks.password = self.shadowsockPass.stringValue
-        if self.vmessSecurity.indexOfSelectedItem >= 0 {
-            v2rayConfig.serverShadowsocks.method = self.shadowsockMethod.titleOfSelectedItem ?? "aes-256-cfb"
+        v2rayConfig.serverShadowsocks.address = shadowsockAddr.stringValue
+        v2rayConfig.serverShadowsocks.port = Int(shadowsockPort.intValue)
+        v2rayConfig.serverShadowsocks.password = shadowsockPass.stringValue
+        if vmessSecurity.indexOfSelectedItem >= 0 {
+            v2rayConfig.serverShadowsocks.method = shadowsockMethod.titleOfSelectedItem ?? "aes-256-cfb"
         }
 
         // trojan
-        v2rayConfig.serverTrojan.address = self.trojanAddr.stringValue
-        v2rayConfig.serverTrojan.port = Int(self.trojanPort.intValue)
-        v2rayConfig.serverTrojan.password = self.trojanPass.stringValue
+        v2rayConfig.serverTrojan.address = trojanAddr.stringValue
+        v2rayConfig.serverTrojan.port = Int(trojanPort.intValue)
+        v2rayConfig.serverTrojan.password = trojanPass.stringValue
 
         // socks5
         if v2rayConfig.serverSocks5.servers.count == 0 {
             v2rayConfig.serverSocks5.servers = [V2rayOutboundSockServer()]
         }
-        v2rayConfig.serverSocks5.servers[0].address = self.socks5Addr.stringValue
-        v2rayConfig.serverSocks5.servers[0].port = Int(self.socks5Port.intValue)
+        v2rayConfig.serverSocks5.servers[0].address = socks5Addr.stringValue
+        v2rayConfig.serverSocks5.servers[0].port = Int(socks5Port.intValue)
 
         var sockUser = V2rayOutboundSockUser()
-        sockUser.user = self.socks5User.stringValue
-        sockUser.pass = self.socks5Pass.stringValue
-        if self.socks5User.stringValue.count > 0 || self.socks5Pass.stringValue.count > 0 {
+        sockUser.user = socks5User.stringValue
+        sockUser.pass = socks5Pass.stringValue
+        if socks5User.stringValue.count > 0 || socks5Pass.stringValue.count > 0 {
             v2rayConfig.serverSocks5.servers[0].users = [sockUser]
         } else {
             v2rayConfig.serverSocks5.servers[0].users = nil
@@ -320,56 +316,56 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         // ========================== server end =======================
 
         // ========================== stream start =======================
-        if self.switchNetwork.indexOfSelectedItem >= 0 {
-            v2rayConfig.streamNetwork = self.switchNetwork.titleOfSelectedItem!
+        if switchNetwork.indexOfSelectedItem >= 0 {
+            v2rayConfig.streamNetwork = switchNetwork.titleOfSelectedItem!
         }
-        v2rayConfig.streamTlsAllowInsecure = self.streamAllowSecure.state.rawValue > 0
-        v2rayConfig.streamXtlsAllowInsecure = self.streamAllowSecure.state.rawValue > 0
-        if self.streamSecurity.indexOfSelectedItem >= 0 {
-            v2rayConfig.streamTlsSecurity = self.streamSecurity.titleOfSelectedItem!
+        v2rayConfig.streamTlsAllowInsecure = streamAllowSecure.state.rawValue > 0
+        v2rayConfig.streamXtlsAllowInsecure = streamAllowSecure.state.rawValue > 0
+        if streamSecurity.indexOfSelectedItem >= 0 {
+            v2rayConfig.streamTlsSecurity = streamSecurity.titleOfSelectedItem!
         }
-        v2rayConfig.streamTlsServerName = self.streamTlsServerName.stringValue
-        v2rayConfig.streamXtlsServerName = self.streamTlsServerName.stringValue
+        v2rayConfig.streamTlsServerName = streamTlsServerName.stringValue
+        v2rayConfig.streamXtlsServerName = streamTlsServerName.stringValue
         // tcp
-        if self.tcpHeaderType.indexOfSelectedItem >= 0 {
-            v2rayConfig.streamTcp.header.type = self.tcpHeaderType.titleOfSelectedItem!
+        if tcpHeaderType.indexOfSelectedItem >= 0 {
+            v2rayConfig.streamTcp.header.type = tcpHeaderType.titleOfSelectedItem!
         }
 
         // kcp
-        if self.kcpHeader.indexOfSelectedItem >= 0 {
-            v2rayConfig.streamKcp.header.type = self.kcpHeader.titleOfSelectedItem!
+        if kcpHeader.indexOfSelectedItem >= 0 {
+            v2rayConfig.streamKcp.header.type = kcpHeader.titleOfSelectedItem!
         }
-        v2rayConfig.streamKcp.mtu = Int(self.kcpMtu.intValue)
-        v2rayConfig.streamKcp.tti = Int(self.kcpTti.intValue)
-        v2rayConfig.streamKcp.uplinkCapacity = Int(self.kcpUplinkCapacity.intValue)
-        v2rayConfig.streamKcp.downlinkCapacity = Int(self.kcpDownlinkCapacity.intValue)
-        v2rayConfig.streamKcp.readBufferSize = Int(self.kcpReadBufferSize.intValue)
-        v2rayConfig.streamKcp.writeBufferSize = Int(self.kcpWriteBufferSize.intValue)
-        v2rayConfig.streamKcp.congestion = self.kcpCongestion.state.rawValue > 0
+        v2rayConfig.streamKcp.mtu = Int(kcpMtu.intValue)
+        v2rayConfig.streamKcp.tti = Int(kcpTti.intValue)
+        v2rayConfig.streamKcp.uplinkCapacity = Int(kcpUplinkCapacity.intValue)
+        v2rayConfig.streamKcp.downlinkCapacity = Int(kcpDownlinkCapacity.intValue)
+        v2rayConfig.streamKcp.readBufferSize = Int(kcpReadBufferSize.intValue)
+        v2rayConfig.streamKcp.writeBufferSize = Int(kcpWriteBufferSize.intValue)
+        v2rayConfig.streamKcp.congestion = kcpCongestion.state.rawValue > 0
 
         // h2
-        let h2HostString = self.h2Host.stringValue
+        let h2HostString = h2Host.stringValue
         if h2HostString.count != 0 {
             v2rayConfig.streamH2.host = [h2HostString]
         } else {
             v2rayConfig.streamH2.host = []
         }
-        v2rayConfig.streamH2.path = self.h2Path.stringValue
+        v2rayConfig.streamH2.path = h2Path.stringValue
 
         // ws
-        v2rayConfig.streamWs.path = self.wsPath.stringValue
-        v2rayConfig.streamWs.headers.host = self.wsHost.stringValue
+        v2rayConfig.streamWs.path = wsPath.stringValue
+        v2rayConfig.streamWs.headers.host = wsHost.stringValue
 
         // domainsocket
-        v2rayConfig.streamDs.path = self.dsPath.stringValue
+        v2rayConfig.streamDs.path = dsPath.stringValue
 
         // quic
-        v2rayConfig.streamQuic.key = self.quicKey.stringValue
-        if self.quicHeaderType.indexOfSelectedItem >= 0 {
-            v2rayConfig.streamQuic.header.type = self.quicHeaderType.titleOfSelectedItem!
+        v2rayConfig.streamQuic.key = quicKey.stringValue
+        if quicHeaderType.indexOfSelectedItem >= 0 {
+            v2rayConfig.streamQuic.header.type = quicHeaderType.titleOfSelectedItem!
         }
-        if self.quicSecurity.indexOfSelectedItem >= 0 {
-            v2rayConfig.streamQuic.security = self.quicSecurity.titleOfSelectedItem!
+        if quicSecurity.indexOfSelectedItem >= 0 {
+            v2rayConfig.streamQuic.security = quicSecurity.titleOfSelectedItem!
         }
         // ========================== stream end =======================
     }
@@ -377,108 +373,107 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
     func bindDataToView() {
         // ========================== base start =======================
         // base
-        self.httpPort.title = v2rayConfig.httpPort
-        self.sockPort.title = v2rayConfig.socksPort
-        self.enableUdp.intValue = v2rayConfig.enableUdp ? 1 : 0
-        self.enableMux.intValue = v2rayConfig.enableMux ? 1 : 0
-        self.muxConcurrent.intValue = Int32(v2rayConfig.mux)
+        httpPort.title = v2rayConfig.httpPort
+        sockPort.title = v2rayConfig.socksPort
+        enableUdp.intValue = v2rayConfig.enableUdp ? 1 : 0
+        enableMux.intValue = v2rayConfig.enableMux ? 1 : 0
+        muxConcurrent.intValue = Int32(v2rayConfig.mux)
         // ========================== base end =======================
 
         // ========================== server start =======================
-        self.switchProtocol.selectItem(withTitle: v2rayConfig.serverProtocol)
-        self.switchOutboundView(protocolTitle: v2rayConfig.serverProtocol)
+        switchProtocol.selectItem(withTitle: v2rayConfig.serverProtocol)
+        switchOutboundView(protocolTitle: v2rayConfig.serverProtocol)
 
         // vmess
-        self.vmessAddr.stringValue = v2rayConfig.serverVmess.address
-        self.vmessPort.intValue = Int32(v2rayConfig.serverVmess.port)
+        vmessAddr.stringValue = v2rayConfig.serverVmess.address
+        vmessPort.intValue = Int32(v2rayConfig.serverVmess.port)
         if v2rayConfig.serverVmess.users.count > 0 {
             let user = v2rayConfig.serverVmess.users[0]
-            self.vmessAlterId.intValue = Int32(user.alterId)
-            self.vmessLevel.intValue = Int32(user.level)
-            self.vmessUserId.stringValue = user.id
-            self.vmessSecurity.selectItem(withTitle: user.security)
+            vmessAlterId.intValue = Int32(user.alterId)
+            vmessLevel.intValue = Int32(user.level)
+            vmessUserId.stringValue = user.id
+            vmessSecurity.selectItem(withTitle: user.security)
         }
 
         // vless
-        self.vlessAddr.stringValue = v2rayConfig.serverVless.address
-        self.vlessPort.intValue = Int32(v2rayConfig.serverVless.port)
+        vlessAddr.stringValue = v2rayConfig.serverVless.address
+        vlessPort.intValue = Int32(v2rayConfig.serverVless.port)
         if v2rayConfig.serverVless.users.count > 0 {
             let user = v2rayConfig.serverVless.users[0]
-            self.vlessLevel.intValue = Int32(user.level)
-            self.vlessFlow.stringValue = user.flow
-            self.vlessUserId.stringValue = user.id
+            vlessLevel.intValue = Int32(user.level)
+            vlessFlow.stringValue = user.flow
+            vlessUserId.stringValue = user.id
         }
 
         // shadowsocks
-        self.shadowsockAddr.stringValue = v2rayConfig.serverShadowsocks.address
+        shadowsockAddr.stringValue = v2rayConfig.serverShadowsocks.address
         if v2rayConfig.serverShadowsocks.port > 0 {
-            self.shadowsockPort.stringValue = String(v2rayConfig.serverShadowsocks.port)
+            shadowsockPort.stringValue = String(v2rayConfig.serverShadowsocks.port)
         }
-        self.shadowsockPass.stringValue = v2rayConfig.serverShadowsocks.password
-        self.shadowsockMethod.selectItem(withTitle: v2rayConfig.serverShadowsocks.method)
+        shadowsockPass.stringValue = v2rayConfig.serverShadowsocks.password
+        shadowsockMethod.selectItem(withTitle: v2rayConfig.serverShadowsocks.method)
 
         // socks5
         if v2rayConfig.serverSocks5.servers.count > 0 {
-            self.socks5Addr.stringValue = v2rayConfig.serverSocks5.servers[0].address
-            self.socks5Port.stringValue = String(v2rayConfig.serverSocks5.servers[0].port)
+            socks5Addr.stringValue = v2rayConfig.serverSocks5.servers[0].address
+            socks5Port.stringValue = String(v2rayConfig.serverSocks5.servers[0].port)
             let users = v2rayConfig.serverSocks5.servers[0].users
-            if users != nil && users!.count > 0 {
+            if users != nil, users!.count > 0 {
                 let user = users![0]
-                self.socks5User.stringValue = user.user
-                self.socks5Pass.stringValue = user.pass
+                socks5User.stringValue = user.user
+                socks5Pass.stringValue = user.pass
             }
         }
 
         // trojan
-        self.trojanAddr.stringValue = v2rayConfig.serverTrojan.address
-        self.trojanPass.stringValue = v2rayConfig.serverTrojan.password
+        trojanAddr.stringValue = v2rayConfig.serverTrojan.address
+        trojanPass.stringValue = v2rayConfig.serverTrojan.password
         if v2rayConfig.serverTrojan.port > 0 {
-            self.trojanPort.stringValue = String(v2rayConfig.serverTrojan.port)
+            trojanPort.stringValue = String(v2rayConfig.serverTrojan.port)
         }
-
 
         // ========================== server end =======================
 
         // ========================== stream start =======================
-        self.switchNetwork.selectItem(withTitle: v2rayConfig.streamNetwork)
-        self.switchSteamView(network: v2rayConfig.streamNetwork)
+        switchNetwork.selectItem(withTitle: v2rayConfig.streamNetwork)
+        switchSteamView(network: v2rayConfig.streamNetwork)
 
-        self.streamAllowSecure.intValue = v2rayConfig.streamTlsAllowInsecure ? 1 : 0
-        self.streamSecurity.selectItem(withTitle: v2rayConfig.streamTlsSecurity)
-        self.streamTlsServerName.stringValue = v2rayConfig.streamTlsServerName
+        streamAllowSecure.intValue = v2rayConfig.streamTlsAllowInsecure ? 1 : 0
+        streamSecurity.selectItem(withTitle: v2rayConfig.streamTlsSecurity)
+        streamTlsServerName.stringValue = v2rayConfig.streamTlsServerName
         if v2rayConfig.streamTlsSecurity == "xtls" {
-            self.streamTlsServerName.stringValue = v2rayConfig.streamXtlsServerName
-            self.streamAllowSecure.intValue = v2rayConfig.streamXtlsAllowInsecure ? 1 : 0
+            streamTlsServerName.stringValue = v2rayConfig.streamXtlsServerName
+            streamAllowSecure.intValue = v2rayConfig.streamXtlsAllowInsecure ? 1 : 0
         }
 
         // tcp
-        self.tcpHeaderType.selectItem(withTitle: v2rayConfig.streamTcp.header.type)
+        tcpHeaderType.selectItem(withTitle: v2rayConfig.streamTcp.header.type)
 
         // kcp
-        self.kcpHeader.selectItem(withTitle: v2rayConfig.streamKcp.header.type)
-        self.kcpMtu.intValue = Int32(v2rayConfig.streamKcp.mtu)
-        self.kcpTti.intValue = Int32(v2rayConfig.streamKcp.tti)
-        self.kcpUplinkCapacity.intValue = Int32(v2rayConfig.streamKcp.uplinkCapacity)
-        self.kcpDownlinkCapacity.intValue = Int32(v2rayConfig.streamKcp.downlinkCapacity)
-        self.kcpReadBufferSize.intValue = Int32(v2rayConfig.streamKcp.readBufferSize)
-        self.kcpWriteBufferSize.intValue = Int32(v2rayConfig.streamKcp.writeBufferSize)
-        self.kcpCongestion.intValue = v2rayConfig.streamKcp.congestion ? 1 : 0
+        kcpHeader.selectItem(withTitle: v2rayConfig.streamKcp.header.type)
+        kcpMtu.intValue = Int32(v2rayConfig.streamKcp.mtu)
+        kcpTti.intValue = Int32(v2rayConfig.streamKcp.tti)
+        kcpUplinkCapacity.intValue = Int32(v2rayConfig.streamKcp.uplinkCapacity)
+        kcpDownlinkCapacity.intValue = Int32(v2rayConfig.streamKcp.downlinkCapacity)
+        kcpReadBufferSize.intValue = Int32(v2rayConfig.streamKcp.readBufferSize)
+        kcpWriteBufferSize.intValue = Int32(v2rayConfig.streamKcp.writeBufferSize)
+        kcpCongestion.intValue = v2rayConfig.streamKcp.congestion ? 1 : 0
 
         // h2
-        self.h2Host.stringValue = v2rayConfig.streamH2.host.count > 0 ? v2rayConfig.streamH2.host[0] : ""
-        self.h2Path.stringValue = v2rayConfig.streamH2.path
+        h2Host.stringValue = v2rayConfig.streamH2.host.count > 0 ? v2rayConfig.streamH2.host[0] : ""
+        h2Path.stringValue = v2rayConfig.streamH2.path
 
         // ws
-        self.wsPath.stringValue = v2rayConfig.streamWs.path
-        self.wsHost.stringValue = v2rayConfig.streamWs.headers.host
+        wsPath.stringValue = v2rayConfig.streamWs.path
+        wsHost.stringValue = v2rayConfig.streamWs.headers.host
 
         // domainsocket
-        self.dsPath.stringValue = v2rayConfig.streamDs.path
+        dsPath.stringValue = v2rayConfig.streamDs.path
 
         // quic
-        self.quicKey.stringValue = v2rayConfig.streamQuic.key
-        self.quicSecurity.selectItem(withTitle: v2rayConfig.streamQuic.security)
-        self.quicHeaderType.selectItem(withTitle: v2rayConfig.streamQuic.header.type)
+        quicKey.stringValue = v2rayConfig.streamQuic.key
+        quicSecurity.selectItem(withTitle: v2rayConfig.streamQuic.security)
+        quicHeaderType.selectItem(withTitle: v2rayConfig.streamQuic.header.type)
 
         // ========================== stream end =======================
     }
@@ -497,38 +492,38 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         }
 
         let item = V2rayServer.loadV2rayItem(idx: rowIndex)
-        self.configText.string = item?.json ?? ""
+        configText.string = item?.json ?? ""
         v2rayConfig.isValid = item?.isValid ?? false
-        self.jsonUrl.stringValue = item?.url ?? ""
+        jsonUrl.stringValue = item?.url ?? ""
 
-        v2rayConfig.parseJson(jsonText: self.configText.string)
+        v2rayConfig.parseJson(jsonText: configText.string)
         if v2rayConfig.errors.count > 0 {
-            self.errTip.stringValue = v2rayConfig.errors[0]
+            errTip.stringValue = v2rayConfig.errors[0]
             return
         }
     }
 
     func saveConfig() {
-        let text = self.configText.string
+        let text = configText.string
 
-        v2rayConfig.parseJson(jsonText: self.configText.string)
+        v2rayConfig.parseJson(jsonText: configText.string)
         if v2rayConfig.errors.count > 0 {
-            self.errTip.stringValue = v2rayConfig.errors[0]
+            errTip.stringValue = v2rayConfig.errors[0]
         }
 
         // save
-        let errMsg = V2rayServer.save(idx: self.serversTableView.selectedRow, isValid: v2rayConfig.isValid, jsonData: text)
+        let errMsg = V2rayServer.save(idx: serversTableView.selectedRow, isValid: v2rayConfig.isValid, jsonData: text)
         if errMsg.count == 0 {
-            if self.errTip.stringValue == "" {
-                self.errTip.stringValue = "save success"
+            if errTip.stringValue == "" {
+                errTip.stringValue = "save success"
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     // your code here
                     self.errTip.stringValue = ""
                 }
             }
-            self.refreshServerList(ok: errMsg.count == 0)
+            refreshServerList(ok: errMsg.count == 0)
         } else {
-            self.errTip.stringValue = errMsg
+            errTip.stringValue = errMsg
         }
     }
 
@@ -538,7 +533,7 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         // if server is current
         if let curName = UserDefaults.get(forKey: .v2rayCurrentServerName) {
             let v2rayItemList = V2rayServer.list()
-            if curName == v2rayItemList[self.serversTableView.selectedRow].name {
+            if curName == v2rayItemList[serversTableView.selectedRow].name {
                 if ok {
                     menuController.startV2rayCore()
                 } else {
@@ -548,53 +543,53 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         }
     }
 
-    @IBAction func ok(_ sender: NSButton) {
+    @IBAction func ok(_: NSButton) {
         // set always on
-        self.okBtn.state = .on
+        okBtn.state = .on
         // in Manual tab view
-        if "Manual" == self.tabView.selectedTabViewItem?.identifier as! String {
-            self.switchToImportView()
+        if tabView.selectedTabViewItem?.identifier as! String == "Manual" {
+            switchToImportView()
         } else {
-            self.saveConfig()
+            saveConfig()
         }
     }
 
-    @IBAction func importConfig(_ sender: NSButton) {
-        self.configText.string = ""
+    @IBAction func importConfig(_: NSButton) {
+        configText.string = ""
         if jsonUrl.stringValue.trimmingCharacters(in: .whitespaces) == "" {
-            self.errTip.stringValue = "error: invaid url"
+            errTip.stringValue = "error: invaid url"
             return
         }
 
-        self.importJson()
+        importJson()
     }
 
     func saveImport(importUri: ImportUri) {
         if importUri.isValid {
-            self.configText.string = importUri.json
+            configText.string = importUri.json
             if importUri.remark.count > 0 {
-                V2rayServer.edit(rowIndex: self.serversTableView.selectedRow, remark: importUri.remark)
+                V2rayServer.edit(rowIndex: serversTableView.selectedRow, remark: importUri.remark)
             }
 
             // refresh
-            self.refreshServerList(ok: true)
+            refreshServerList(ok: true)
         } else {
-            self.errTip.stringValue = importUri.error
+            errTip.stringValue = importUri.error
         }
     }
 
     func importJson() {
-        let text = self.configText.string
+        let text = configText.string
         let uri = jsonUrl.stringValue.trimmingCharacters(in: .whitespaces)
         // edit item remark
-        V2rayServer.edit(rowIndex: self.serversTableView.selectedRow, url: uri)
+        V2rayServer.edit(rowIndex: serversTableView.selectedRow, url: uri)
 
         if let importUri = ImportUri.importUri(uri: uri, checkExist: false) {
-            self.saveImport(importUri: importUri)
+            saveImport(importUri: importUri)
         } else {
             // download json file
-            Alamofire.request(jsonUrl.stringValue).responseString { DataResponse in
-                if (DataResponse.error != nil) {
+            AF.request(jsonUrl.stringValue).responseString { DataResponse in
+                if DataResponse.error != nil {
                     self.errTip.stringValue = "error: " + DataResponse.error.debugDescription
                     return
                 }
@@ -606,42 +601,42 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         }
     }
 
-    @IBAction func goTcpHelp(_ sender: NSButtonCell) {
+    @IBAction func goTcpHelp(_: NSButtonCell) {
         guard let url = URL(string: "https://www.v2ray.com/chapter_02/transport/tcp.html") else {
             return
         }
         NSWorkspace.shared.open(url)
     }
 
-    @IBAction func goDsHelp(_ sender: Any) {
+    @IBAction func goDsHelp(_: Any) {
         guard let url = URL(string: "https://www.v2ray.com/chapter_02/transport/domainsocket.html") else {
             return
         }
         NSWorkspace.shared.open(url)
     }
 
-    @IBAction func goQuicHelp(_ sender: Any) {
+    @IBAction func goQuicHelp(_: Any) {
         guard let url = URL(string: "https://www.v2ray.com/chapter_02/transport/quic.html") else {
             return
         }
         NSWorkspace.shared.open(url)
     }
 
-    @IBAction func goProtocolHelp(_ sender: NSButton) {
+    @IBAction func goProtocolHelp(_: NSButton) {
         guard let url = URL(string: "https://www.v2ray.com/chapter_02/protocols/vmess.html") else {
             return
         }
         NSWorkspace.shared.open(url)
     }
 
-    @IBAction func goVersionHelp(_ sender: Any) {
+    @IBAction func goVersionHelp(_: Any) {
         guard let url = URL(string: "https://www.v2ray.com/chapter_02/01_overview.html") else {
             return
         }
         NSWorkspace.shared.open(url)
     }
 
-    @IBAction func goStreamHelp(_ sender: Any) {
+    @IBAction func goStreamHelp(_: Any) {
         guard let url = URL(string: "https://www.v2ray.com/chapter_02/05_transport.html") else {
             return
         }
@@ -655,26 +650,19 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
 
         switch network {
         case "tcp":
-            self.tcpView.isHidden = false
-            break;
+            tcpView.isHidden = false
         case "kcp":
-            self.kcpView.isHidden = false
-            break;
+            kcpView.isHidden = false
         case "domainsocket":
-            self.dsView.isHidden = false
-            break;
+            dsView.isHidden = false
         case "ws":
-            self.wsView.isHidden = false
-            break;
+            wsView.isHidden = false
         case "h2":
-            self.h2View.isHidden = false
-            break;
+            h2View.isHidden = false
         case "quic":
-            self.quicView.isHidden = false
-            break;
+            quicView.isHidden = false
         default: // vmess
-            self.tcpView.isHidden = false
-            break
+            tcpView.isHidden = false
         }
     }
 
@@ -685,35 +673,29 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
 
         switch protocolTitle {
         case "vmess":
-            self.VmessView.isHidden = false
-            break
+            VmessView.isHidden = false
         case "vless":
-            self.VlessView.isHidden = false
-            break
+            VlessView.isHidden = false
         case "shadowsocks":
-            self.ShadowsocksView.isHidden = false
-            break
+            ShadowsocksView.isHidden = false
         case "socks":
-            self.SocksView.isHidden = false
-            break
+            SocksView.isHidden = false
         case "trojan":
-            self.TrojanView.isHidden = false
-            break
+            TrojanView.isHidden = false
         default: // vmess
-            self.VmessView.isHidden = true
-            break
+            VmessView.isHidden = true
         }
     }
 
-    @IBAction func switchSteamNetwork(_ sender: NSPopUpButtonCell) {
+    @IBAction func switchSteamNetwork(_: NSPopUpButtonCell) {
         if let item = switchNetwork.selectedItem {
-            self.switchSteamView(network: item.title)
+            switchSteamView(network: item.title)
         }
     }
 
-    @IBAction func switchOutboundProtocol(_ sender: NSPopUpButtonCell) {
+    @IBAction func switchOutboundProtocol(_: NSPopUpButtonCell) {
         if let item = switchProtocol.selectedItem {
-            self.switchOutboundView(protocolTitle: item.title)
+            switchOutboundView(protocolTitle: item.title)
         }
     }
 
@@ -736,24 +718,23 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         }
     }
 
-    @IBAction func browseFile(_ sender: NSButton) {
+    @IBAction func browseFile(_: NSButton) {
         jsonUrl.stringValue = ""
         let dialog = NSOpenPanel()
 
-        dialog.title = "Choose a .json file";
-        dialog.showsResizeIndicator = true;
-        dialog.showsHiddenFiles = false;
-        dialog.canChooseDirectories = true;
-        dialog.canCreateDirectories = true;
-        dialog.allowsMultipleSelection = false;
-        dialog.allowedFileTypes = ["json", "txt"];
+        dialog.title = "Choose a .json file"
+        dialog.showsResizeIndicator = true
+        dialog.showsHiddenFiles = false
+        dialog.canChooseDirectories = true
+        dialog.canCreateDirectories = true
+        dialog.allowsMultipleSelection = false
 
-        if (dialog.runModal() == NSApplication.ModalResponse.OK) {
+        if dialog.runModal() == NSApplication.ModalResponse.OK {
             let result = dialog.url // Pathname of the file
 
-            if (result != nil) {
+            if result != nil {
                 jsonUrl.stringValue = result?.absoluteString ?? ""
-                self.importJson()
+                importJson()
             }
         } else {
             // User clicked on "Cancel"
@@ -761,40 +742,39 @@ class ConfigWindowController: NSWindowController, NSWindowDelegate, NSTabViewDel
         }
     }
 
-    @IBAction func openLogs(_ sender: NSButton) {
+    @IBAction func openLogs(_: NSButton) {
         V2rayLaunch.OpenLogs()
     }
 
-    @IBAction func clearLogs(_ sender: NSButton) {
+    @IBAction func clearLogs(_: NSButton) {
         V2rayLaunch.ClearLogs()
     }
 
-    @IBAction func cancel(_ sender: NSButton) {
+    @IBAction func cancel(_: NSButton) {
         // hide dock icon and close all opened windows
         _ = menuController.showDock(state: false)
     }
 
-    @IBAction func goAdvanceSetting(_ sender: Any) {
+    @IBAction func goAdvanceSetting(_: Any) {
         preferencesWindowController.show(preferencePane: .advanceTab)
     }
 
-    @IBAction func goSubscribeSetting(_ sender: Any) {
+    @IBAction func goSubscribeSetting(_: Any) {
         preferencesWindowController.show(preferencePane: .subscribeTab)
     }
 
-    @IBAction func goRoutingRuleSetting(_ sender: Any) {
+    @IBAction func goRoutingRuleSetting(_: Any) {
         preferencesWindowController.show(preferencePane: .routingTab)
     }
 }
 
 // NSv2rayItemListSource
 extension ConfigWindowController: NSTableViewDataSource {
-
-    func numberOfRows(in tableView: NSTableView) -> Int {
+    func numberOfRows(in _: NSTableView) -> Int {
         return V2rayServer.count()
     }
 
-    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+    func tableView(_: NSTableView, objectValueFor _: NSTableColumn?, row: Int) -> Any? {
         let v2rayItemList = V2rayServer.list()
         // set cell data
         if v2rayItemList.count >= row {
@@ -804,7 +784,7 @@ extension ConfigWindowController: NSTableViewDataSource {
     }
 
     // edit cell
-    func tableView(_ tableView: NSTableView, setObjectValue: Any?, for forTableColumn: NSTableColumn?, row: Int) {
+    func tableView(_ tableView: NSTableView, setObjectValue: Any?, for _: NSTableColumn?, row: Int) {
         guard let remark = setObjectValue as? String else {
             NSLog("remark is nil")
             return
@@ -821,33 +801,34 @@ extension ConfigWindowController: NSTableViewDataSource {
 // NSTableViewDelegate
 extension ConfigWindowController: NSTableViewDelegate {
     // For NSTableViewDelegate
-    func tableViewSelectionDidChange(_ notification: Notification) {
-        self.loadJsonData(rowIndex: self.serversTableView.selectedRow)
-        self.errTip.stringValue = ""
+    func tableViewSelectionDidChange(_: Notification) {
+        loadJsonData(rowIndex: serversTableView.selectedRow)
+        errTip.stringValue = ""
     }
 
     // Drag & Drop reorder rows
-    func tableView(_ tableView: NSTableView, pasteboardWriterForRow row: Int) -> NSPasteboardWriting? {
+    func tableView(_: NSTableView, pasteboardWriterForRow row: Int) -> NSPasteboardWriting? {
         let item = NSPasteboardItem()
         item.setString(String(row), forType: NSPasteboard.PasteboardType(rawValue: tableViewDragType))
         return item
     }
 
-    func tableView(_ tableView: NSTableView, validateDrop info: NSDraggingInfo, proposedRow row: Int, proposedDropOperation dropOperation: NSTableView.DropOperation) -> NSDragOperation {
+    func tableView(_: NSTableView, validateDrop _: NSDraggingInfo, proposedRow _: Int, proposedDropOperation dropOperation: NSTableView.DropOperation) -> NSDragOperation {
         if dropOperation == .above {
             return .move
         }
         return NSDragOperation()
     }
 
-    func tableView(_ tableView: NSTableView, acceptDrop info: NSDraggingInfo, row: Int, dropOperation: NSTableView.DropOperation) -> Bool {
+    func tableView(_ tableView: NSTableView, acceptDrop info: NSDraggingInfo, row: Int, dropOperation _: NSTableView.DropOperation) -> Bool {
         var oldIndexes = [Int]()
         info.enumerateDraggingItems(options: [], for: tableView, classes: [NSPasteboardItem.self], searchOptions: [:], using: {
-            (draggingItem: NSDraggingItem, idx: Int, stop: UnsafeMutablePointer<ObjCBool>) in
-            if let str = (draggingItem.item as! NSPasteboardItem).string(forType: NSPasteboard.PasteboardType(rawValue: self.tableViewDragType)),
-               let index = Int(str) {
-                oldIndexes.append(index)
-            }
+            (draggingItem: NSDraggingItem, _: Int, _: UnsafeMutablePointer<ObjCBool>) in
+                if let str = (draggingItem.item as! NSPasteboardItem).string(forType: NSPasteboard.PasteboardType(rawValue: self.tableViewDragType)),
+                   let index = Int(str)
+                {
+                    oldIndexes.append(index)
+                }
         })
 
         var oldIndexOffset = 0
@@ -872,9 +853,9 @@ extension ConfigWindowController: NSTableViewDelegate {
         // move
         V2rayServer.move(oldIndex: oldIndexLast, newIndex: newIndexLast)
         // set selected
-        self.serversTableView.selectRowIndexes(NSIndexSet(index: newIndexLast) as IndexSet, byExtendingSelection: false)
+        serversTableView.selectRowIndexes(NSIndexSet(index: newIndexLast) as IndexSet, byExtendingSelection: false)
         // reload table
-        self.serversTableView.reloadData()
+        serversTableView.reloadData()
         // reload menu
         menuController.showServers()
 

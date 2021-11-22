@@ -10,13 +10,12 @@ import Cocoa
 import Preferences
 
 final class PreferenceRoutingViewController: NSViewController, PreferencePane {
-
-    let preferencePaneIdentifier = PreferencePane.Identifier.routingTab
+    let preferencePaneIdentifier = Preferences.PaneIdentifier.routingTab
     let preferencePaneTitle = "Routing"
     let toolbarItemIcon = NSImage(named: NSImage.networkName)!
 
-    @IBOutlet weak var domainStrategy: NSPopUpButton!
-    @IBOutlet weak var routingRule: NSPopUpButton!
+    @IBOutlet var domainStrategy: NSPopUpButton!
+    @IBOutlet var routingRule: NSPopUpButton!
     @IBOutlet var proxyTextView: NSTextView!
     @IBOutlet var directTextView: NSTextView!
     @IBOutlet var blockTextView: NSTextView!
@@ -28,7 +27,7 @@ final class PreferenceRoutingViewController: NSViewController, PreferencePane {
     override func viewDidLoad() {
         super.viewDidLoad()
         // fix: https://github.com/sindresorhus/Preferences/issues/31
-        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        preferredContentSize = NSMakeSize(view.frame.size.width, view.frame.size.height)
 
         let domainStrategy = UserDefaults.get(forKey: .routingDomainStrategy) ?? "AsIs"
         self.domainStrategy.selectItem(withTitle: domainStrategy)
@@ -36,50 +35,50 @@ final class PreferenceRoutingViewController: NSViewController, PreferencePane {
         let routingRule = Int(UserDefaults.get(forKey: .routingRule) ?? "0") ?? 0
         self.routingRule.selectItem(withTag: routingRule)
 
-        let routingProxyDomains = UserDefaults.getArray(forKey: .routingProxyDomains) ?? [];
-        let routingProxyIps = UserDefaults.getArray(forKey: .routingProxyIps) ?? [];
-        let routingDirectDomains = UserDefaults.getArray(forKey: .routingDirectDomains) ?? [];
-        let routingDirectIps = UserDefaults.getArray(forKey: .routingDirectIps) ?? [];
-        let routingBlockDomains = UserDefaults.getArray(forKey: .routingBlockDomains) ?? [];
-        let routingBlockIps = UserDefaults.getArray(forKey: .routingBlockIps) ?? [];
+        let routingProxyDomains = UserDefaults.getArray(forKey: .routingProxyDomains) ?? []
+        let routingProxyIps = UserDefaults.getArray(forKey: .routingProxyIps) ?? []
+        let routingDirectDomains = UserDefaults.getArray(forKey: .routingDirectDomains) ?? []
+        let routingDirectIps = UserDefaults.getArray(forKey: .routingDirectIps) ?? []
+        let routingBlockDomains = UserDefaults.getArray(forKey: .routingBlockDomains) ?? []
+        let routingBlockIps = UserDefaults.getArray(forKey: .routingBlockIps) ?? []
 
         let routingProxy = routingProxyDomains + routingProxyIps
         let routingDirect = routingDirectDomains + routingDirectIps
         let routingBlock = routingBlockDomains + routingBlockIps
 
         print("routingProxy", routingProxy, routingDirect, routingBlock)
-        self.proxyTextView.string = routingProxy.joined(separator: "\n")
-        self.directTextView.string = routingDirect.joined(separator: "\n")
-        self.blockTextView.string = routingBlock.joined(separator: "\n")
+        proxyTextView.string = routingProxy.joined(separator: "\n")
+        directTextView.string = routingDirect.joined(separator: "\n")
+        blockTextView.string = routingBlock.joined(separator: "\n")
     }
 
-    @IBAction func goHelp(_ sender: Any) {
+    @IBAction func goHelp(_: Any) {
         guard let url = URL(string: "https://toutyrater.github.io/basic/routing/") else {
             return
         }
         NSWorkspace.shared.open(url)
     }
 
-    @IBAction func goHelp2(_ sender: Any) {
+    @IBAction func goHelp2(_: Any) {
         guard let url = URL(string: "https://github.com/v2ray/domain-list-community") else {
             return
         }
         NSWorkspace.shared.open(url)
     }
 
-    @IBAction func saveRouting(_ sender: Any) {
-        UserDefaults.set(forKey: .routingDomainStrategy, value: self.domainStrategy.titleOfSelectedItem!)
-        UserDefaults.set(forKey: .routingRule, value: String(self.routingRule.selectedTag()))
+    @IBAction func saveRouting(_: Any) {
+        UserDefaults.set(forKey: .routingDomainStrategy, value: domainStrategy.titleOfSelectedItem!)
+        UserDefaults.set(forKey: .routingRule, value: String(routingRule.selectedTag()))
 
-        var (domains, ips) = self.parseDomainOrIp(domainIpStr: self.proxyTextView.string)
+        var (domains, ips) = parseDomainOrIp(domainIpStr: proxyTextView.string)
         UserDefaults.setArray(forKey: .routingProxyDomains, value: domains)
         UserDefaults.setArray(forKey: .routingProxyIps, value: ips)
 
-        (domains, ips) = self.parseDomainOrIp(domainIpStr: self.directTextView.string)
+        (domains, ips) = parseDomainOrIp(domainIpStr: directTextView.string)
         UserDefaults.setArray(forKey: .routingDirectDomains, value: domains)
         UserDefaults.setArray(forKey: .routingDirectIps, value: ips)
 
-        (domains, ips) = self.parseDomainOrIp(domainIpStr: self.blockTextView.string)
+        (domains, ips) = parseDomainOrIp(domainIpStr: blockTextView.string)
         UserDefaults.setArray(forKey: .routingBlockDomains, value: domains)
         UserDefaults.setArray(forKey: .routingBlockIps, value: ips)
 
@@ -123,7 +122,7 @@ final class PreferenceRoutingViewController: NSViewController, PreferencePane {
 
     func isIp(str: String) -> Bool {
         let pattern = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(/[0-9]{2})?$"
-        if ((str.count == 0) || (str.range(of: pattern, options: .regularExpression) == nil)) {
+        if (str.count == 0) || (str.range(of: pattern, options: .regularExpression) == nil) {
             return false
         }
         return true
@@ -131,7 +130,7 @@ final class PreferenceRoutingViewController: NSViewController, PreferencePane {
 
     func isDomain(str: String) -> Bool {
         let pattern = "[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+"
-        if ((str.count == 0) || (str.range(of: pattern, options: .regularExpression) == nil)) {
+        if (str.count == 0) || (str.range(of: pattern, options: .regularExpression) == nil) {
             return false
         }
         return true

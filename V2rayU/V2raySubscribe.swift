@@ -6,8 +6,8 @@
 //  Copyright © 2019 yanue. All rights reserved.
 //
 
-import Cocoa
 import Alamofire
+import Cocoa
 import SwiftyJSON
 
 // ----- v2ray subscribe manager -----
@@ -22,12 +22,12 @@ class V2raySubscribe: NSObject {
     }
 
     // v2ray subscribe list
-    static private var v2raySubList: [V2raySubItem] = []
+    private static var v2raySubList: [V2raySubItem] = []
 
     // (init) load v2ray subscribe list from UserDefaults
     static func loadConfig() {
         // static reset
-        self.v2raySubList = []
+        v2raySubList = []
 
         // load name list from UserDefaults
         let list = UserDefaults.getArray(forKey: .v2raySubList)
@@ -43,46 +43,46 @@ class V2raySubscribe: NSObject {
                 continue
             }
             // append
-            self.v2raySubList.append(v2ray)
+            v2raySubList.append(v2ray)
         }
     }
 
     // get list from v2ray subscribe list
     static func list() -> [V2raySubItem] {
-        return self.v2raySubList
+        return v2raySubList
     }
 
     // get count from v2ray subscribe list
     static func count() -> Int {
-        return self.v2raySubList.count
+        return v2raySubList.count
     }
 
     static func edit(rowIndex: Int, remark: String) {
-        if !self.v2raySubList.indices.contains(rowIndex) {
+        if !v2raySubList.indices.contains(rowIndex) {
             NSLog("index out of range", rowIndex)
             return
         }
 
         // update list
-        self.v2raySubList[rowIndex].remark = remark
+        v2raySubList[rowIndex].remark = remark
 
         // save
-        let v2ray = self.v2raySubList[rowIndex]
+        let v2ray = v2raySubList[rowIndex]
         v2ray.remark = remark
         v2ray.store()
     }
 
     static func edit(rowIndex: Int, url: String) {
-        if !self.v2raySubList.indices.contains(rowIndex) {
+        if !v2raySubList.indices.contains(rowIndex) {
             NSLog("index out of range", rowIndex)
             return
         }
 
         // update list
-        self.v2raySubList[rowIndex].url = url
+        v2raySubList[rowIndex].url = url
 
         // save
-        let v2ray = self.v2raySubList[rowIndex]
+        let v2ray = v2raySubList[rowIndex]
         v2ray.url = url
         v2ray.store()
     }
@@ -98,21 +98,16 @@ class V2raySubscribe: NSObject {
             return
         }
 
-        let o = self.v2raySubList[oldIndex]
-        self.v2raySubList.remove(at: oldIndex)
-        self.v2raySubList.insert(o, at: newIndex)
+        let o = v2raySubList[oldIndex]
+        v2raySubList.remove(at: oldIndex)
+        v2raySubList.insert(o, at: newIndex)
 
         // update subscribe list UserDefaults
-        self.saveItemList()
+        saveItemList()
     }
 
     // add v2ray subscribe (by scan qrcode)
     static func add(remark: String, url: String) {
-        if self.v2raySubList.count > 50 {
-//            NSLog("over max len")
-//            return
-        }
-
         // name is : subscribe. + uuid
         let name = "subscribe." + UUID().uuidString
 
@@ -121,10 +116,10 @@ class V2raySubscribe: NSObject {
         v2ray.store()
 
         // just add to mem
-        self.v2raySubList.append(v2ray)
+        v2raySubList.append(v2ray)
 
         // update subscribe list UserDefaults
-        self.saveItemList()
+        saveItemList()
     }
 
     // remove v2ray subscribe (tmp and UserDefaults and config json file)
@@ -137,18 +132,18 @@ class V2raySubscribe: NSObject {
         let v2ray = V2raySubscribe.v2raySubList[idx]
 
         // delete from tmp
-        self.v2raySubList.remove(at: idx)
+        v2raySubList.remove(at: idx)
 
         // delete from v2ray UserDefaults
         V2raySubItem.remove(name: v2ray.name)
 
         // update subscribe list UserDefaults
-        self.saveItemList()
+        saveItemList()
     }
 
     // update subscribe list UserDefaults
-    static private func saveItemList() {
-        var v2raySubList: Array<String> = []
+    private static func saveItemList() {
+        var v2raySubList: [String] = []
         for item in V2raySubscribe.list() {
             v2raySubList.append(item.name)
         }
@@ -163,7 +158,7 @@ class V2raySubscribe: NSObject {
             return nil
         }
 
-        return self.v2raySubList[idx]
+        return v2raySubList[idx]
     }
 }
 
@@ -184,10 +179,10 @@ class V2raySubItem: NSObject, NSCoding {
 
     // decode
     required init(coder decoder: NSCoder) {
-        self.name = decoder.decodeObject(forKey: "Name") as? String ?? ""
-        self.remark = decoder.decodeObject(forKey: "Remark") as? String ?? ""
-        self.isValid = decoder.decodeBool(forKey: "IsValid")
-        self.url = decoder.decodeObject(forKey: "Url") as? String ?? ""
+        name = decoder.decodeObject(forKey: "Name") as? String ?? ""
+        remark = decoder.decodeObject(forKey: "Remark") as? String ?? ""
+        isValid = decoder.decodeBool(forKey: "IsValid")
+        url = decoder.decodeObject(forKey: "Url") as? String ?? ""
     }
 
     // object encode
@@ -200,8 +195,9 @@ class V2raySubItem: NSObject, NSCoding {
 
     // store into UserDefaults
     func store() {
-        let modelData = NSKeyedArchiver.archivedData(withRootObject: self)
-        UserDefaults.standard.set(modelData, forKey: self.name)
+        if let modelData = try? NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: true) {
+            UserDefaults.standard.set(modelData, forKey: name)
+        }
     }
 
     // static load from UserDefaults
@@ -235,11 +231,11 @@ class V2raySubSync: NSObject {
         let list = V2raySubscribe.list()
 
         if list.count == 0 {
-            self.logTip(title: "fail: ", uri: "", informativeText: " please add Subscription Url")
+            logTip(title: "fail: ", uri: "", informativeText: " please add Subscription Url")
         }
 
         for item in list {
-            self.dlFromUrl(url: item.url, subscribe: item.name)
+            dlFromUrl(url: item.url, subscribe: item.name)
         }
     }
 
@@ -248,18 +244,15 @@ class V2raySubSync: NSObject {
 
         var request = URLRequest(url: URL(string: url)!)
         request.cachePolicy = .reloadIgnoringCacheData
-        
-        Alamofire.request(request).responseString { response in
-            switch (response.result) {
-            case .success(_):
-                if let data = response.result.value {
-                    self.handle(base64Str: data, subscribe: subscribe, url: url)
-                }
 
-            case .failure(_):
-                print("dlFromUrl error:", url, " -- ", response.result.error ?? "")
+        AF.request(request).responseString { response in
+            switch response.result {
+            case let .success(data):
+                self.handle(base64Str: data, subscribe: subscribe, url: url)
+
+            case let .failure(error):
+                print("dlFromUrl error:", url, " -- ", error)
                 self.logTip(title: "loading fail : ", uri: "", informativeText: url)
-                break
             }
         }
     }
@@ -267,24 +260,24 @@ class V2raySubSync: NSObject {
     func handle(base64Str: String, subscribe: String, url: String) {
         let strTmp = base64Str.trimmingCharacters(in: .whitespacesAndNewlines).base64Decoded()
         if strTmp == nil {
-            self.logTip(title: "parse fail : ", uri: "", informativeText: base64Str)
+            logTip(title: "parse fail : ", uri: "", informativeText: base64Str)
             return
         }
 
-        self.logTip(title: "del old from url : ", uri: "", informativeText: url + "\n\n")
+        logTip(title: "del old from url : ", uri: "", informativeText: url + "\n\n")
 
         // remove old v2ray servers by subscribe
         V2rayServer.remove(subscribe: subscribe)
 
-        let id: String = String(url.suffix(32));
+        let id = String(url.suffix(32))
 
         let list = strTmp!.trimmingCharacters(in: .newlines).components(separatedBy: CharacterSet.newlines)
         for item in list {
             // import every server
-            if (item.count == 0) {
-                continue;
+            if item.count == 0 {
+                continue
             } else {
-                self.importUri(uri: item.trimmingCharacters(in: .whitespacesAndNewlines), subscribe: subscribe, id: id)
+                importUri(uri: item.trimmingCharacters(in: .whitespacesAndNewlines), subscribe: subscribe, id: id)
             }
         }
     }
@@ -329,4 +322,3 @@ class V2raySubSync: NSObject {
         }
     }
 }
-

@@ -140,6 +140,7 @@ cd /Applications/V2rayU.app/Contents/Resources/
 	2. pod install
 	3. 下载最新版v2ray-core,如: https://github.com/v2ray/v2ray-core/releases/download/v4.8.0/v2ray-macos.zip,解压到Build目录,重命名为v2ray-core
 	4. 运行xcode即可
+	5. 打包依赖：安装appdmg，yarn global add appdmg
 
 ### 软件使用问题
 	1. 安装包显示文件已损坏的解决方案: sudo spctl --master-disable

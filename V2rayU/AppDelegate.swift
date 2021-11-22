@@ -15,7 +15,7 @@ let appVersion = getAppVersion()
 let NOTIFY_TOGGLE_RUNNING_SHORTCUT = Notification.Name(rawValue: "NOTIFY_TOGGLE_RUNNING_SHORTCUT")
 let NOTIFY_SWITCH_PROXY_MODE_SHORTCUT = Notification.Name(rawValue: "NOTIFY_SWITCH_PROXY_MODE_SHORTCUT")
 
-func SignalHandler(signal: Int32) -> Void {
+func SignalHandler(signal _: Int32) {
     var mstr = String()
     mstr += "Stack:\n"
 //    mstr = mstr.appendingFormat("slideAdress:0x%0x\r\n", calculate())
@@ -38,9 +38,9 @@ func exceptionHandler(exception: NSException) {
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     // bar menu
-    @IBOutlet weak var statusMenu: NSMenu!
+    @IBOutlet var statusMenu: NSMenu!
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
+    func applicationDidFinishLaunching(_: Notification) {
         // ERROR ExceptionHandler
         if let exception = UserDefaults.getArray(forKey: .Exception) {
             print("Error was occured on previous session! \n", exception, "\n\n-------------------------")
@@ -51,10 +51,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             makeToast(message: exceptions)
             UserDefaults.delArray(forKey: .Exception)
         }
-        NSSetUncaughtExceptionHandler(exceptionHandler);
+        NSSetUncaughtExceptionHandler(exceptionHandler)
 
         // default settings
-        self.checkDefault()
+        checkDefault()
 
         // auto launch
         if UserDefaults.getBool(forKey: .autoLaunch) {
@@ -86,17 +86,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(onSleepNote(note:)), name: NSWorkspace.willSleepNotification, object: nil)
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(onWakeNote(note:)), name: NSWorkspace.didWakeNotification, object: nil)
         // url scheme
-        NSAppleEventManager.shared().setEventHandler(self, andSelector: #selector(self.handleAppleEvent(event:replyEvent:)), forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
+        NSAppleEventManager.shared().setEventHandler(self, andSelector: #selector(handleAppleEvent(event:replyEvent:)), forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
 
         // set global hotkey
         let notifyCenter = NotificationCenter.default
         notifyCenter.addObserver(forName: NOTIFY_TOGGLE_RUNNING_SHORTCUT, object: nil, queue: nil, using: {
-            notice in
+            _ in
             ToggleRunning()
         })
 
         notifyCenter.addObserver(forName: NOTIFY_SWITCH_PROXY_MODE_SHORTCUT, object: nil, queue: nil, using: {
-            notice in
+            _ in
             SwitchProxyMode()
         })
 
@@ -134,7 +134,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    @objc func handleAppleEvent(event: NSAppleEventDescriptor, replyEvent: NSAppleEventDescriptor) {
+    @objc func handleAppleEvent(event: NSAppleEventDescriptor, replyEvent _: NSAppleEventDescriptor) {
         guard let appleEventDescription = event.paramDescriptor(forKeyword: AEKeyword(keyDirectObject)) else {
             return
         }
@@ -147,7 +147,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // todo
     }
 
-    @objc func onWakeNote(note: NSNotification) {
+    @objc func onWakeNote(note _: NSNotification) {
         print("onWakeNote")
         // reconnect
         if UserDefaults.getBool(forKey: .v2rayTurnOn) {
@@ -170,11 +170,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        PingSpeed().pingAll()
     }
 
-    @objc func onSleepNote(note: NSNotification) {
+    @objc func onSleepNote(note _: NSNotification) {
         print("onSleepNote")
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
+    func applicationWillTerminate(_: Notification) {
         // unregister All shortcut
         MASShortcutMonitor.shared().unregisterAllShortcuts()
         // Insert code here to tear down your application
